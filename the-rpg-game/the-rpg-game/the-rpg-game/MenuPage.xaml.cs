@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Šablona položky "Blank Page" je popsána na adrese  http://go.microsoft.com/fwlink/?LinkId=234238
+// aaa Šablona položky "Blank Page" je popsána na adrese  http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace the_rpg_game
 {
