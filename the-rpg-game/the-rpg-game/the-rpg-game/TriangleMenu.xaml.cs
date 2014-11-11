@@ -14,11 +14,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 namespace the_rpg_game
 {
-    public sealed partial class GamePage : Page
+    public sealed partial class TriangleMenu : Page
     {
-
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
@@ -39,8 +39,7 @@ namespace the_rpg_game
             get { return this.navigationHelper; }
         }
 
-
-        public GamePage()
+        public TriangleMenu()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
@@ -97,13 +96,5 @@ namespace the_rpg_game
         }
 
         #endregion
-
-        private void pageRoot_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key.ToString() == "Control")
-            {
-                this.Frame.Navigate(typeof(TriangleMenu));
-            }
-        }
     }
 }

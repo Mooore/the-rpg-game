@@ -32,6 +32,7 @@ namespace the_rpg_game
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
         }
         
         /// <summary>

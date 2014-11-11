@@ -17,14 +17,15 @@ using Windows.UI.Xaml.Navigation;
 
 namespace the_rpg_game
 {
-    /// <summary>
-    /// Prázdné stránka, která může být použita samostatně, nebo v rámci prvku Frame.
-    /// </summary>
     public sealed partial class MenuPage : Page
     {
         public MenuPage()
         {
             this.InitializeComponent();
+            if (this.MenuFrame.Visibility == Visibility.Visible)
+            {
+                this.MenuFrame.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void NewGameButton_Click(object sender, RoutedEventArgs e)
@@ -35,6 +36,20 @@ namespace the_rpg_game
         private void ExitGameButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
+            
         }
+
+        private void LoadGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.MenuFrame.Visibility = Visibility.Visible;
+            this.MenuFrame.Navigate(typeof(LoadGamePage));
+        }
+
+        private void OptionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.MenuFrame.Visibility = Visibility.Visible;
+            this.MenuFrame.Navigate(typeof(OptionsPage));
+        }
+
     }
 }
