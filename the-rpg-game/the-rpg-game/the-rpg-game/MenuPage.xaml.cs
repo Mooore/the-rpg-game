@@ -26,5 +26,15 @@ namespace the_rpg_game
         {
             this.InitializeComponent();
         }
+
+        private void NewGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GamePage));       
+        }
+
+        private void ExitGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }

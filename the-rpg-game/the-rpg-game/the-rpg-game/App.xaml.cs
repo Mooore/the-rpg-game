@@ -33,7 +33,7 @@ namespace the_rpg_game
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
-
+        
         /// <summary>
         /// Vyvoláno při normálním spuštění aplikace koncovým uživatelem.  Ostatní vstupní body
         /// budou použity například při spuštění aplikace za účelem otevřít konkrétní soubor.
@@ -42,12 +42,12 @@ namespace the_rpg_game
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
-#if DEBUG
+/*if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
-#endif
+endif*/
 
             Frame rootFrame = Window.Current.Content as Frame;
 
