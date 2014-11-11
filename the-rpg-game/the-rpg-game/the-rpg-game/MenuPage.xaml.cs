@@ -20,9 +20,9 @@ namespace the_rpg_game
     /// <summary>
     /// Prázdné stránka, která může být použita samostatně, nebo v rámci prvku Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MenuPage : Page
     {
-        public MainPage()
+        public MenuPage()
         {
             this.InitializeComponent();
         }

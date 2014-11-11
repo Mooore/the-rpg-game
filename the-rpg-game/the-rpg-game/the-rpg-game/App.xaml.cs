@@ -76,7 +76,7 @@ namespace the_rpg_game
                 // Není-li navigační zásobník obnoven, navigovat na první stránku
                 // a nakonfigurovat novou stránku předáním požadovaných informací ve formě
                 // parametru navigace
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(MenuPage), e.Arguments);
             }
             // Zkontrolovat, zda je aktuální okno aktivní
             Window.Current.Activate();
