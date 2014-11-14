@@ -32,7 +32,7 @@ namespace RPG_game_GUI.Menu
 
         private void Button_Click_NewGame(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new Menu.Loading());
+            Switcher.Switch(new Gameplay.Gameplay());
         }
 
         private void Button_Click_LoadGame(object sender, RoutedEventArgs e)
@@ -42,9 +42,16 @@ namespace RPG_game_GUI.Menu
 
         private void Button_Click_Options(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new Menu.Options());
+            if (borOptions.Visibility == Visibility.Visible)
+            {
+                borOptions.Visibility = Visibility.Hidden;
+            }
+            else 
+            {
+                borOptions.Visibility = Visibility.Visible;
+            }
+                
         }
-
         private void Button_Click_Exit(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -53,6 +60,11 @@ namespace RPG_game_GUI.Menu
         private void Button_Click_Credits(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new Menu.Credits());
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbVersion.Content += System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
     }
 }

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RPG_game_GUI.Menu" x:Class="RPG_game_GUI.Menu.MainMenu" 
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800" Loaded="UserControl_Loaded">
+             d:DesignHeight="768" d:DesignWidth="1024">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -17,7 +17,9 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="60" />
             <RowDefinition Height="1.5*" />
+
             <RowDefinition Height="50" />
+            <RowDefinition Height="40" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
@@ -33,15 +35,30 @@
 
         <Button x:Name="btnStart" Content="New Game" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_NewGame" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="2" Width="165" Height="90"/>
         <Button x:Name="btnLoad" Content="Load Game" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_LoadGame" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="3" Width="165" Height="90"/>
-        <Button x:Name="btnOptions" Content="Options" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Options" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="4" Width="165" Height="90" />
+        <Button x:Name="btnOptions" Content="Options" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Options" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="4" Width="165" Height="90">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:5" Storyboard.TargetName="btnCredits" Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" From="0" To="250" AutoReverse="True" RepeatBehavior="Forever"/>
+
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+
+
         <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Exit" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="6" Width="165" Height="60"/>
         <Button x:Name="btnCredits" Content="Credits" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_Credits" FontFamily="Viner Hand ITC" FontSize="16" Grid.Column="5" Grid.Row="8" Width="100" Height="40"/>
 
 
-        <Border x:Name="borOptions" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden">
+        <Border x:Name="borOptions" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5">
             <local:Options />
         </Border>
-        <Label x:Name="lbVersion" Content="v. " HorizontalAlignment="Left" Grid.Row="8" Grid.ColumnSpan="2" VerticalAlignment="Bottom"/>
+        <Button x:Name="hov" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="27,43,0,0" Grid.Row="7" VerticalAlignment="Top" Width="75"/>
+
 
 
     </Grid>

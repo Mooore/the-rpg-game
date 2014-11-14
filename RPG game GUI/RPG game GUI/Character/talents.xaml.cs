@@ -13,21 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RPG_game_GUI.Menu
+namespace RPG_game_GUI.Character
 {
     /// <summary>
-    /// Interaction logic for Options.xaml
+    /// Interaction logic for Talents.xaml
     /// </summary>
-    public partial class Options : UserControl
+    public partial class Talents : UserControl
     {
-        public Options()
+        public Talents()
         {
             InitializeComponent();
         }
+        
 
-        private void Button_Click_Back(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new Menu.MainMenu());
-        }
     }
 }
