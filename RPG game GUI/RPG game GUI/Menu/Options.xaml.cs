@@ -29,5 +29,20 @@ namespace RPG_game_GUI.Menu
         {
             Switcher.Switch(new Menu.MainMenu());
         }
+
+        private void btnVideo_Click(object sender, RoutedEventArgs e)
+        {
+            this.Content = new Menu.OptionsContent.Video();
+        }
+
+        private void btnSound_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnKeyboard_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,7 +1,14 @@
 ﻿<Window x:Class="RPG_game_GUI.PageSwitcher"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="RPG GUI" Height="600" Width="800">
+        Title="RPG GUI" 
+        WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        MaxHeight="1024"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+        MaxWidth="1920">
     <Grid>
         
     </Grid>
