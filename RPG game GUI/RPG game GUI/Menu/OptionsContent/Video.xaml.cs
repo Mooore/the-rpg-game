@@ -27,7 +27,7 @@ namespace RPG_game_GUI.Menu.OptionsContent
 
         private void btn1920_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Height = 1024;
+            App.Current.MainWindow.Height = 1080;
             App.Current.MainWindow.Width = 1920;
             changeWindowProperties();
         }
@@ -53,10 +53,25 @@ namespace RPG_game_GUI.Menu.OptionsContent
 
         private void changeWindowProperties()
         {
-            App.Current.MainWindow.WindowState = WindowState.Normal;
-            App.Current.MainWindow.WindowStyle = WindowStyle.SingleBorderWindow;
-            App.Current.MainWindow.ResizeMode = ResizeMode.CanMinimize;
-            App.Current.MainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            double width = Convert.ToDouble(App.Current.Properties["width"]);
+            double height = Convert.ToDouble(App.Current.Properties["height"]);
+
+            
+            if((width == App.Current.MainWindow.Width) && (height == App.Current.MainWindow.Height)){
+                App.Current.MainWindow.WindowState = WindowState.Maximized;
+                App.Current.MainWindow.WindowStyle = WindowStyle.None;
+                App.Current.MainWindow.ResizeMode = ResizeMode.NoResize;
+                //App.Current.MainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                
+                App.Current.MainWindow.Topmost = true;
+                App.Current.MainWindow.Activate();
+            }
+            else {
+                App.Current.MainWindow.WindowState = WindowState.Normal;
+                App.Current.MainWindow.WindowStyle = WindowStyle.SingleBorderWindow;
+                App.Current.MainWindow.ResizeMode = ResizeMode.CanMinimize;
+                App.Current.MainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            }
         }
 
     }

@@ -6,7 +6,7 @@
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
         Height="{x:Static SystemParameters.PrimaryScreenHeight}"
-        MaxHeight="1024"
+        MaxHeight="1080"
         Width="{x:Static SystemParameters.PrimaryScreenWidth}"
         MaxWidth="1920">
     <Grid>
