@@ -44,10 +44,20 @@ namespace RPG_game_GUI.Menu
         {
             if (borOptions.Visibility == Visibility.Visible)
             {
-                borOptions.Visibility = Visibility.Hidden;
+                if (Convert.ToBoolean(App.Current.Properties["is_option"]) == true)
+                {
+                    App.Current.Properties["is_option"] = false;
+                    borOptions.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    App.Current.Properties["is_option"] = true;
+                    borOptions.Child = new Menu.Options();
+                }
             }
             else 
             {
+                App.Current.Properties["is_option"] = true;
                 borOptions.Visibility = Visibility.Visible;
             }
                 

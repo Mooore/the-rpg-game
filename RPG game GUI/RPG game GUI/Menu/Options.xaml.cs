@@ -32,17 +32,18 @@ namespace RPG_game_GUI.Menu
 
         private void btnVideo_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_option"] = false;
             this.Content = new Menu.OptionsContent.Video();
         }
 
         private void btnSound_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.Properties["is_option"] = false;
         }
 
         private void btnKeyboard_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.Properties["is_option"] = false;
         }
     }
 }
