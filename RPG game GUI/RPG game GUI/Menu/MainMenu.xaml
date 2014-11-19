@@ -9,36 +9,37 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="150" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="100" />
-            <RowDefinition Height="100" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="60" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="1.5*" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50" />
-            <ColumnDefinition Width="220" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="50" />
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="80" />
         </Grid.ColumnDefinitions>
 
         <Button x:Name="btnStart" Content="New Game" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_NewGame" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="2" Width="165" Height="90"/>
         <Button x:Name="btnLoad" Content="Load Game" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_LoadGame" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="3" Width="165" Height="90"/>
         <Button x:Name="btnOptions" Content="Options" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Options" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="4" Width="165" Height="90" />
         <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Exit" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="6" Width="165" Height="60"/>
-        <Button x:Name="btnCredits" Content="Credits" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_Credits" FontFamily="Viner Hand ITC" FontSize="16" Grid.Column="5" Grid.Row="8" Width="100" Height="40"/>
+        <Button x:Name="btnCredits" Content="Credits" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_Credits" FontFamily="Viner Hand ITC" FontSize="16" Grid.Column="6" Grid.Row="8" Width="100" Height="40"/>
 
 
-        <Border x:Name="borOptions" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
+        <Border x:Name="borOptions" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
             <local:Options />
         </Border>
         <Label x:Name="lbVersion" Content="v. " HorizontalAlignment="Left" Grid.Row="8" Grid.ColumnSpan="2" VerticalAlignment="Bottom"/>

@@ -23,11 +23,75 @@ namespace RPG_game_GUI.Menu
         public MainMenu()
         {
             InitializeComponent();
+            setSizeItems();
         }
 
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
+        }
+
+        private void setSizeItems()
+        {
+            if (Convert.ToString(App.Current.Properties["size"]) == "H")
+            {
+                set1920();
+            }
+            else if (Convert.ToString(App.Current.Properties["size"]) == "M")
+            {
+                set1366();
+            }
+            else
+            {
+                set1024();
+            }
+        }
+
+        private void set1920()
+        {
+            btnStart.Margin = new Thickness(30, 10, 30, 10);
+            btnStart.FontSize = 20;
+            btnStart.Padding = new Thickness(15, 5, 15, 5);
+
+            btnLoad.Margin = new Thickness(30, 10, 30, 10);
+            btnLoad.FontSize = 20;
+            btnLoad.Padding = new Thickness(15, 5, 15, 5);
+
+            btnOptions.Margin = new Thickness(30, 10, 30, 10);
+            btnOptions.FontSize = 20;
+            btnOptions.Padding = new Thickness(15, 5, 15, 5);
+
+            btnExit.Margin = new Thickness(30, 10, 20, 10);
+            btnExit.FontSize = 20;
+            btnExit.Padding = new Thickness(10, 5, 10, 5);
+
+            btnCredits.Margin = new Thickness(0, 15, 0, 0);
+        }
+
+        private void set1366()
+        {
+            btnStart.Margin = new Thickness(20, 10, 20, 10);
+            btnStart.FontSize = 16;
+            btnStart.Padding = new Thickness(10, 5, 10, 5);
+
+            btnLoad.Margin = new Thickness(20, 10, 20, 10);
+            btnLoad.FontSize = 16;
+            btnLoad.Padding = new Thickness(10, 5, 10, 5);
+
+            btnOptions.Margin = new Thickness(20, 10, 20, 10);
+            btnOptions.FontSize = 16;
+            btnOptions.Padding = new Thickness(10, 5, 10, 5);
+
+            btnExit.Margin = new Thickness(20, 10, 20, 10);
+            btnExit.FontSize = 16;
+            btnExit.Padding = new Thickness(10, 5, 10, 5);
+
+            btnCredits.Margin = new Thickness(0, 15, 0, 0);
+        }
+
+        private void set1024()
+        {
+            
         }
 
         private void Button_Click_NewGame(object sender, RoutedEventArgs e)
