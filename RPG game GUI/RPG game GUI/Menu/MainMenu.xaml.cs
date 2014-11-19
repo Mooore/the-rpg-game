@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Timers;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,7 +24,9 @@ namespace RPG_game_GUI.Menu
         public MainMenu()
         {
             InitializeComponent();
+
             setSizeItems();
+
         }
 
         public void UtilizeState(object state)

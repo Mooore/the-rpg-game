@@ -137,6 +137,8 @@ namespace RPG_game_GUI.Menu.OptionsContent
             double width = Convert.ToDouble(App.Current.Properties["width"]);
             double height = Convert.ToDouble(App.Current.Properties["height"]);
 
+            
+
             if((width == App.Current.MainWindow.Width) && (height == App.Current.MainWindow.Height)){
                 App.Current.MainWindow.WindowStyle = WindowStyle.None;
                 App.Current.MainWindow.ResizeMode = ResizeMode.NoResize;
