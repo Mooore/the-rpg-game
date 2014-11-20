@@ -6,6 +6,8 @@
              xmlns:Menu="clr-namespace:RPG_game_GUI.Menu" x:Name="GameLayer" x:Class="RPG_game_GUI.Gameplay.Gameplay" 
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800" PreviewKeyDown="UserControl_PreviewKeyDown" Loaded="UserControl_Loaded">
+
+
     
 
     <Grid>
@@ -16,11 +18,13 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Viewbox x:Name="vbTriforce" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None" Visibility="Hidden">
-            <Menu:Triforce />
-        </Viewbox>
-
         <StatusBar Focusable="False" FocusManager.IsFocusScope="False" Height="80" Width="535" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom">
+
+            <StatusBar.Effect>
+                <BlurEffect x:Name="GameBlur" Radius="0"/>
+            </StatusBar.Effect>
+
+
             <Button x:Name="btnOne" Focusable="False" Content="1" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
             <Button x:Name="btnTwo" Focusable="False" Content="2" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
             <Button x:Name="btnThree" Focusable="False" Content="3" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
@@ -29,12 +33,14 @@
             <Button x:Name="btnSix" Focusable="False" Content="6" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
             <Button x:Name="btnSeven" Focusable="False" Content="7" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
 
-            <StatusBar.Effect>
-                <BlurEffect x:Name="GameBlur" Radius="0"/>
-            </StatusBar.Effect>
-
 
         </StatusBar>
+
+
+        <Viewbox Grid.Column="0" Grid.Row="0" x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" >
+            <Menu:Triforce Height="600" Width="800"/>
+        </Viewbox>
+
 
     </Grid>
 </UserControl>

@@ -49,6 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -192,6 +193,69 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\triforce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\triforce_middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\triforce_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\triforce_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\triforce_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\stat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\talents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\wiki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\fraction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\friends.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\quest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\death.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\abbility.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
