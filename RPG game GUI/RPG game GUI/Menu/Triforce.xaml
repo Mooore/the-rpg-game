@@ -9,6 +9,7 @@
 
     <UserControl.Resources>
         <DropShadowBitmapEffect x:Key="GlowEffect" Color="Blue" ShadowDepth="0" Opacity="10" Softness="50" />
+        <DropShadowBitmapEffect x:Key="ClickEffect" Color="Red" ShadowDepth="0" Opacity="10" Softness="50" />
         <BitmapImage x:Key="Triforce" UriSource="/RPG game GUI;component/Resources/triforce.png"/>
         <BitmapImage x:Key="Middle" UriSource="/RPG game GUI;component/Resources/triforce_middle.png"/>
         <BitmapImage x:Key="Top" UriSource="/RPG game GUI;component/Resources/triforce_top.png"/>
@@ -32,6 +33,9 @@
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Button.BitmapEffect" Value="{StaticResource GlowEffect}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource ClickEffect}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -288,7 +292,7 @@
             <Label x:Name="lbFrakce" Content="Frakce" Canvas.Left="223" Canvas.Top="358" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbZpravy" Content="Zprávy" Canvas.Left="244" Canvas.Top="384" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbPratele" Content="Přátelé" Canvas.Left="267" Canvas.Top="408" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbWiki" Content="Databáze" Canvas.Left="326" Canvas.Top="438" FontFamily="Tekton Pro Ext"/>
+            <Label x:Name="lbWiki" Content="Databáze" Canvas.Left="289" Canvas.Top="426" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbNevim" Content="Neklikat" Canvas.Left="485" Canvas.Top="410" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbSettings" Content="Nastavení" Canvas.Left="509" Canvas.Top="387" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbExit" Content="Konec" Canvas.Left="527" Canvas.Top="361" FontFamily="Tekton Pro Ext"/>
