@@ -7,8 +7,10 @@
         WindowState="Maximized"
         Height="{x:Static SystemParameters.PrimaryScreenHeight}"
         MaxHeight="1080"
+        MinHeight="768"
         Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-        MaxWidth="1920">
+        MaxWidth="1920"
+        MinWidth="1024">
     <Grid>
         
     </Grid>
