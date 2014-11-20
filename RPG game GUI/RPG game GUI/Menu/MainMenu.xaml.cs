@@ -24,7 +24,19 @@ namespace RPG_game_GUI.Menu
         public MainMenu()
         {
             InitializeComponent();
-
+            
+            if ((SystemParameters.PrimaryScreenWidth == 1920) && (SystemParameters.PrimaryScreenHeight == 1080))
+            {
+                App.Current.Properties["size"] = "H";
+            }
+            else if ((SystemParameters.PrimaryScreenWidth == 1366) && (SystemParameters.PrimaryScreenHeight == 768))
+            {
+                App.Current.Properties["size"] = "M";
+            }
+            else
+            {
+                App.Current.Properties["size"] = "S";
+            }
             setSizeItems();
 
         }
@@ -34,7 +46,7 @@ namespace RPG_game_GUI.Menu
             throw new NotImplementedException();
         }
 
-        private void setSizeItems()
+        public void setSizeItems()
         {
             if (Convert.ToString(App.Current.Properties["size"]) == "H")
             {
@@ -94,7 +106,23 @@ namespace RPG_game_GUI.Menu
 
         private void set1024()
         {
-            
+            btnStart.Margin = new Thickness(10, 5, 10, 5);
+            btnStart.FontSize = 13;
+            btnStart.Padding = new Thickness(8, 5, 8, 5);
+
+            btnLoad.Margin = new Thickness(10, 5, 10, 5);
+            btnLoad.FontSize = 13;
+            btnLoad.Padding = new Thickness(8, 5, 8, 5);
+
+            btnOptions.Margin = new Thickness(10, 5, 10, 5);
+            btnOptions.FontSize = 13;
+            btnOptions.Padding = new Thickness(8, 5, 8, 5);
+
+            btnExit.Margin = new Thickness(10, 5, 10, 5);
+            btnExit.FontSize = 13;
+            btnExit.Padding = new Thickness(8, 5, 8, 5);
+
+            btnCredits.Margin = new Thickness(0, 10, 0, 0);
         }
 
         private void Button_Click_NewGame(object sender, RoutedEventArgs e)
