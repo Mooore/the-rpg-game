@@ -58,9 +58,9 @@
 
         <Canvas x:Name="cnvBack" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0">
             <Image x:Name="imgTriforce"  Source="/RPG game GUI;component/Resources/triforce.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="200" Canvas.Top="163" Canvas.Left="299"/>
-            <Ellipse x:Name="triMiddle" Fill="#FFF4F4F5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" Stroke="Black" Width="52" MouseEnter="triMiddle_MouseEnter" StrokeThickness="5" Opacity="0" MouseLeave="triMiddle_MouseLeave" PreviewMouseLeftButtonUp="triMiddle_PreviewMouseLeftButtonUp" Canvas.Left="376" Canvas.Top="275"/>
-            <Polygon x:Name="triTop" Fill="Black" Points="50,0 100,100, 0,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triTop_MouseEnter" MouseLeave="triTop_MouseLeave" Opacity="0" Canvas.Left="350" Canvas.Top="182" />
-            <Polygon x:Name="triRight" Fill="Black" Points="50,10 100,100, 10,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triRight_MouseEnter" MouseLeave="triRight_MouseLeave" RenderTransformOrigin="0.5,0.5" Height="117" Width="91" Opacity="0" Canvas.Left="374" Canvas.Top="275" >
+            <Ellipse x:Name="triMiddle" Fill="#FFF4F4F5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" Stroke="Black" Width="52" MouseEnter="triMiddle_MouseEnter" StrokeThickness="5" MouseLeave="triMiddle_MouseLeave" PreviewMouseLeftButtonUp="triMiddle_PreviewMouseLeftButtonUp" Canvas.Left="375" Canvas.Top="265" Opacity="0"/>
+            <Polygon x:Name="triTop" Fill="Black" Points="50,0 100,100, 0,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triTop_MouseEnter" MouseLeave="triTop_MouseLeave" Opacity="0" Canvas.Left="349" Canvas.Top="183" />
+            <Polygon x:Name="triRight" Fill="Black" Points="50,10 100,100, 10,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triRight_MouseEnter" MouseLeave="triRight_MouseLeave" RenderTransformOrigin="0.5,0.5" Height="117" Width="91" Opacity="0" Canvas.Left="373" Canvas.Top="269" >
                 <Polygon.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="0.987" ScaleY="0.967"/>
@@ -70,7 +70,7 @@
                     </TransformGroup>
                 </Polygon.RenderTransform>
             </Polygon>
-            <Polygon x:Name="triLeft" Fill="Black" Points="50,10 100,100 0,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triLeft_MouseEnter" MouseLeave="triLeft_MouseLeave" RenderTransformOrigin="0.5,0.5" Height="116" Width="86" Opacity="0" Canvas.Left="298" Canvas.Top="264" >
+            <Polygon x:Name="triLeft" Fill="Black" Points="50,10 100,100 0,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triLeft_MouseEnter" MouseLeave="triLeft_MouseLeave" RenderTransformOrigin="0.5,0.5" Height="116" Width="86" Opacity="0" Canvas.Left="298" Canvas.Top="258" >
                 <Polygon.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="0.997" ScaleY="0.999"/>
@@ -294,7 +294,7 @@
             <Label x:Name="lbExit" Content="Konec" Canvas.Left="527" Canvas.Top="361" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbLoad" Content="Načíst" Canvas.Left="539" Canvas.Top="329" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbSave" Content="Uložit" Canvas.Left="543" Canvas.Top="296" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbName2" Content="Systém" HorizontalAlignment="Center" Height="39" VerticalAlignment="Center" Width="149" FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Rosewood Std Regular" Canvas.Left="470" Canvas.Top="248" />
+            <Label x:Name="lbName2" Content="Systém" HorizontalAlignment="Center" Height="49" VerticalAlignment="Center" Width="149" FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Rosewood Std Regular" Canvas.Left="470" Canvas.Top="238" />
             <Label x:Name="lbName3" Content="PDA" HorizontalAlignment="Center" Height="44" VerticalAlignment="Center" Width="121" FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Rosewood Std Regular" Canvas.Left="208" Canvas.Top="221" />
         </Canvas>
     </Grid>
