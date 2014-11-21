@@ -21,7 +21,8 @@ namespace RPG_game_GUI
             {
                 App.Current.Properties["size"] = "H";
             }
-            else if ((SystemParameters.PrimaryScreenWidth == 1366) && (SystemParameters.PrimaryScreenHeight == 1024))
+            else if (((SystemParameters.PrimaryScreenWidth < 1920) && (SystemParameters.PrimaryScreenHeight < 1080)) &&
+                    ((SystemParameters.PrimaryScreenWidth >= 1366) && (SystemParameters.PrimaryScreenHeight >= 768)))
             {
                 App.Current.Properties["size"] = "M";
             }
