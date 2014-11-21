@@ -71,8 +71,8 @@
             <Menu:Triforce Height="600" Width="800"/>
         </Viewbox>
 
-        <Viewbox Grid.Column="0" Grid.Row="0" x:Name="vbStatistics" Stretch="none" Visibility="Hidden" >
-            <Character:Statistics Height="400" Width="350"/>
+        <Viewbox Grid.Column="0" Grid.Row="1" Margin="31,28,0,0" VerticalAlignment="Top" x:Name="vbStatistics" Stretch="none" Visibility="Hidden" >
+            <Character:Statistics Height="200" Width="150"/>
         </Viewbox>
 
 
