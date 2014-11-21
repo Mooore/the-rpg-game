@@ -279,8 +279,6 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-
-            <Label x:Name="lbName" Content="Postava" HorizontalAlignment="Center" Height="38" VerticalAlignment="Center" Width="178" FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Rosewood Std Regular" Canvas.Left="317" Canvas.Top="76" />
             <Label x:Name="lbStat" Content="Statistiky" Canvas.Left="292" Canvas.Top="130" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbInv" Content="Inventář" Canvas.Left="339" Canvas.Top="116" FontFamily="Tekton Pro Ext" />
             <Label x:Name="lbChar" Content="Charakter" Canvas.Left="370" Canvas.Top="111" FontFamily="Tekton Pro Ext" />
@@ -298,8 +296,6 @@
             <Label x:Name="lbExit" Content="Konec" Canvas.Left="527" Canvas.Top="361" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbLoad" Content="Načíst" Canvas.Left="539" Canvas.Top="329" FontFamily="Tekton Pro Ext"/>
             <Label x:Name="lbSave" Content="Uložit" Canvas.Left="543" Canvas.Top="296" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbName2" Content="Systém" HorizontalAlignment="Center" Height="49" VerticalAlignment="Center" Width="149" FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Rosewood Std Regular" Canvas.Left="470" Canvas.Top="238" />
-            <Label x:Name="lbName3" Content="PDA" HorizontalAlignment="Center" Height="44" VerticalAlignment="Center" Width="121" FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Rosewood Std Regular" Canvas.Left="208" Canvas.Top="221" />
         </Canvas>
     </Grid>
 </UserControl>
