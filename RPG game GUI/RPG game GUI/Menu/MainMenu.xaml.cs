@@ -25,18 +25,6 @@ namespace RPG_game_GUI.Menu
         {
             InitializeComponent();
             
-            if ((SystemParameters.PrimaryScreenWidth == 1920) && (SystemParameters.PrimaryScreenHeight == 1080))
-            {
-                App.Current.Properties["size"] = "H";
-            }
-            else if ((SystemParameters.PrimaryScreenWidth == 1366) && (SystemParameters.PrimaryScreenHeight == 768))
-            {
-                App.Current.Properties["size"] = "M";
-            }
-            else
-            {
-                App.Current.Properties["size"] = "S";
-            }
             setSizeItems();
 
         }
