@@ -12,13 +12,43 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
-        <StatusBar Focusable="False" FocusManager.IsFocusScope="False" Height="80" Width="535" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom">
+        <WrapPanel Background="Black" HorizontalAlignment="Left" Height="49" Margin="82,35,0,0" VerticalAlignment="Top" Width="151" Grid.ColumnSpan="2"/>
+
+        <Ellipse HorizontalAlignment="Left"  Height="62" Margin="31,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="70">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/RPG game GUI;component/Resources/ninja.png" />
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <WrapPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="9" VerticalAlignment="Top" Width="114" Margin="106,48,0,0" Grid.ColumnSpan="2">
+            <WrapPanel.Background>
+                <ImageBrush ImageSource="/RPG game GUI;component/Resources/health.png" />
+            </WrapPanel.Background>
+        </WrapPanel>
+
+        <WrapPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="9" VerticalAlignment="Top" Width="114" Margin="106,62,0,0" Grid.ColumnSpan="2">
+            <WrapPanel.Background>
+                <ImageBrush ImageSource="/RPG game GUI;component/Resources/mana.png" />
+            </WrapPanel.Background>
+        </WrapPanel>
+
+        <Ellipse  Grid.Column="2" HorizontalAlignment="Left" Height="163" Margin="33,10,-65,0" Grid.RowSpan="2" Stroke="Black" VerticalAlignment="Top" Width="165">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/RPG game GUI;component/Resources/min_mapa.png" />
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <StatusBar Focusable="False" FocusManager.IsFocusScope="False" Height="80" Width="535" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="0" Grid.Row="2" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Margin="132,0,0,0">
 
             <StatusBar.Effect>
                 <BlurEffect x:Name="GameBlur" Radius="0"/>
@@ -37,13 +67,15 @@
         </StatusBar>
 
 
-        <Viewbox Grid.Column="0" Grid.Row="0" x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" >
+        <Viewbox Grid.Column="1" Grid.Row="1" x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" >
             <Menu:Triforce Height="600" Width="800"/>
         </Viewbox>
 
         <Viewbox Grid.Column="0" Grid.Row="0" x:Name="vbStatistics" Stretch="none" Visibility="Hidden" >
             <Character:Statistics Height="400" Width="350"/>
         </Viewbox>
+
+
 
 
 

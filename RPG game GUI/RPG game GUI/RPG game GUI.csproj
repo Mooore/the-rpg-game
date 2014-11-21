@@ -172,6 +172,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -263,6 +264,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\abbility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ninja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\min_mapa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
