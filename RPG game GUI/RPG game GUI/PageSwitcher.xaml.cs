@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace RPG_game_GUI
 {
@@ -48,6 +49,19 @@ namespace RPG_game_GUI
             else
                 throw new ArgumentException("NextPage is not ISwitchable! "
                   + nextPage.Name.ToString());
+        }
+
+        /// <summary>
+        /// Simulace stisknutí klávesy
+        /// </summary>
+        /// <param name="key">Tlačítko, jehož stisknutí chceme simulovat</param>
+        public static void Send(Key key)
+        {
+            if (Keyboard.PrimaryDevice != null && Keyboard.PrimaryDevice.ActiveSource != null)
+            {
+                var action = new KeyEventArgs(Keyboard.PrimaryDevice, Keyboard.PrimaryDevice.ActiveSource, 0, key) { RoutedEvent = Keyboard.PreviewKeyDownEvent };
+                InputManager.Current.ProcessInput(action);
+            }
         }
     }
 }

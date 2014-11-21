@@ -84,7 +84,7 @@
                     </TransformGroup>
                 </Polygon.RenderTransform>
             </Polygon>
-            <Button x:Name="btnStat" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="322" Canvas.Top="148" MouseEnter="btnStat_MouseEnter" MouseLeave="btnStat_MouseLeave" Margin="0">
+            <Button x:Name="btnStat" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="322" Canvas.Top="148" MouseEnter="btnStat_MouseEnter" MouseLeave="btnStat_MouseLeave" Margin="0" Click="btnStat_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/stat.png"/>
                 </Button.Background>
@@ -140,7 +140,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnExit" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="483" Canvas.Top="323" MouseEnter="btnExit_MouseEnter" MouseLeave="btnExit_MouseLeave" Margin="0">
+            <Button x:Name="btnExit" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="483" Canvas.Top="323" MouseEnter="btnExit_MouseEnter" MouseLeave="btnExit_MouseLeave" Margin="0" Click="btnExit_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/exit.png"/>
                 </Button.Background>
@@ -154,7 +154,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnSetting" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="515" Canvas.Top="327" MouseEnter="btnSetting_MouseEnter" MouseLeave="btnSetting_MouseLeave" Margin="0">
+            <Button x:Name="btnSetting" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="515" Canvas.Top="327" MouseEnter="btnSetting_MouseEnter" MouseLeave="btnSetting_MouseLeave" Margin="0" Click="btnSetting_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/settings.png"/>
                 </Button.Background>

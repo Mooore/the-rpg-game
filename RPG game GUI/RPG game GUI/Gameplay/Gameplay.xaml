@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:Menu="clr-namespace:RPG_game_GUI.Menu" x:Name="GameLayer" x:Class="RPG_game_GUI.Gameplay.Gameplay" 
+             xmlns:Menu="clr-namespace:RPG_game_GUI.Menu" xmlns:Character="clr-namespace:RPG_game_GUI.Character" x:Name="GameLayer" x:Class="RPG_game_GUI.Gameplay.Gameplay" 
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800" PreviewKeyDown="UserControl_PreviewKeyDown" Loaded="UserControl_Loaded">
 
 
-    
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -40,6 +40,12 @@
         <Viewbox Grid.Column="0" Grid.Row="0" x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" >
             <Menu:Triforce Height="600" Width="800"/>
         </Viewbox>
+
+        <Viewbox Grid.Column="0" Grid.Row="0" x:Name="vbStatistics" Stretch="none" Visibility="Hidden" >
+            <Character:Statistics Height="400" Width="350"/>
+        </Viewbox>
+
+
 
 
     </Grid>

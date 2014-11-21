@@ -36,13 +36,12 @@ namespace RPG_game_GUI.Gameplay
             throw new NotImplementedException();
         }
 
-        private void Grid_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
 
         private void UserControl_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            /*
+             * Zobrazení Triforce  
+             */
             if (e.Key == Key.Tab || e.Key == Key.Escape)
             {
                 if (vbTriforce.Visibility == Visibility.Visible)
@@ -54,6 +53,21 @@ namespace RPG_game_GUI.Gameplay
                 {
                     vbTriforce.Visibility = Visibility.Visible;
                     GameBlur.Radius = 10;
+                }
+            }
+
+            /*
+             * Zobrazení statistik
+             */
+            if (e.Key == Key.C)
+            {
+                if (vbStatistics.Visibility == Visibility.Visible)
+                {
+                    vbStatistics.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbStatistics.Visibility = Visibility.Visible;
                 }
             }
         }

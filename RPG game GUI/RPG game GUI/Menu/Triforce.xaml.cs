@@ -35,8 +35,6 @@ namespace RPG_game_GUI.Menu
         {
             hideAll();
             imgTriforce.Source = (ImageSource)Resources["Middle"];
-            lbName.Content = "Odpojit";
-            lbName.Visibility = Visibility.Visible;
         }
 
         private void triMiddle_MouseLeave(object sender, MouseEventArgs e)
@@ -48,8 +46,6 @@ namespace RPG_game_GUI.Menu
         {
             imgTriforce.Source = (ImageSource)Resources["Top"];
             hideAll();
-            lbName.Content = "Postava";
-            lbName.Visibility = Visibility.Visible;
             btnAbility.Visibility = Visibility.Visible;
             btnChar.Visibility = Visibility.Visible;
             btnInv1.Visibility = Visibility.Visible;
@@ -66,7 +62,6 @@ namespace RPG_game_GUI.Menu
         {
             imgTriforce.Source = (ImageSource)Resources["Left"];
             hideAll();
-            lbName3.Visibility = Visibility.Visible;
             btnFrakce.Visibility = Visibility.Visible;
             btnMapa.Visibility = Visibility.Visible;
             btnObchod.Visibility = Visibility.Visible;
@@ -85,7 +80,6 @@ namespace RPG_game_GUI.Menu
         {
             imgTriforce.Source = (ImageSource)Resources["Right"];
             hideAll();
-            lbName2.Visibility = Visibility.Visible;
             btnExit.Visibility = Visibility.Visible;
             btnLoad.Visibility = Visibility.Visible;
             btnNevim.Visibility = Visibility.Visible;
@@ -106,11 +100,11 @@ namespace RPG_game_GUI.Menu
             }
         }
 
+        /// <summary>
+        /// Skryje všechny tlačítka a hlavní nadpisy
+        /// </summary>
         private void hideAll()
         {
-            lbName.Visibility = Visibility.Hidden;
-            lbName2.Visibility = Visibility.Hidden;
-            lbName3.Visibility = Visibility.Hidden;
             btnAbility.Visibility = Visibility.Hidden;
             btnChar.Visibility = Visibility.Hidden;
             btnExit.Visibility = Visibility.Hidden;
@@ -130,6 +124,9 @@ namespace RPG_game_GUI.Menu
             btnZpravy.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Skryje všechny labely
+        /// </summary>
         private void initVisibility()
         {
             hideAll();
@@ -140,9 +137,6 @@ namespace RPG_game_GUI.Menu
             lbInv.Visibility = Visibility.Hidden;
             lbLoad.Visibility = Visibility.Hidden;
             lbMapa.Visibility = Visibility.Hidden;
-            lbName.Visibility = Visibility.Hidden;
-            lbName2.Visibility = Visibility.Hidden;
-            lbName3.Visibility = Visibility.Hidden;
             lbNevim.Visibility = Visibility.Hidden;
             lbObchod.Visibility = Visibility.Hidden;
             lbPratele.Visibility = Visibility.Hidden;
@@ -325,6 +319,21 @@ namespace RPG_game_GUI.Menu
             lbNevim.Visibility = Visibility.Hidden;
         }
 
-        
+        private void btnStat_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.C);
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu.MainMenu());
+        }
+
+        private void btnSetting_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Properties["is_option"] = true;
+            Switcher.Switch(new Menu.MainMenu());
+        }        
     }
 }
