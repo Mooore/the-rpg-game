@@ -23,6 +23,12 @@ namespace RPG_game_GUI.Gameplay
         public Gameplay()
         {
             InitializeComponent();
+
+            this.Height = App.Current.MainWindow.Height;
+            this.Width = App.Current.MainWindow.Width;
+
+            //double top = (GameCanvas.ActualHeight - element.ActualHeight) / 2;
+            //Canvas.SetTop(element, top);
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -47,12 +53,17 @@ namespace RPG_game_GUI.Gameplay
                 if (vbTriforce.Visibility == Visibility.Visible)
                 {
                     vbTriforce.Visibility = Visibility.Hidden;
-                    GameBlur.Radius = 0;
+                    vbBarBlur.Radius = 0;
+                    vbCharBlur.Radius = 0;
+                    vbMapBlur.Radius = 0;
+                    
                 }
                 else
                 {
                     vbTriforce.Visibility = Visibility.Visible;
-                    GameBlur.Radius = 10;
+                    vbBarBlur.Radius = 10;
+                    vbCharBlur.Radius = 10;
+                    vbMapBlur.Radius = 10;
                 }
             }
 
@@ -70,6 +81,28 @@ namespace RPG_game_GUI.Gameplay
                     vbStatistics.Visibility = Visibility.Visible;
                 }
             }
+        }
+
+        private void QuickBar_Loaded(object sender, RoutedEventArgs e)
+        {
+            double left = (GameCanvas.ActualWidth - QuickBar.ActualWidth) / 2;
+            Canvas.SetLeft(QuickBar, left);
+        }
+
+        private void GameCanvas_Loaded(object sender, RoutedEventArgs e)
+        {
+            Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+            if (win.WindowState.ToString() == "Maximized")
+            {
+                GameCanvas.Height = this.Height;
+                GameCanvas.Width = this.Width;
+            }
+            else
+            {
+                GameCanvas.Height = this.Height - 30;
+                GameCanvas.Width = this.Width - 20;
+            }
+            
         }
 
     }

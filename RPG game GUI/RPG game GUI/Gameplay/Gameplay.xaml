@@ -5,80 +5,95 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:Menu="clr-namespace:RPG_game_GUI.Menu" xmlns:Character="clr-namespace:RPG_game_GUI.Character" x:Name="GameLayer" x:Class="RPG_game_GUI.Gameplay.Gameplay" 
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800" PreviewKeyDown="UserControl_PreviewKeyDown" Loaded="UserControl_Loaded">
+             d:DesignHeight="768" d:DesignWidth="1024" PreviewKeyDown="UserControl_PreviewKeyDown" Loaded="UserControl_Loaded">
+
+    <UserControl.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="1"
+                            Padding="4,2" 
+                            BorderBrush="DarkGray" 
+                            CornerRadius="0" 
+                            Height="70"
+                            Width="70"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
 
 
+    <Canvas x:Name="GameCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="{Binding ElementName=GameLayer, Path=Width}" Height="{Binding ElementName=GameLayer, Path=ActualHeight}" Loaded="GameCanvas_Loaded">
 
+        <Viewbox x:Name="vbCharBar" Height="80" Canvas.Top="20" Canvas.Left="20" Stretch="Uniform">
+            <Viewbox.Effect>
+                <BlurEffect x:Name="vbCharBlur" Radius="0"/>
+            </Viewbox.Effect>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="4*" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="4*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
+            <WrapPanel x:Name="CharBar" Height="65">
+                <Ellipse Height="62" Margin="0,1,0,0" Stroke="Black" Width="70" Panel.ZIndex="1" >
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/RPG game GUI;component/Resources/ninja.png" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <WrapPanel Background="Black" Height="49" Margin="-17,8,0,0" VerticalAlignment="Top" Width="136" >
+                    <WrapPanel Height="14" Width="114" Margin="13,10,0,0" >
+                        <WrapPanel.Background>
+                            <ImageBrush ImageSource="/RPG game GUI;component/Resources/health.png" />
+                        </WrapPanel.Background>
+                    </WrapPanel>
+                    <WrapPanel Height="14" Width="114" Margin="13,5,0,0" >
+                        <WrapPanel.Background>
+                            <ImageBrush ImageSource="/RPG game GUI;component/Resources/mana.png" />
+                        </WrapPanel.Background>
+                    </WrapPanel>
+                </WrapPanel>
+            </WrapPanel>
+        </Viewbox>
 
-        <WrapPanel Background="Black" HorizontalAlignment="Left" Height="49" Margin="82,35,0,0" VerticalAlignment="Top" Width="151" Grid.ColumnSpan="2"/>
+        <Viewbox x:Name="vbMap" Height="200" Canvas.Right="10" Canvas.Top="10" VerticalAlignment="Top" HorizontalAlignment="Right" Stretch="UniformToFill">
+            <Viewbox.Effect>
+                <BlurEffect x:Name="vbMapBlur" Radius="0"/>
+            </Viewbox.Effect>
 
-        <Ellipse HorizontalAlignment="Left"  Height="62" Margin="31,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="70">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="/RPG game GUI;component/Resources/ninja.png" />
-            </Ellipse.Fill>
-        </Ellipse>
+            <Ellipse Height="163" Stroke="Black" Width="165" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/min_mapa.png" />
+                </Ellipse.Fill>
+            </Ellipse>
+        </Viewbox>
 
-        <WrapPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="9" VerticalAlignment="Top" Width="114" Margin="106,48,0,0" Grid.ColumnSpan="2">
-            <WrapPanel.Background>
-                <ImageBrush ImageSource="/RPG game GUI;component/Resources/health.png" />
-            </WrapPanel.Background>
-        </WrapPanel>
+        <Grid Height="{Binding ElementName=GameLayer, Path=Height}" Width="{Binding ElementName=GameLayer, Path=Width}">
+            <Viewbox x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" Panel.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Menu:Triforce Height="600" Width="800"/>
+            </Viewbox>
+        </Grid>
 
-        <WrapPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="9" VerticalAlignment="Top" Width="114" Margin="106,62,0,0" Grid.ColumnSpan="2">
-            <WrapPanel.Background>
-                <ImageBrush ImageSource="/RPG game GUI;component/Resources/mana.png" />
-            </WrapPanel.Background>
-        </WrapPanel>
+        <Viewbox VerticalAlignment="Top" x:Name="vbStatistics" Stretch="none" Visibility="Hidden" Canvas.Left="80" Canvas.Top="258" >
+            <Character:Statistics />
+        </Viewbox>
 
-        <Ellipse  Grid.Column="2" HorizontalAlignment="Left" Height="163" Margin="33,10,-65,0" Grid.RowSpan="2" Stroke="Black" VerticalAlignment="Top" Width="165">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="/RPG game GUI;component/Resources/min_mapa.png" />
-            </Ellipse.Fill>
-        </Ellipse>
-
-        <StatusBar Focusable="False" FocusManager.IsFocusScope="False" Height="80" Width="535" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="0" Grid.Row="2" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Margin="132,0,0,0">
-
+        <StatusBar x:Name="QuickBar" Focusable="False" FocusManager.IsFocusScope="False" Height="90" Width="604" Canvas.Bottom="5" Canvas.Left="200" Loaded="QuickBar_Loaded" >
             <StatusBar.Effect>
-                <BlurEffect x:Name="GameBlur" Radius="0"/>
+                <BlurEffect x:Name="vbBarBlur" Radius="0"/>
             </StatusBar.Effect>
 
-
-            <Button x:Name="btnOne" Focusable="False" Content="1" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnTwo" Focusable="False" Content="2" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnThree" Focusable="False" Content="3" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnFour" Focusable="False" Content="4" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnFive" Focusable="False" Content="5" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnSix" Focusable="False" Content="6" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnSeven" Focusable="False" Content="7" Width="70" Height="70" Background="Transparent" BorderThickness="2" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-
-
+            <Button x:Name="btnOne" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnTwo" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnThree" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnFour" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnFive" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnSix" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnSeven" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
         </StatusBar>
 
-
-        <Viewbox Grid.Column="1" Grid.Row="1" x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" >
-            <Menu:Triforce Height="600" Width="800"/>
-        </Viewbox>
-
-        <Viewbox Grid.Column="0" Grid.Row="1" Margin="31,28,0,0" VerticalAlignment="Top" x:Name="vbStatistics" Stretch="none" Visibility="Hidden" >
-            <Character:Statistics Height="200" Width="150"/>
-        </Viewbox>
-
-
-
-
-
-
-    </Grid>
+    </Canvas>
 </UserControl>
