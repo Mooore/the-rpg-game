@@ -27,6 +27,8 @@ namespace RPG_game_GUI.Gameplay
             this.Height = App.Current.MainWindow.Height;
             this.Width = App.Current.MainWindow.Width;
 
+            
+
             //double top = (GameCanvas.ActualHeight - element.ActualHeight) / 2;
             //Canvas.SetTop(element, top);
         }

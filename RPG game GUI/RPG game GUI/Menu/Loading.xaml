@@ -4,8 +4,64 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="768" d:DesignWidth="1024">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/RPG game GUI;component/Resources/background.jpg" Stretch="UniformToFill"/>
+    </UserControl.Background>
+
+    <UserControl.Resources>
+        <Storyboard x:Key="MovingCard"/>
+    </UserControl.Resources>
     <Grid>
-            
+        
+        
+        <Image x:Name="Card" Height="500" Width="300" Source="/RPG game GUI;component/Resources/Tarots/0.png"  Loaded="Card_Loaded" RenderTransformOrigin="0.5,0.5" Margin="70,200,654,68">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-27.24"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+
+            </Image.RenderTransform>
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Loaded" SourceName="Card">
+                    <BeginStoryboard >
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="Opacity" 
+                                From="0" To="1.0" Duration="0:0:2">
+                            </DoubleAnimation>
+                            <!--Angle-->
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" 
+                                To="50" Duration="0:0:30">
+                            </DoubleAnimation>
+                            <!--Position X-->
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" 
+                                To="1200" Duration="0:0:30">
+                            </DoubleAnimation>
+                            <!--Position Y-->
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" 
+                                To="-300" Duration="0:0:30">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <TextBox x:Name="txtTooltip"
+            Margin="0,0,0,80"
+            Focusable="False"
+            Background="Transparent" 
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+            HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" 
+            FontSize="36" BorderBrush="{x:Null}" Foreground="White" Loaded="txtTooltip_Loaded" />
     </Grid>
+
+
+    <!-- {StaticResource MovingCard}"/> -->
 </UserControl>

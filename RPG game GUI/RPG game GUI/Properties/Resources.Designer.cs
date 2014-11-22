@@ -59,5 +59,16 @@ namespace RPG_game_GUI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Věděli jste, že tato loading screen je tady jenom proto, že je cool?
+        ///Na vytvoření tohoto GUI padlo přibližně 124,8 hrnku kávy.
+        ///Na poslední chvíli se vše stihlo..
+        /// </summary>
+        internal static string tips {
+            get {
+                return ResourceManager.GetString("tips", resourceCulture);
+            }
+        }
     }
 }

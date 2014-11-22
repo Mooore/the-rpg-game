@@ -278,13 +278,103 @@
     <Resource Include="Resources\min_mapa.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\main_menu_textura.jpg" />
+    <SplashScreen Include="Resources\main_menu_textura.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\QuickBarBorder.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\QuickBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tarots\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tarots\11.png" />
+    <Resource Include="Resources\Tarots\12.png" />
+    <Resource Include="Resources\Tarots\13.png" />
+    <Resource Include="Resources\Tarots\14.png" />
+    <Resource Include="Resources\Tarots\15.png" />
+    <Resource Include="Resources\Tarots\16.png" />
+    <Resource Include="Resources\Tarots\17.png" />
+    <Resource Include="Resources\Tarots\18.png" />
+    <Resource Include="Resources\Tarots\19.png" />
+    <Resource Include="Resources\Tarots\20.png" />
+    <Resource Include="Resources\Tarots\21.png" />
+    <Resource Include="Resources\Tarots\22.png" />
+    <Resource Include="Resources\Tarots\23.png" />
+    <Resource Include="Resources\Tarots\24.png" />
+    <Resource Include="Resources\Tarots\25.png" />
+    <Resource Include="Resources\Tarots\26.png" />
+    <Resource Include="Resources\Tarots\27.png" />
+    <Resource Include="Resources\Tarots\28.png" />
+    <Resource Include="Resources\Tarots\29.png" />
+    <Resource Include="Resources\Tarots\30.png" />
+    <Resource Include="Resources\Tarots\31.png" />
+    <Resource Include="Resources\Tarots\32.png" />
+    <Resource Include="Resources\Tarots\33.png" />
+    <Resource Include="Resources\Tarots\34.png" />
+    <Resource Include="Resources\Tarots\35.png" />
+    <Resource Include="Resources\Tarots\36.png" />
+    <Resource Include="Resources\Tarots\37.png" />
+    <Resource Include="Resources\Tarots\38.png" />
+    <Resource Include="Resources\Tarots\39.png" />
+    <Resource Include="Resources\Tarots\40.png" />
+    <Resource Include="Resources\Tarots\41.png" />
+    <Resource Include="Resources\Tarots\42.png" />
+    <Resource Include="Resources\Tarots\43.png" />
+    <Resource Include="Resources\Tarots\44.png" />
+    <Resource Include="Resources\Tarots\45.png" />
+    <Resource Include="Resources\Tarots\46.png" />
+    <Resource Include="Resources\Tarots\47.png" />
+    <Resource Include="Resources\Tarots\48.png" />
+    <Resource Include="Resources\Tarots\49.png" />
+    <Resource Include="Resources\Tarots\50.png" />
+    <Resource Include="Resources\Tarots\51.png" />
+    <Resource Include="Resources\Tarots\52.png" />
+    <Resource Include="Resources\Tarots\53.png" />
+    <Resource Include="Resources\Tarots\54.png" />
+    <Resource Include="Resources\Tarots\55.png" />
+    <Resource Include="Resources\Tarots\56.png" />
+    <Resource Include="Resources\Tarots\57.png" />
+    <Resource Include="Resources\Tarots\58.png" />
+    <Resource Include="Resources\Tarots\59.png" />
+    <Resource Include="Resources\Tarots\60.png" />
+    <Resource Include="Resources\Tarots\61.png" />
+    <Resource Include="Resources\Tarots\62.png" />
+    <Resource Include="Resources\Tarots\63.png" />
+    <Resource Include="Resources\Tarots\64.png" />
+    <Resource Include="Resources\Tarots\65.png" />
+    <Resource Include="Resources\Tarots\66.png" />
+    <Resource Include="Resources\Tarots\67.png" />
+    <Resource Include="Resources\Tarots\68.png" />
+    <Resource Include="Resources\Tarots\69.png" />
+    <Resource Include="Resources\Tarots\70.png" />
+    <Resource Include="Resources\Tarots\71.png" />
+    <Resource Include="Resources\Tarots\72.png" />
+    <Resource Include="Resources\Tarots\73.png" />
+    <Resource Include="Resources\Tarots\74.png" />
+    <Resource Include="Resources\Tarots\75.png" />
+    <Resource Include="Resources\Tarots\76.png" />
+    <Resource Include="Resources\Tarots\77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tarots\0.png" />
+    <Resource Include="Resources\Tarots\1.png" />
+    <Resource Include="Resources\Tarots\2.png" />
+    <Resource Include="Resources\Tarots\3.png" />
+    <Resource Include="Resources\Tarots\4.png" />
+    <Resource Include="Resources\Tarots\5.png" />
+    <Resource Include="Resources\Tarots\6.png" />
+    <Resource Include="Resources\Tarots\7.png" />
+    <Resource Include="Resources\Tarots\8.png" />
+    <Resource Include="Resources\Tarots\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tips.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

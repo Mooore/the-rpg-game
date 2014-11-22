@@ -118,7 +118,7 @@ namespace RPG_game_GUI.Menu
 
         private void Button_Click_NewGame(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new Gameplay.Gameplay());
+            Switcher.Switch(new Menu.Loading());
         }
 
         private void Button_Click_LoadGame(object sender, RoutedEventArgs e)
