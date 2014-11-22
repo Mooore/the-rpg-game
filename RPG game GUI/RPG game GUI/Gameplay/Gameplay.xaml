@@ -15,16 +15,19 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border Name="border" 
-                            BorderThickness="1"
+                            BorderThickness="0"
+                            Opacity="50"
+                            Focusable="False"
                             Padding="4,2" 
-                            BorderBrush="DarkGray" 
+                            BorderBrush="Black" 
                             CornerRadius="0" 
-                            Height="70"
-                            Width="70"
+                            Height="64"
+                            Width="61"
                             Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
+                    
                 </Setter.Value>
             </Setter>
         </Style>
@@ -81,18 +84,36 @@
             <Character:Statistics />
         </Viewbox>
 
+        
         <StatusBar x:Name="QuickBar" Focusable="False" FocusManager.IsFocusScope="False" Height="90" Width="604" Canvas.Bottom="5" Canvas.Left="200" Loaded="QuickBar_Loaded" >
+            <StatusBar.Background>
+                <ImageBrush ImageSource="/RPG game GUI;component/Resources/QuickBar.png" />
+            </StatusBar.Background>
             <StatusBar.Effect>
                 <BlurEffect x:Name="vbBarBlur" Radius="0"/>
             </StatusBar.Effect>
 
-            <Button x:Name="btnOne" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnTwo" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnThree" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnFour" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnFive" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnSix" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnSeven" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            
+
+            <Button x:Name="btnOne" Margin="10,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/death.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnTwo" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnThree" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnFour" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/inventory.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnFive" Margin="19.600,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnSix" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnSeven" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/stat.png"/>
+                </Button.Background>
+            </Button>
         </StatusBar>
 
     </Canvas>
