@@ -8,6 +8,9 @@
              d:DesignHeight="600" d:DesignWidth="800" Loaded="UserControl_Loaded">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/RPG game GUI;component/Resources/main_menu_textura.jpg" AlignmentX="Center" AlignmentY="Center" />
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="150" />
             <RowDefinition Height="1*" />
