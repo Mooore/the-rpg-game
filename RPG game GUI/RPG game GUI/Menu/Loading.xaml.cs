@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,7 +76,7 @@ namespace RPG_game_GUI.Menu
             string tips = Properties.Resources.tips;
 
             // Vygeneruje se náhodné číslo, které reprezentuje řádek s tipem (1 tip = 1 řádek)
-            int tip = random.Next(0, 6); // Musí se zvýšit druhé číslo, pokud se dopíší tipy (počet řádků + 1)
+            int tip = random.Next(0, 10); // Musí se zvýšit druhé číslo, pokud se dopíší tipy (počet řádků + 1)
             int counter = 0;
 
             // Vytvoření čtenáře pro řetězce
