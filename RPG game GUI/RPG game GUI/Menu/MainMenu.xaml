@@ -7,6 +7,39 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800" Loaded="UserControl_Loaded">
 
+    <UserControl.Resources>
+        <DropShadowBitmapEffect x:Key="GlowEffect" Color="Blue" ShadowDepth="0" Opacity="20" Softness="80" />
+        <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
+        
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="2,0,2,0" 
+                            BorderBrush="Transparent" 
+                            CornerRadius="10" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource GlowEffect}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource ClickEffect}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
     <Grid>
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/RPG game GUI;component/Resources/main_menu_textura.jpg" AlignmentX="Center" AlignmentY="Center" />
@@ -41,11 +74,36 @@
             </Canvas.Background>
         </Canvas>
 
-        <Button x:Name="btnStart" Content="New Game" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_NewGame" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="2" Width="165" Height="90"/>
-        <Button x:Name="btnLoad" Content="Load Game" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_LoadGame" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="3" Width="165" Height="90"/>
-        <Button x:Name="btnOptions" Content="Options" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Options" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="4" Width="165" Height="90" />
-        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Exit" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="6" Width="165" Height="60"/>
-        <Button x:Name="btnCredits" Content="Credits" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_Credits" FontFamily="Viner Hand ITC" FontSize="16" Grid.Column="6" Grid.Row="8" Width="100" Height="40"/>
+
+
+        <Button x:Name="btnStart" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_NewGame" Grid.Column="1" Grid.Row="2" Width="220" Height="70" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/main_menu_button_new_game.png" AlignmentX="Center" AlignmentY="Center" />
+            </Button.Background>
+            
+            
+        </Button>
+
+        <Button x:Name="btnLoad" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_LoadGame" Grid.Column="1" Grid.Row="3" Width="220" Height="70" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/main_menu_button_load_game.png" AlignmentX="Center" AlignmentY="Center" />
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnOptions" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Options" Grid.Column="1" Grid.Row="4" Width="220" Height="70" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/main_menu_button_options.png" AlignmentX="Center" AlignmentY="Center" />
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnExit" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_Exit" Grid.Column="1" Grid.Row="6" Width="220" Height="70" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/main_menu_button_exit.png" AlignmentX="Center" AlignmentY="Center" />
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnCredits" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_Credits" Grid.Column="6" Grid.Row="8" Grid.ColumnSpan="2" Width="140" Height="50" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/main_menu_button_credits.png" AlignmentX="Center" AlignmentY="Center" />
+            </Button.Background>
+        </Button>
 
 
         <Border x:Name="borOptions" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
