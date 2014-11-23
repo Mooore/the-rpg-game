@@ -272,9 +272,6 @@
     <Resource Include="Resources\mana.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\min_mapa.png" />
-  </ItemGroup>
-  <ItemGroup>
     <SplashScreen Include="Resources\main_menu_textura.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -386,6 +383,9 @@
   <ItemGroup>
     <Resource Include="Resources\Char_icons\char_icon.jpg" />
     <Resource Include="Resources\Char_icons\ninja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Minimap\minimap.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
