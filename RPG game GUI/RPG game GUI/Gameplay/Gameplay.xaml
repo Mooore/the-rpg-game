@@ -27,7 +27,7 @@
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
-                    
+
                 </Setter.Value>
             </Setter>
         </Style>
@@ -69,7 +69,7 @@
 
             <Ellipse Height="163" Stroke="Black" Width="165" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/min_mapa.png" />
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Minimap/minimap.png" />
                 </Ellipse.Fill>
             </Ellipse>
         </Viewbox>
@@ -84,7 +84,7 @@
             <Character:Statistics />
         </Viewbox>
 
-        
+
         <StatusBar x:Name="QuickBar" Focusable="False" FocusManager.IsFocusScope="False" Height="90" Width="604" Canvas.Bottom="5" Canvas.Left="200" Loaded="QuickBar_Loaded" >
             <StatusBar.Background>
                 <ImageBrush ImageSource="/RPG game GUI;component/Resources/QuickBar.png" />
@@ -93,7 +93,7 @@
                 <BlurEffect x:Name="vbBarBlur" Radius="0"/>
             </StatusBar.Effect>
 
-            
+
 
             <Button x:Name="btnOne" Margin="10,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
                 <Button.Background>
