@@ -58,7 +58,6 @@ namespace RPG_game_GUI.Gameplay
                     vbBarBlur.Radius = 0;
                     vbCharBlur.Radius = 0;
                     vbMapBlur.Radius = 0;
-                    
                 }
                 else
                 {
@@ -66,13 +65,14 @@ namespace RPG_game_GUI.Gameplay
                     vbBarBlur.Radius = 10;
                     vbCharBlur.Radius = 10;
                     vbMapBlur.Radius = 10;
+                    vbStatistics.Visibility = Visibility.Hidden;
                 }
             }
 
             /*
              * Zobrazení statistik
              */
-            if (e.Key == Key.C)
+            if (e.Key == Key.C && vbTriforce.Visibility == Visibility.Hidden)
             {
                 if (vbStatistics.Visibility == Visibility.Visible)
                 {

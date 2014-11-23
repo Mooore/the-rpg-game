@@ -29,6 +29,16 @@ namespace RPG_game_GUI.Character
         {
             (this.Parent as Viewbox).Visibility = Visibility.Hidden;
         }
+        private void UserControl_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            /*
+             * Skrytí statistik
+             */
+            if (e.Key == Key.C || e.Key == Key.Tab)
+            {
+                (this.Parent as Viewbox).Visibility = Visibility.Hidden;
+            }
+        }
 
     }
 }

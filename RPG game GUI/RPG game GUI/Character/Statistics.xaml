@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="350" BorderBrush="Black" 
+             d:DesignHeight="400" d:DesignWidth="350" BorderBrush="Black" PreviewKeyDown="UserControl_PreviewKeyDown" 
              BorderThickness="3">
 
     <UserControl.Resources>
@@ -17,6 +17,7 @@
                         <Border Name="border" 
                             BorderThickness="2"
                             Padding="4,2" 
+                            Focusable="False"
                             BorderBrush="Black" 
                             CornerRadius="8" 
                             Background="{TemplateBinding Background}">
@@ -48,7 +49,7 @@
         <Label Content="2" HorizontalAlignment="Left" Margin="89,140,0,0" VerticalAlignment="Top"/>
         <Label Content="Vlastnosti" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <Button Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="15" Height="15" Background="#FFAA2424" Click="Button_Click" />
+        <Button Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Left" Focusable="False" VerticalAlignment="Top" Width="15" Height="15" Background="#FFAA2424" Click="Button_Click" Margin="324,5,0,0" />
 
     </Grid>
 </UserControl>
