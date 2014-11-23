@@ -34,6 +34,12 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="80" />
         </Grid.ColumnDefinitions>
+        
+        <Canvas Name="title" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4">
+            <Canvas.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/title.png" AlignmentX="Center" AlignmentY="Top" />
+            </Canvas.Background>
+        </Canvas>
 
         <Button x:Name="btnStart" Content="New Game" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_NewGame" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="2" Width="165" Height="90"/>
         <Button x:Name="btnLoad" Content="Load Game" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_LoadGame" FontSize="22" FontFamily="Viner Hand ITC" FontWeight="Bold" Grid.Column="1" Grid.Row="3" Width="165" Height="90"/>
