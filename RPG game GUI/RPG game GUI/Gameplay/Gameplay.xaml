@@ -40,20 +40,23 @@
             <Viewbox.Effect>
                 <BlurEffect x:Name="vbCharBlur" Radius="0"/>
             </Viewbox.Effect>
+            <WrapPanel x:Name="CharBar" Height="70">
 
-            <WrapPanel x:Name="CharBar" Height="65">
-                <Ellipse Height="62" Margin="0,1,0,0" Stroke="Black" Width="70" Panel.ZIndex="1" >
+                <Ellipse Height="67" Margin="0,1,0,0" VerticalAlignment="Center" Stroke="Black" Width="74" Panel.ZIndex="1" >
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="/RPG game GUI;component/Resources/Char_icons/char_icon.jpg" />
                     </Ellipse.Fill>
                 </Ellipse>
-                <WrapPanel Background="Black" Height="49" Margin="-17,8,0,0" VerticalAlignment="Top" Width="136" >
-                    <WrapPanel Height="14" Width="114" Margin="13,10,0,0" >
+                <WrapPanel Height="90" Margin="-60,2.5,0,0" VerticalAlignment="Center" Width="185" >
+                    <WrapPanel.Background>
+                        <ImageBrush ImageSource="/RPG game GUI;component/Resources/frame.png" />
+                    </WrapPanel.Background>
+                    <WrapPanel Height="10" Width="170" Margin="-5,30,0,0" >
                         <WrapPanel.Background>
                             <ImageBrush ImageSource="/RPG game GUI;component/Resources/health.png" />
-                        </WrapPanel.Background>
+                        </WrapPanel.Background>                       
                     </WrapPanel>
-                    <WrapPanel Height="14" Width="114" Margin="13,5,0,0" >
+                    <WrapPanel Height="10" Width="170" Margin="-5,5,0,10">
                         <WrapPanel.Background>
                             <ImageBrush ImageSource="/RPG game GUI;component/Resources/mana.png" />
                         </WrapPanel.Background>
@@ -78,6 +81,8 @@
             <Viewbox x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" Panel.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Menu:Triforce Height="600" Width="800"/>
             </Viewbox>
+            
+
         </Grid>
 
         <Viewbox VerticalAlignment="Top" x:Name="vbStatistics" Stretch="none" Visibility="Hidden" Canvas.Left="80" Canvas.Top="258" >
