@@ -4,9 +4,117 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="400" d:DesignWidth="800">
     <Grid>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_Back"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Button     x:Name="btnLoad1" 
+                    Content="Saved game 1" 
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    Margin="10,10,10,10" 
+                    Width="auto" 
+                    MaxWidth="200" 
+                    MinWidth="100"
+                    Height="auto"
+                    MaxHeight="50"
+                    MinHeight="30" />
+        <Button     x:Name="btnLoad2" 
+                    Content="Saved game 2" 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    Margin="10,10,10,10" 
+                    Width="auto" 
+                    MaxWidth="200" 
+                    MinWidth="100"
+                    Height="auto"
+                    MaxHeight="50"
+                    MinHeight="30" />
+        <Button     x:Name="btnLoad3" 
+                    Content="Saved game 3" 
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    Margin="10,10,10,10" 
+                    Width="auto" 
+                    MaxWidth="200" 
+                    MinWidth="100"
+                    Height="auto"
+                    MaxHeight="50"
+                    MinHeight="30" />
+        <Button     x:Name="btnLoad4" 
+                    Content="Saved game 4" 
+                    Grid.Row="3" 
+                    Grid.Column="1" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    Margin="10,10,10,10" 
+                    Width="auto" 
+                    MaxWidth="200" 
+                    MinWidth="100"
+                    Height="auto"
+                    MaxHeight="50"
+                    MinHeight="30" />
+        <Button     x:Name="btnLoad5" 
+                    Content="Saved game 5" 
+                    Grid.Row="4" 
+                    Grid.Column="1" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    Margin="10,10,10,10" 
+                    Width="auto" 
+                    MaxWidth="200" 
+                    MinWidth="100"
+                    Height="auto"
+                    MaxHeight="50"
+                    MinHeight="30" />
+        <Button     x:Name="btnLoad6" 
+                    Content="Saved game 6" 
+                    Grid.Row="5" 
+                    Grid.Column="1" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    Margin="10,10,10,10" 
+                    Width="auto" 
+                    MaxWidth="200" 
+                    MinWidth="100"
+                    Height="auto"
+                    MaxHeight="50"
+                    MinHeight="30" />
+        <Button     x:Name="btnLoad7" 
+                    Content="Saved game 7" 
+                    Grid.Row="6" 
+                    Grid.Column="1" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    Margin="10,10,10,10" 
+                    Width="auto" 
+                    MaxWidth="200" 
+                    MinWidth="100"
+                    Height="auto"
+                    MaxHeight="50"
+                    MinHeight="30" />
+        <Button Grid.Row="7"  Grid.Column="2"  x:Name="btnBack" Content="Back" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Width="75" Click="Button_Click_Back"/>
     </Grid>
+
 </UserControl>
