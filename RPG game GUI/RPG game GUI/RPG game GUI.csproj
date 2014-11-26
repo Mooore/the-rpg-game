@@ -399,6 +399,18 @@
     <Resource Include="Resources\credits_text.png" />
     <Resource Include="Resources\credits_text2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\back-button.png" />
+    <Resource Include="Resources\play-game-1-button.png" />
+    <Resource Include="Resources\play-game-2-button.png" />
+    <Resource Include="Resources\play-game-3-button.png" />
+    <Resource Include="Resources\play-game-4-button.png" />
+    <Resource Include="Resources\play-game-5-button.png" />
+    <Resource Include="Resources\play-game-6-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\title-load-game.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

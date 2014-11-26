@@ -34,5 +34,35 @@ namespace RPG_game_GUI.Menu
         {
             throw new NotImplementedException();
         }
+
+        private void btnLoad1_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu.Loading());
+        }
+
+        private void btnLoad2_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu.Loading());
+        }
+
+        private void btnLoad3_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu.Loading());
+        }
+
+        private void btnLoad4_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu.Loading());
+        }
+
+        private void btnLoad5_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu.Loading());
+        }
+
+        private void btnLoad6_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu.Loading());
+        }
     }
 }

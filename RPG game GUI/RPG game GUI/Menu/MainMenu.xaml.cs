@@ -14,17 +14,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace RPG_game_GUI.Menu
 {
     /// <summary>
     /// Interaction logic for MainMenu.xaml
     /// </summary>
+    /// 
+
+    
+
     public partial class MainMenu : UserControl, ISwitchable
     {
         public MainMenu()
         {
             InitializeComponent();
-
+            
             if(App.Current.Properties["is_option"].ToString() == "True") 
             {
                 borOptions.Visibility = Visibility.Visible;
@@ -123,7 +128,28 @@ namespace RPG_game_GUI.Menu
 
         private void Button_Click_LoadGame(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new Menu.LoadGame());
+            //Switcher.Switch(new Menu.LoadGame());
+            if (borLoadGame.Visibility == Visibility.Visible)
+            {
+                if (Convert.ToBoolean(App.Current.Properties["is_load"]) == true)
+                {
+                    App.Current.Properties["is_load"] = false;
+                    
+                    borLoadGame.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    App.Current.Properties["is_load"] = true;
+                    borLoadGame.Child = new Menu.LoadGame();
+                }
+            }
+            else
+            {
+                App.Current.Properties["is_option"] = false;
+                borOptions.Visibility = Visibility.Hidden;
+                App.Current.Properties["is_load"] = true;
+                borLoadGame.Visibility = Visibility.Visible;
+            }
         }
 
         private void Button_Click_Options(object sender, RoutedEventArgs e)
@@ -143,6 +169,8 @@ namespace RPG_game_GUI.Menu
             }
             else 
             {
+                App.Current.Properties["is_load"] = false;
+                borLoadGame.Visibility = Visibility.Hidden;
                 App.Current.Properties["is_option"] = true;
                 borOptions.Visibility = Visibility.Visible;
             }

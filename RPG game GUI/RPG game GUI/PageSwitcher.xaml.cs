@@ -16,6 +16,7 @@ namespace RPG_game_GUI
             App.Current.Properties["width"] = SystemParameters.PrimaryScreenWidth;
             App.Current.Properties["height"] = SystemParameters.PrimaryScreenHeight;
             App.Current.Properties["is_option"] = false;
+            App.Current.Properties["is_load"] = false;
             
             if ((SystemParameters.PrimaryScreenWidth == 1920) && (SystemParameters.PrimaryScreenHeight == 1080))
             {
