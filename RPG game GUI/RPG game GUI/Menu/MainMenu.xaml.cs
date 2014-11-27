@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Timers;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,6 +14,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
+using System.Windows.Threading;
+using System.IO;
+
 
 
 namespace RPG_game_GUI.Menu
@@ -128,27 +133,80 @@ namespace RPG_game_GUI.Menu
 
         private void Button_Click_LoadGame(object sender, RoutedEventArgs e)
         {
-            //Switcher.Switch(new Menu.LoadGame());
-            if (borLoadGame.Visibility == Visibility.Visible)
+            if (Convert.ToBoolean(App.Current.Properties["is_load"]) == true)
             {
-                if (Convert.ToBoolean(App.Current.Properties["is_load"]) == true)
-                {
-                    App.Current.Properties["is_load"] = false;
+                App.Current.Properties["is_load"] = false;
                     
-                    borLoadGame.Visibility = Visibility.Hidden;
-                }
-                else
-                {
-                    App.Current.Properties["is_load"] = true;
-                    borLoadGame.Child = new Menu.LoadGame();
-                }
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, borLoadGame);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, borLoadGame);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+                    
+                sb.Begin();
+                sb2.Begin();
             }
             else
             {
+                if (borLoadGame.Visibility == Visibility.Hidden)
+                {
+                    borLoadGame.Visibility = Visibility.Visible;
+                }
+
                 App.Current.Properties["is_option"] = false;
                 borOptions.Visibility = Visibility.Hidden;
                 App.Current.Properties["is_load"] = true;
-                borLoadGame.Visibility = Visibility.Visible;
+
+                DoubleAnimation fade_in = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_in.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_in);
+
+                Storyboard.SetTarget(fade_in, borLoadGame);
+                Storyboard.SetTargetProperty(fade_in, new PropertyPath("(Opacity)"));
+
+                fade_in.From = 0;
+                fade_in.To = 1;
+
+                ThicknessAnimation margin_in = new ThicknessAnimation();
+                margin_in.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_in);
+
+                Storyboard.SetTarget(margin_in, borLoadGame);
+                Storyboard.SetTargetProperty(margin_in, new PropertyPath("(Margin)"));
+
+                margin_in.From = new Thickness(0, 100, 0, 0);
+                margin_in.To = new Thickness(0, 0, 0, 0);
+
+                sb.Begin();
+                sb2.Begin();
             }
         }
 
