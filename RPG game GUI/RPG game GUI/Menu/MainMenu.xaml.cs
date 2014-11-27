@@ -26,9 +26,6 @@ namespace RPG_game_GUI.Menu
     /// Interaction logic for MainMenu.xaml
     /// </summary>
     /// 
-
-    
-
     public partial class MainMenu : UserControl, ISwitchable
     {
         public MainMenu()
@@ -126,9 +123,41 @@ namespace RPG_game_GUI.Menu
             btnCredits.Margin = new Thickness(0, 10, 0, 0);
         }
 
+        /// <summary>
+        /// Funkce která zajístí spoždění pro vytracení menu a přepnutí do Loading screen po určitém čase.
+        /// </summary>
+        /// <param name="seconds">Kolik sekund bude čekat</param>
+        private void Wait(int seconds)
+        {
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(seconds) };
+            timer.Start();
+            timer.Tick += (sender, args) =>
+            {
+                timer.Stop();
+                Switcher.Switch(new Menu.Loading());
+            };
+        }
+
         private void Button_Click_NewGame(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new Menu.Loading());
+            Grid.SetZIndex(BlackOut, 10);
+
+            DoubleAnimation Fade = new DoubleAnimation();
+            Fade.Duration = new Duration(TimeSpan.FromSeconds(1));
+
+            Storyboard story = new Storyboard();
+            story.Duration = Fade.Duration;
+            story.Children.Add(Fade);
+
+            Storyboard.SetTarget(Fade, BlackOut);
+            Storyboard.SetTargetProperty(Fade, new PropertyPath("(Opacity)"));
+
+            Fade.From = 0;
+            Fade.To = 1;
+
+            story.Begin();
+
+            Wait(2);
         }
 
         private void Button_Click_LoadGame(object sender, RoutedEventArgs e)

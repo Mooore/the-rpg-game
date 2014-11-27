@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RPG_game_GUI.Menu" x:Class="RPG_game_GUI.Menu.MainMenu" 
              mc:Ignorable="d" 
+             x:Name="ucMainMenu"
              d:DesignHeight="600" d:DesignWidth="800" Loaded="UserControl_Loaded">
 
     <UserControl.Resources>
@@ -67,13 +68,13 @@
             <ColumnDefinition Width="80" />
         </Grid.ColumnDefinitions>
         
+        <Rectangle x:Name="BlackOut" Grid.ColumnSpan="10" Grid.RowSpan="10" Fill="Black" Stretch="Fill" Opacity="0" Panel.ZIndex="0" />
+
         <Canvas Name="title" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4">
             <Canvas.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/title.png" AlignmentX="Center" AlignmentY="Top" />
             </Canvas.Background>
         </Canvas>
-
-
 
         <Button x:Name="btnStart" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click_NewGame" Grid.Column="1" Grid.Row="2" Width="220" Height="70" BorderThickness="0">
             <Button.Background>

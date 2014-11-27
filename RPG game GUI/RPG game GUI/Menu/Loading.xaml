@@ -8,13 +8,15 @@
     <UserControl.Background>
         <ImageBrush ImageSource="/RPG game GUI;component/Resources/background.jpg" Stretch="UniformToFill"/>
     </UserControl.Background>
-
+    
     <UserControl.Resources>
         <Storyboard x:Key="MovingCard"/>
     </UserControl.Resources>
     <Grid>
-        
-        
+
+        <Rectangle x:Name="BlackOut" Grid.ColumnSpan="10" Grid.RowSpan="10" Fill="Black" Stretch="Fill" Opacity="0" Panel.ZIndex="0" />
+
+
         <Image x:Name="Card" Height="500" Width="300" Source="/RPG game GUI;component/Resources/Tarots/0.png"  Loaded="Card_Loaded" RenderTransformOrigin="0.5,0.5" Margin="70,200,654,68">
             <Image.RenderTransform>
                 <TransformGroup>

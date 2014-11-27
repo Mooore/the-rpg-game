@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.IO;
+using System.Windows.Media.Animation;
 
 namespace RPG_game_GUI.Menu
 {
@@ -29,7 +30,29 @@ namespace RPG_game_GUI.Menu
 
             InitializeComponent();
 
-            Wait(3);
+            FadeIn();
+
+            Wait(5);
+        }
+
+        private void FadeIn()
+        {
+            Grid.SetZIndex(BlackOut, 10);
+
+            DoubleAnimation Fade = new DoubleAnimation();
+            Fade.Duration = new Duration(TimeSpan.FromSeconds(1));
+
+            Storyboard story = new Storyboard();
+            story.Duration = Fade.Duration;
+            story.Children.Add(Fade);
+
+            Storyboard.SetTarget(Fade, BlackOut);
+            Storyboard.SetTargetProperty(Fade, new PropertyPath("(Opacity)"));
+
+            Fade.From = 1;
+            Fade.To = 0;
+
+            story.Begin();
         }
 
         /// <summary>
@@ -46,7 +69,7 @@ namespace RPG_game_GUI.Menu
                 Switcher.Switch(new Gameplay.Gameplay());
             };
         }
-        
+
         private void Card_Loaded(object sender, RoutedEventArgs e)
         {
             /*
