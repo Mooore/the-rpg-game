@@ -35,10 +35,16 @@
 
 
     <Canvas x:Name="GameCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="{Binding ElementName=GameLayer, Path=Width}" Height="{Binding ElementName=GameLayer, Path=ActualHeight}" Loaded="GameCanvas_Loaded">
-        <Canvas.Background>
-            <ImageBrush Stretch="UniformToFill" ImageSource="/RPG game GUI;component/Resources/background-gameplay.jpg" AlignmentX="Center" AlignmentY="Center">
-            </ImageBrush>
-        </Canvas.Background>
+        <Grid Width="{Binding ElementName=GameLayer, Path=Width}" Height="{Binding ElementName=GameLayer, Path=ActualHeight}">
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="/RPG game GUI;component/Resources/background-gameplay.jpg" AlignmentX="Center" AlignmentY="Center">
+                </ImageBrush>
+            </Grid.Background>
+            <Grid.Effect>
+                <BlurEffect x:Name="vbBackground" Radius="0"/>
+            </Grid.Effect>
+        </Grid>
+        
 
         <Viewbox x:Name="vbCharBar" Height="80" Canvas.Top="20" Canvas.Left="20" Stretch="Uniform">
             <Viewbox.Effect>
@@ -83,7 +89,7 @@
 
         <!-- Triforce  -->
         <Grid Height="{Binding ElementName=GameLayer, Path=Height}" Width="{Binding ElementName=GameLayer, Path=Width}">
-            <Viewbox x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" Panel.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Viewbox x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Visible" Panel.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Menu:Triforce Height="600" Width="800"/>
             </Viewbox>
         </Grid>

@@ -279,23 +279,91 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Label x:Name="lbStat" Content="Statistiky" Canvas.Left="292" Canvas.Top="130" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbInv" Content="Inventář" Canvas.Left="339" Canvas.Top="116" FontFamily="Tekton Pro Ext" />
-            <Label x:Name="lbChar" Content="Charakter" Canvas.Left="370" Canvas.Top="111" FontFamily="Tekton Pro Ext" />
-            <Label x:Name="lbtalent" Content="Talenty" Canvas.Left="414" Canvas.Top="117" FontFamily="Tekton Pro Ext" />
-            <Label x:Name="lbAbility" Content="Dovednosti" Canvas.Left="450" Canvas.Top="130" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbMapa" Content="Mapa" Canvas.Left="215" Canvas.Top="264" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbObchod" Content="Obchod" Canvas.Left="201" Canvas.Top="297" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbQuest" Content="Úkoly" Canvas.Left="214" Canvas.Top="330" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbFrakce" Content="Frakce" Canvas.Left="223" Canvas.Top="358" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbZpravy" Content="Zprávy" Canvas.Left="244" Canvas.Top="384" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbPratele" Content="Přátelé" Canvas.Left="267" Canvas.Top="408" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbWiki" Content="Databáze" Canvas.Left="289" Canvas.Top="426" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbNevim" Content="Neklikat" Canvas.Left="485" Canvas.Top="410" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbSettings" Content="Nastavení" Canvas.Left="509" Canvas.Top="387" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbExit" Content="Konec" Canvas.Left="527" Canvas.Top="361" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbLoad" Content="Načíst" Canvas.Left="539" Canvas.Top="329" FontFamily="Tekton Pro Ext"/>
-            <Label x:Name="lbSave" Content="Uložit" Canvas.Left="543" Canvas.Top="296" FontFamily="Tekton Pro Ext"/>
+            <Label x:Name="lbStat" Content="Statistiky" Canvas.Left="292" Canvas.Top="130" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbInv" Content="Inventář" Canvas.Left="339" Canvas.Top="116" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbChar" Content="Charakter" Canvas.Left="370" Canvas.Top="111" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbtalent" Content="Talenty" Canvas.Left="414" Canvas.Top="117" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbAbility" Content="Dovednosti" Canvas.Left="450" Canvas.Top="130" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbMapa" Content="Mapa" Canvas.Left="215" Canvas.Top="264" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbObchod" Content="Obchod" Canvas.Left="201" Canvas.Top="297" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbQuest" Content="Úkoly" Canvas.Left="214" Canvas.Top="330" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbFrakce" Content="Frakce" Canvas.Left="223" Canvas.Top="358" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbZpravy" Content="Zprávy" Canvas.Left="244" Canvas.Top="384" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbPratele" Content="Přátelé" Canvas.Left="267" Canvas.Top="408" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbWiki" Content="Databáze" Canvas.Left="289" Canvas.Top="426" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbNevim" Content="Neklikat" Canvas.Left="485" Canvas.Top="410" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbSettings" Content="Nastavení" Canvas.Left="509" Canvas.Top="387" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbExit" Content="Konec" Canvas.Left="527" Canvas.Top="361" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbLoad" Content="Načíst" Canvas.Left="539" Canvas.Top="329" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lbSave" Content="Uložit" Canvas.Left="543" Canvas.Top="296" FontFamily="Tekton Pro Ext" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
+                </Label.Effect>
+            </Label>
         </Canvas>
     </Grid>
 </UserControl>

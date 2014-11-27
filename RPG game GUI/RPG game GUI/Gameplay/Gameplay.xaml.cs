@@ -58,6 +58,7 @@ namespace RPG_game_GUI.Gameplay
                     vbBarBlur.Radius = 0;
                     vbCharBlur.Radius = 0;
                     vbMapBlur.Radius = 0;
+                    vbBackground.Radius = 0;
                 }
                 else
                 {
@@ -65,6 +66,7 @@ namespace RPG_game_GUI.Gameplay
                     vbBarBlur.Radius = 10;
                     vbCharBlur.Radius = 10;
                     vbMapBlur.Radius = 10;
+                    vbBackground.Radius = 10;
                     vbStatistics.Visibility = Visibility.Hidden;
                 }
             }
