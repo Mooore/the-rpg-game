@@ -107,7 +107,7 @@
 
         <Border x:Name="borOptions" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
             <local:Options />
-            <Border.Style>
+            <!--<Border.Style>
                 <Style TargetType="{x:Type Border}">
                     <Style.Triggers>
                         <Trigger Property="Visibility" Value="Visible">
@@ -122,7 +122,7 @@
                         </Trigger>
                     </Style.Triggers>
                 </Style>
-            </Border.Style>
+            </Border.Style>-->
         </Border>
         <Border x:Name="borLoadGame" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
             <local:LoadGame />

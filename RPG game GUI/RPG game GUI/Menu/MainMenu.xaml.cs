@@ -212,27 +212,81 @@ namespace RPG_game_GUI.Menu
 
         private void Button_Click_Options(object sender, RoutedEventArgs e)
         {
-            if (borOptions.Visibility == Visibility.Visible)
+            if (Convert.ToBoolean(App.Current.Properties["is_option"]) == true)
             {
-                if (Convert.ToBoolean(App.Current.Properties["is_option"]) == true)
-                {
-                    App.Current.Properties["is_option"] = false;
-                    borOptions.Visibility = Visibility.Hidden;
-                }
-                else
-                {
-                    App.Current.Properties["is_option"] = true;
-                    borOptions.Child = new Menu.Options();
-                }
+                App.Current.Properties["is_option"] = false;
+
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, borOptions);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, borOptions);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+
+                sb.Begin();
+                sb2.Begin();
             }
-            else 
+            else
             {
+                if (borOptions.Visibility == Visibility.Hidden)
+                {
+                    borOptions.Visibility = Visibility.Visible;
+                }
+
                 App.Current.Properties["is_load"] = false;
                 borLoadGame.Visibility = Visibility.Hidden;
                 App.Current.Properties["is_option"] = true;
-                borOptions.Visibility = Visibility.Visible;
-            }
-                
+
+                DoubleAnimation fade_in = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_in.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_in);
+
+                Storyboard.SetTarget(fade_in, borOptions);
+                Storyboard.SetTargetProperty(fade_in, new PropertyPath("(Opacity)"));
+
+                fade_in.From = 0;
+                fade_in.To = 1;
+
+                ThicknessAnimation margin_in = new ThicknessAnimation();
+                margin_in.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_in);
+
+                Storyboard.SetTarget(margin_in, borOptions);
+                Storyboard.SetTargetProperty(margin_in, new PropertyPath("(Margin)"));
+
+                margin_in.From = new Thickness(0, 100, 0, 0);
+                margin_in.To = new Thickness(0, 0, 0, 0);
+
+                sb.Begin();
+                sb2.Begin();
+            }    
         }
         private void Button_Click_Exit(object sender, RoutedEventArgs e)
         {

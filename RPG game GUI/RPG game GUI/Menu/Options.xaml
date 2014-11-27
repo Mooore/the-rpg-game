@@ -54,6 +54,12 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
+        <Canvas Name="title_load_game" Grid.Column="1" Grid.Row="0" Height="80" VerticalAlignment="Top">
+            <Canvas.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/title-options-game.png" AlignmentX="Center" AlignmentY="Top" />
+            </Canvas.Background>
+        </Canvas>
+        
         <Button     x:Name="btnVideo"
                     Style="{StaticResource MyButtonStyle}" 
                     Grid.Row="1" 
