@@ -11,7 +11,11 @@
     <UserControl.Resources>
         <DropShadowBitmapEffect x:Key="GlowEffect" Color="Blue" ShadowDepth="0" Opacity="20" Softness="80" />
         <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
-        
+
+        <Storyboard x:Key="ThemeBackground">
+            <MediaTimeline Storyboard.TargetName="ThemeMedia" Source="Resources\Sounds\Theme.mp3" />
+        </Storyboard>
+
         <Style x:Key="MyButtonStyle" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="Margin" Value="5"/>
@@ -40,6 +44,12 @@
         </Style>
     </UserControl.Resources>
 
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded" SourceName="ucMainMenu">
+            <BeginStoryboard Storyboard="{StaticResource ThemeBackground}" />
+        </EventTrigger>
+    </UserControl.Triggers>
+
     <Grid x:Name="main_grid">
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/RPG game GUI;component/Resources/main_menu_textura.jpg" AlignmentX="Center" AlignmentY="Center" />
@@ -67,7 +77,9 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="80" />
         </Grid.ColumnDefinitions>
-        
+
+        <MediaElement x:Name="ThemeMedia" />
+
         <Rectangle x:Name="BlackOut" Grid.ColumnSpan="10" Grid.RowSpan="10" Fill="Black" Stretch="Fill" Opacity="0" Panel.ZIndex="0" />
 
         <Canvas Name="title" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4">
@@ -144,7 +156,7 @@
                 </Style>
             </Border.Style>-->
         </Border>
-        <Label x:Name="lbVersion" Content="v. " HorizontalAlignment="Left" Grid.Row="8" Grid.ColumnSpan="2" VerticalAlignment="Bottom"/>
+        <Label x:Name="lbVersion" Content="v. " HorizontalAlignment="Left" Grid.Row="8" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Foreground="White"/>
 
 
     </Grid>
