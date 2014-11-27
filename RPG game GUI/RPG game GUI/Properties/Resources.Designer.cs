@@ -61,9 +61,15 @@ namespace RPG_game_GUI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Věděli jste, že tato loading screen je tady jenom proto, že je cool?
-        ///Na vytvoření tohoto GUI padlo přibližně 124,8 hrnku kávy.
-        ///Na poslední chvíli se vše stihlo..
+        ///   Looks up a localized string similar to Věděli jste, že tohle načítání je tady jenom proto, že vypadá dobře?
+        ///Na vytvoření tohoto GUI bylo spotřebováno přibližně 124,8 hrnků kávy.
+        ///Na poslední chvíli se vše stihlo.
+        ///Můžete zde vidět až 78 karet!
+        ///Věděli jste, že tipy jsou tu jenom proto, že je chtěl vedoucí týmu?
+        ///Na počátku bylo světlo. A před tím počátkem byla tma ...
+        ///Víte jak se leze na skleněnou kouli? Blbě.
+        ///Před započetím hry doporučujeme návštěvu toalety a nákup sušeného masa.
+        ///Pokud chcete mít klidný spánek zvolte si jinou školu než my!        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string tips {
             get {
