@@ -54,7 +54,7 @@
                     <WrapPanel Height="10" Width="170" Margin="-5,30,0,0" >
                         <WrapPanel.Background>
                             <ImageBrush ImageSource="/RPG game GUI;component/Resources/health.png" />
-                        </WrapPanel.Background>                       
+                        </WrapPanel.Background>
                     </WrapPanel>
                     <WrapPanel Height="10" Width="170" Margin="-5,5,0,10">
                         <WrapPanel.Background>
@@ -77,18 +77,17 @@
             </Ellipse>
         </Viewbox>
 
+        <!-- Triforce  -->
         <Grid Height="{Binding ElementName=GameLayer, Path=Height}" Width="{Binding ElementName=GameLayer, Path=Width}">
             <Viewbox x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" Panel.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Menu:Triforce Height="600" Width="800"/>
             </Viewbox>
-            
-
         </Grid>
 
-        <Viewbox VerticalAlignment="Top" x:Name="vbStatistics" Stretch="none" Visibility="Hidden" Canvas.Left="80" Canvas.Top="258" >
-            <Character:Statistics />
+        <!-- Okno pro statistiky  -->
+        <Viewbox VerticalAlignment="Top" x:Name="vbStatistics" Visibility="Hidden" Canvas.Left="83" Canvas.Top="140" Stretch="Fill" >
+            <Character:Statistics Height="500" Width="400" />
         </Viewbox>
-
 
         <StatusBar x:Name="QuickBar" Focusable="False" FocusManager.IsFocusScope="False" Height="90" Width="604" Canvas.Bottom="5" Canvas.Left="200" Loaded="QuickBar_Loaded" >
             <StatusBar.Background>

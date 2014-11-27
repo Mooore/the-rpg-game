@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="350" BorderBrush="Black" PreviewKeyDown="UserControl_PreviewKeyDown" 
-             BorderThickness="3">
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="500" BorderBrush="Black" 
+             PreviewKeyDown="UserControl_PreviewKeyDown" 
+             BorderThickness="1">
 
     <UserControl.Resources>
         <Style x:Key="MyButtonStyle" TargetType="Button">
@@ -15,7 +15,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border Name="border" 
-                            BorderThickness="2"
+                            BorderThickness="0"
                             Padding="4,2" 
                             Focusable="False"
                             BorderBrush="Black" 
@@ -28,30 +28,259 @@
             </Setter>
         </Style>
     </UserControl.Resources>
+    <UserControl.Background>
+        <ImageBrush ImageSource="/RPG game GUI;component/Resources/WindowLight.jpg" Stretch="UniformToFill"/>
+    </UserControl.Background>
 
 
     <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <GradientStop Color="White" Offset="0"/>
-                <GradientStop Color="#FF939AE8" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Label Content="Síla:" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" FontWeight="SemiBold"/>
-        <Label Content="Pohyblivost:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" FontWeight="SemiBold"/>
-        <Label Content="8" HorizontalAlignment="Left" Margin="89,48,0,0" VerticalAlignment="Top"/>
-        <Label Content="Inteligence:" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" FontWeight="SemiBold"/>
-        <Label Content="Charisma:" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" FontWeight="SemiBold"/>
-        <Label Content="Štěstí:" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" FontWeight="SemiBold"/>
-        <Label Content="8" HorizontalAlignment="Left" Margin="89,74,0,0" VerticalAlignment="Top"/>
-        <Label Content="15" HorizontalAlignment="Left" Margin="89,100,0,0" VerticalAlignment="Top"/>
-        <Label Content="12" HorizontalAlignment="Left" Margin="89,126,0,0" VerticalAlignment="Top"/>
-        <Label Content="2" HorizontalAlignment="Left" Margin="89,152,0,0" VerticalAlignment="Top"/>
-        <Label Content="Vlastnosti" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Thumb x:Name="ThumbPanel" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="344" DragDelta="Thumb_DragDelta"/>
-        <Button Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="15" Height="15" Background="#FFAA2424" Click="Button_Click" Margin="0,3,2,0" />
-        
-       
-        
+        <Rectangle Height="10" Width="10" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+        <Thumb x:Name="ThumbPanel" VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="Transparent" Foreground="Transparent" Height="20" DragDelta="Thumb_DragDelta" Opacity="0" />
+        <Button x:Name="btnExit" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Height="61" Click="Button_Click" Margin="0,-25,-25,0" RenderTransformOrigin="0.5,0.5" >
+            <Button.Background>
+                <ImageBrush ImageSource="/RPG game GUI;component/Resources/crossButton.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform />
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter" SourceName="btnExit">
+                    <BeginStoryboard >
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Button.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" 
+                                To="360" Duration="0:0:2"
+                                RepeatBehavior="Forever">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave" SourceName="btnExit">
+                    <BeginStoryboard >
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Button.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" >
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Label Content="Síla:" HorizontalAlignment="Left" Margin="61,96,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Pohyblivost:" HorizontalAlignment="Left" Margin="61,114,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="8" HorizontalAlignment="Left" Margin="143,96,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Inteligence:" HorizontalAlignment="Left" Margin="61,133,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Charisma:" HorizontalAlignment="Left" Margin="61,153,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Štěstí:" HorizontalAlignment="Left" Margin="61,172,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="8" HorizontalAlignment="Left" Margin="143,114,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="15" HorizontalAlignment="Left" Margin="143,133,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="12" HorizontalAlignment="Left" Margin="143,153,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="2" HorizontalAlignment="Left" Margin="143,172,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Vlastnosti:" HorizontalAlignment="Left" Margin="61,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Na blízko:" HorizontalAlignment="Left" Margin="203,99,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Kritický zásah:" HorizontalAlignment="Left" Margin="203,116,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="3 - 5" HorizontalAlignment="Left" Margin="304,99,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Na dálku:" HorizontalAlignment="Left" Margin="203,137,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Kritický zásah:" HorizontalAlignment="Left" Margin="203,158,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="8 %" HorizontalAlignment="Left" Margin="304,116,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="10 - 15" HorizontalAlignment="Left" Margin="304,137,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="23%" HorizontalAlignment="Left" Margin="304,158,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Útok:" HorizontalAlignment="Left" Margin="203,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Střelné:" HorizontalAlignment="Left" Margin="89,229,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Magie:" HorizontalAlignment="Left" Margin="89,249,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="18" HorizontalAlignment="Left" Margin="167,229,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Bodné:" HorizontalAlignment="Left" Margin="89,269,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Řezné:" HorizontalAlignment="Left" Margin="89,290,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Tupé:" HorizontalAlignment="Left" Margin="89,310,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="8" HorizontalAlignment="Left" Margin="167,249,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="12" HorizontalAlignment="Left" Margin="167,269,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="10" HorizontalAlignment="Left" Margin="167,290,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="6" HorizontalAlignment="Left" Margin="167,310,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Ochrana:" HorizontalAlignment="Left" Margin="89,200,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Radiace:" HorizontalAlignment="Left" Margin="200,229,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Popálení:" HorizontalAlignment="Left" Margin="200,249,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="22" HorizontalAlignment="Left" Margin="278,229,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Kyselina:" HorizontalAlignment="Left" Margin="200,269,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Exploze:" HorizontalAlignment="Left" Margin="200,290,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Jed:" HorizontalAlignment="Left" Margin="200,310,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="18" HorizontalAlignment="Left" Margin="278,249,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="5" HorizontalAlignment="Left" Margin="278,269,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="11" HorizontalAlignment="Left" Margin="278,290,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content="0" HorizontalAlignment="Left" Margin="278,310,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+
+
     </Grid>
 </UserControl>

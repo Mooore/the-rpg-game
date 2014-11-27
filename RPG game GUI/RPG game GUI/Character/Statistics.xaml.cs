@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace RPG_game_GUI.Character
 {
@@ -39,7 +40,9 @@ namespace RPG_game_GUI.Character
                 (this.Parent as Viewbox).Visibility = Visibility.Hidden;
             }
         }
-
+        /*
+         * Zajišťuje, že je okno přetahovatelné a dá se volně umístit, kde uživatel chce.
+         */
         private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
         {
             Canvas.SetLeft(this.Parent as Viewbox, Canvas.GetLeft(this.Parent as Viewbox) + e.HorizontalChange);
