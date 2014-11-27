@@ -40,7 +40,7 @@
         </Style>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid x:Name="main_grid">
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/RPG game GUI;component/Resources/main_menu_textura.jpg" AlignmentX="Center" AlignmentY="Center" />
         </Grid.Background>

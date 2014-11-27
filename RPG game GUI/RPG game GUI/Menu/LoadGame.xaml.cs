@@ -32,7 +32,8 @@ namespace RPG_game_GUI.Menu
             //(this.Parent as Border);
 
             App.Current.Properties["is_load"] = false;
-            
+            (this.Parent as Border).IsEnabled = false;
+
             DoubleAnimation fade_out = new DoubleAnimation();
             Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
             fade_out.Duration = animate_dur;

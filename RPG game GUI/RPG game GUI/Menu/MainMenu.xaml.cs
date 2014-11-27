@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using System.IO;
+using System.Xaml;
 
 
 
@@ -164,7 +165,8 @@ namespace RPG_game_GUI.Menu
         {
             if (Convert.ToBoolean(App.Current.Properties["is_load"]) == true)
             {
-                App.Current.Properties["is_load"] = false; 
+                App.Current.Properties["is_load"] = false;
+                borLoadGame.IsEnabled = false;
                     
                 DoubleAnimation fade_out = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
@@ -242,6 +244,11 @@ namespace RPG_game_GUI.Menu
 
                 App.Current.Properties["is_load"] = true;
                 
+                Panel.SetZIndex(borOptions, 1);
+                borOptions.IsEnabled = false;
+                Panel.SetZIndex(borLoadGame, 10);
+                borLoadGame.IsEnabled = true;
+                
                 DoubleAnimation fade_in = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
                 fade_in.Duration = animate_dur;
@@ -279,6 +286,7 @@ namespace RPG_game_GUI.Menu
             if (Convert.ToBoolean(App.Current.Properties["is_option"]) == true)
             {
                 App.Current.Properties["is_option"] = false;
+                borOptions.IsEnabled = false;
 
                 DoubleAnimation fade_out = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
@@ -321,7 +329,9 @@ namespace RPG_game_GUI.Menu
                 {
                     //borLoadGame.Visibility = Visibility.Hidden;
                     App.Current.Properties["is_load"] = false;
-                   
+
+                    
+                        
                     DoubleAnimation fade_out = new DoubleAnimation();
                     Duration animate_dur1 = new Duration(TimeSpan.FromSeconds(1.5));
                     fade_out.Duration = animate_dur1;
@@ -354,7 +364,11 @@ namespace RPG_game_GUI.Menu
                 }
 
                 App.Current.Properties["is_option"] = true;
-                
+
+                Panel.SetZIndex(borLoadGame, 1);
+                borLoadGame.IsEnabled = false;
+                Panel.SetZIndex(borOptions, 10);
+                borOptions.IsEnabled = true;
                 
                 DoubleAnimation fade_in = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));

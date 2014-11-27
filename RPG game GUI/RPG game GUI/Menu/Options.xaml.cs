@@ -30,6 +30,7 @@ namespace RPG_game_GUI.Menu
         {
             //Switcher.Switch(new Menu.MainMenu());
             App.Current.Properties["is_option"] = false;
+            (this.Parent as Border).IsEnabled = false;
 
             DoubleAnimation fade_out = new DoubleAnimation();
             Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));

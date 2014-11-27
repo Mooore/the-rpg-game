@@ -35,6 +35,9 @@
 
 
     <Canvas x:Name="GameCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="{Binding ElementName=GameLayer, Path=Width}" Height="{Binding ElementName=GameLayer, Path=ActualHeight}" Loaded="GameCanvas_Loaded">
+        <Canvas.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/RPG game GUI;component/Resources/background-gameplay.jpg" AlignmentX="Center" AlignmentY="Center" />
+        </Canvas.Background>
 
         <Viewbox x:Name="vbCharBar" Height="80" Canvas.Top="20" Canvas.Left="20" Stretch="Uniform">
             <Viewbox.Effect>
