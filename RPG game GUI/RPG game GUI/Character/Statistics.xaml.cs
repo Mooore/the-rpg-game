@@ -40,5 +40,11 @@ namespace RPG_game_GUI.Character
             }
         }
 
+        private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
+        {
+            Canvas.SetLeft(this.Parent as Viewbox, Canvas.GetLeft(this.Parent as Viewbox) + e.HorizontalChange);
+            Canvas.SetTop(this.Parent as Viewbox, Canvas.GetTop(this.Parent as Viewbox) + e.VerticalChange);
+        }
+
     }
 }

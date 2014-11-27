@@ -29,7 +29,7 @@ namespace RPG_game_GUI.Menu
 
             InitializeComponent();
 
-            Wait(12);
+            Wait(3);
         }
 
         /// <summary>
