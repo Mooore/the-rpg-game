@@ -89,7 +89,7 @@
 
         <!-- Triforce  -->
         <Grid Height="{Binding ElementName=GameLayer, Path=Height}" Width="{Binding ElementName=GameLayer, Path=Width}">
-            <Viewbox x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Visible" Panel.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Viewbox x:Name="vbTriforce" Stretch="UniformToFill" Visibility="Hidden" Panel.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Menu:Triforce Height="600" Width="800"/>
             </Viewbox>
         </Grid>
