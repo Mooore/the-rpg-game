@@ -32,7 +32,7 @@ namespace RPG_game_GUI.Menu
             //(this.Parent as Border);
 
             App.Current.Properties["is_load"] = false;
-
+            
             DoubleAnimation fade_out = new DoubleAnimation();
             Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
             fade_out.Duration = animate_dur;
@@ -71,31 +71,37 @@ namespace RPG_game_GUI.Menu
 
         private void btnLoad1_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_load"] = false;
             Switcher.Switch(new Menu.Loading());
         }
 
         private void btnLoad2_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_load"] = false;
             Switcher.Switch(new Menu.Loading());
         }
 
         private void btnLoad3_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_load"] = false;
             Switcher.Switch(new Menu.Loading());
         }
 
         private void btnLoad4_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_load"] = false;
             Switcher.Switch(new Menu.Loading());
         }
 
         private void btnLoad5_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_load"] = false;
             Switcher.Switch(new Menu.Loading());
         }
 
         private void btnLoad6_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_load"] = false;
             Switcher.Switch(new Menu.Loading());
         }
     }

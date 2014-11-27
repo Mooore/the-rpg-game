@@ -135,7 +135,7 @@ namespace RPG_game_GUI.Menu
         {
             if (Convert.ToBoolean(App.Current.Properties["is_load"]) == true)
             {
-                App.Current.Properties["is_load"] = false;
+                App.Current.Properties["is_load"] = false; 
                     
                 DoubleAnimation fade_out = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
@@ -174,10 +174,45 @@ namespace RPG_game_GUI.Menu
                     borLoadGame.Visibility = Visibility.Visible;
                 }
 
-                App.Current.Properties["is_option"] = false;
-                borOptions.Visibility = Visibility.Hidden;
-                App.Current.Properties["is_load"] = true;
+                if (Convert.ToBoolean(App.Current.Properties["is_option"]) != false)
+                {
+                    //borOptions.Visibility = Visibility.Hidden;
 
+                    App.Current.Properties["is_option"] = false;
+                   
+                    DoubleAnimation fade_out1 = new DoubleAnimation();
+                    Duration animate_dur1 = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out1.Duration = animate_dur1;
+
+                    Storyboard sb1 = new Storyboard();
+                    sb1.Duration = animate_dur1;
+                    sb1.Children.Add(fade_out1);
+
+                    Storyboard.SetTarget(fade_out1, borOptions);
+                    Storyboard.SetTargetProperty(fade_out1, new PropertyPath("(Opacity)"));
+
+                    fade_out1.From = 1;
+                    fade_out1.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_dur1;
+
+                    Storyboard sb12 = new Storyboard();
+                    sb12.Duration = animate_dur1;
+                    sb12.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, borOptions);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sb1.Begin();
+                    sb12.Begin();
+                }
+
+                App.Current.Properties["is_load"] = true;
+                
                 DoubleAnimation fade_in = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
                 fade_in.Duration = animate_dur;
@@ -253,10 +288,45 @@ namespace RPG_game_GUI.Menu
                     borOptions.Visibility = Visibility.Visible;
                 }
 
-                App.Current.Properties["is_load"] = false;
-                borLoadGame.Visibility = Visibility.Hidden;
-                App.Current.Properties["is_option"] = true;
+                if (Convert.ToBoolean(App.Current.Properties["is_load"]) != false)
+                {
+                    //borLoadGame.Visibility = Visibility.Hidden;
+                    App.Current.Properties["is_load"] = false;
+                   
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_dur1 = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_dur1;
 
+                    Storyboard sb1 = new Storyboard();
+                    sb1.Duration = animate_dur1;
+                    sb1.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, borLoadGame);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_dur1;
+
+                    Storyboard sb12 = new Storyboard();
+                    sb12.Duration = animate_dur1;
+                    sb12.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, borLoadGame);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sb1.Begin();
+                    sb12.Begin();
+                }
+
+                App.Current.Properties["is_option"] = true;
+                
+                
                 DoubleAnimation fade_in = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
                 fade_in.Duration = animate_dur;
