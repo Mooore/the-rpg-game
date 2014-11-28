@@ -396,7 +396,6 @@
   <ItemGroup>
     <Resource Include="Resources\credits.jpg" />
     <Resource Include="Resources\credits_text.png" />
-    <Resource Include="Resources\credits_text2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\back-button.png" />
