@@ -5,6 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <DropShadowBitmapEffect x:Key="GlowEffect" Color="DarkKhaki" ShadowDepth="0" Opacity="20" Softness="80" />
+        <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
+
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="2,0,2,0" 
+                            BorderBrush="Transparent" 
+                            CornerRadius="10" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource GlowEffect}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource ClickEffect}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.75*"/>
@@ -20,10 +53,14 @@
         <Grid.Background>
             <ImageBrush ImageSource="/RPG game GUI;component/Resources/credits.jpg" />
         </Grid.Background>
-        <Button Grid.Row="2" Grid.Column="2" x:Name="btnBack" Content="Back" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75" Click="Button_Click_Back"/>
+        <Button Style="{StaticResource MyButtonStyle}" Grid.Row="2" Grid.Column="2" x:Name="btnBack" HorizontalAlignment="Stretch" Margin="0,0,10,10" VerticalAlignment="Stretch" MaxWidth="150" MinWidth="100" Width="auto" Height="auto" Click="Button_Click_Back">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/back-button.png" AlignmentX="Center" AlignmentY="Center" />
+            </Button.Background>
+        </Button>
 
         <Image x:Name="Credits_text" Height="300" Source="/RPG game GUI;component/Resources/credits_text.png" Grid.Column="1" Margin="50,30,50,0" Grid.RowSpan="1" />
         <Image x:Name="Credits_text2" Height="300" Source="/RPG game GUI;component/Resources/credits_text2.png" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" Margin="50,69,50,51" Grid.Column="1" Grid.RowSpan="3"/>
-        <Image x:Name="Credits_char" Source="/RPG game GUI;component/Resources/credits_char.jpg" HorizontalAlignment="Right" RenderTransformOrigin="0.52,0.058" Margin="0,10,10,0" Grid.Column="2" Grid.RowSpan="2"/>
+        <Image x:Name="Credits_char" Source="/RPG game GUI;component/Resources/credits_char.png" HorizontalAlignment="Right" RenderTransformOrigin="0.52,0.058" Margin="0,10,10,0" Grid.Column="2" Grid.RowSpan="2"/>
     </Grid>
 </UserControl>

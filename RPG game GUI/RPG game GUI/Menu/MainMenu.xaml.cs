@@ -243,11 +243,49 @@ namespace RPG_game_GUI.Menu
                     sb1.Begin();
                     sb12.Begin();
                 }
+                if (Convert.ToBoolean(App.Current.Properties["is_credits"]) != false)
+                {
+                    //borOptions.Visibility = Visibility.Hidden;
+
+                    App.Current.Properties["is_credits"] = false;
+
+                    DoubleAnimation fade_out1 = new DoubleAnimation();
+                    Duration animate_dur1 = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out1.Duration = animate_dur1;
+
+                    Storyboard sb1 = new Storyboard();
+                    sb1.Duration = animate_dur1;
+                    sb1.Children.Add(fade_out1);
+
+                    Storyboard.SetTarget(fade_out1, borCredits);
+                    Storyboard.SetTargetProperty(fade_out1, new PropertyPath("(Opacity)"));
+
+                    fade_out1.From = 1;
+                    fade_out1.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_dur1;
+
+                    Storyboard sb12 = new Storyboard();
+                    sb12.Duration = animate_dur1;
+                    sb12.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, borCredits);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sb1.Begin();
+                    sb12.Begin();
+                }
 
                 App.Current.Properties["is_load"] = true;
 
                 Panel.SetZIndex(borOptions, 1);
                 borOptions.IsEnabled = false;
+                Panel.SetZIndex(borCredits, 1);
+                borCredits.IsEnabled = false;
                 Panel.SetZIndex(borLoadGame, 10);
                 borLoadGame.IsEnabled = true;
                 
@@ -362,11 +400,48 @@ namespace RPG_game_GUI.Menu
                     sb1.Begin();
                     sb12.Begin();
                 }
+                if (Convert.ToBoolean(App.Current.Properties["is_credits"]) != false)
+                {
+                    //borLoadGame.Visibility = Visibility.Hidden;
+                    App.Current.Properties["is_credits"] = false;
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_dur1 = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_dur1;
+
+                    Storyboard sb1 = new Storyboard();
+                    sb1.Duration = animate_dur1;
+                    sb1.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, borCredits);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_dur1;
+
+                    Storyboard sb12 = new Storyboard();
+                    sb12.Duration = animate_dur1;
+                    sb12.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, borCredits);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sb1.Begin();
+                    sb12.Begin();
+                }
 
                 App.Current.Properties["is_option"] = true;
 
                 Panel.SetZIndex(borLoadGame, 1);
                 borLoadGame.IsEnabled = false;
+                Panel.SetZIndex(borCredits, 1);
+                borCredits.IsEnabled = false;
                 Panel.SetZIndex(borOptions, 10);
                 borOptions.IsEnabled = true;
                 
@@ -409,7 +484,159 @@ namespace RPG_game_GUI.Menu
 
         private void Button_Click_Credits(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new Menu.Credits());
+            if (Convert.ToBoolean(App.Current.Properties["is_credits"]) == true)
+            {
+                App.Current.Properties["is_credits"] = false;
+                borCredits.IsEnabled = false;
+
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, borCredits);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, borCredits);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+
+                sb.Begin();
+                sb2.Begin();
+            }
+            else
+            {
+                if (borCredits.Visibility == Visibility.Hidden)
+                {
+                    borCredits.Visibility = Visibility.Visible;
+                }
+
+                if (Convert.ToBoolean(App.Current.Properties["is_load"]) != false)
+                {
+                    //borLoadGame.Visibility = Visibility.Hidden;
+                    App.Current.Properties["is_load"] = false;
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_dur1 = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_dur1;
+
+                    Storyboard sb1 = new Storyboard();
+                    sb1.Duration = animate_dur1;
+                    sb1.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, borLoadGame);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_dur1;
+
+                    Storyboard sb12 = new Storyboard();
+                    sb12.Duration = animate_dur1;
+                    sb12.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, borLoadGame);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sb1.Begin();
+                    sb12.Begin();
+                }
+                if (Convert.ToBoolean(App.Current.Properties["is_option"]) != false)
+                {
+                    //borLoadGame.Visibility = Visibility.Hidden;
+                    App.Current.Properties["is_option"] = false;
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_dur1 = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_dur1;
+
+                    Storyboard sb1 = new Storyboard();
+                    sb1.Duration = animate_dur1;
+                    sb1.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, borOptions);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_dur1;
+
+                    Storyboard sb12 = new Storyboard();
+                    sb12.Duration = animate_dur1;
+                    sb12.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, borOptions);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sb1.Begin();
+                    sb12.Begin();
+                }
+
+                App.Current.Properties["is_credits"] = true;
+
+                Panel.SetZIndex(borLoadGame, 1);
+                borLoadGame.IsEnabled = false;
+                Panel.SetZIndex(borOptions, 1);
+                borOptions.IsEnabled = false;
+                Panel.SetZIndex(borCredits, 10);
+                borCredits.IsEnabled = true;
+
+
+                DoubleAnimation fade_in = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_in.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_in);
+
+                Storyboard.SetTarget(fade_in, borCredits);
+                Storyboard.SetTargetProperty(fade_in, new PropertyPath("(Opacity)"));
+
+                fade_in.From = 0;
+                fade_in.To = 1;
+
+                ThicknessAnimation margin_in = new ThicknessAnimation();
+                margin_in.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_in);
+
+                Storyboard.SetTarget(margin_in, borCredits);
+                Storyboard.SetTargetProperty(margin_in, new PropertyPath("(Margin)"));
+
+                margin_in.From = new Thickness(0, 100, 0, 0);
+                margin_in.To = new Thickness(0, 0, 0, 0);
+
+                sb.Begin();
+                sb2.Begin();
+            }
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)

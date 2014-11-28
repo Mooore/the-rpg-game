@@ -137,24 +137,13 @@
                 </Style>
             </Border.Style>-->
         </Border>
+        
         <Border x:Name="borLoadGame" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
             <local:LoadGame />
-            <!--<Border.Style>
-                <Style TargetType="{x:Type Border}">
-                    <Style.Triggers>
-                        <Trigger Property="Visibility" Value="Visible">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard x:Name="fade">
-                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" Duration="00:00:01.5" From="0,100,0,0" To="0,0,0,0"/>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" Duration="00:00:01.5" From="0" To="1"/>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Border.Style>-->
+        </Border>
+
+        <Border x:Name="borCredits" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
+            <local:Credits />
         </Border>
         <Label x:Name="lbVersion" Content="v. " HorizontalAlignment="Left" Grid.Row="8" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Foreground="White"/>
 
