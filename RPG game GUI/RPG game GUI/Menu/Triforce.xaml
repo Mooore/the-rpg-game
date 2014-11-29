@@ -60,11 +60,11 @@
 
 
 
-        <Canvas x:Name="cnvBack" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0">
-            <Image x:Name="imgTriforce"  Source="/RPG game GUI;component/Resources/triforce.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="200" Canvas.Top="163" Canvas.Left="299"/>
-            <Ellipse x:Name="triMiddle" Fill="#FFF4F4F5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" Stroke="Black" Width="52" MouseEnter="triMiddle_MouseEnter" StrokeThickness="5" MouseLeave="triMiddle_MouseLeave" PreviewMouseLeftButtonUp="triMiddle_PreviewMouseLeftButtonUp" Canvas.Left="375" Canvas.Top="265" Opacity="0"/>
-            <Polygon x:Name="triTop" Fill="Black" Points="50,0 100,100, 0,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triTop_MouseEnter" MouseLeave="triTop_MouseLeave" Opacity="0" Canvas.Left="349" Canvas.Top="183" />
-            <Polygon x:Name="triRight" Fill="Black" Points="50,10 100,100, 10,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triRight_MouseEnter" MouseLeave="triRight_MouseLeave" RenderTransformOrigin="0.5,0.5" Height="117" Width="91" Opacity="0" Canvas.Left="373" Canvas.Top="269" >
+        <Canvas x:Name="cnvBack" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" Margin="0,-2,0,2">
+            <Image x:Name="imgTriforce" Panel.ZIndex="1"  Source="/RPG game GUI;component/Resources/triforce.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="200" Canvas.Top="163" Canvas.Left="299" />
+            <Ellipse x:Name="triMiddle" Panel.ZIndex="10" Fill="#FFF4F4F5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" Stroke="Black" Width="52" MouseEnter="triMiddle_MouseEnter" StrokeThickness="5" MouseLeave="triMiddle_MouseLeave" PreviewMouseLeftButtonUp="triMiddle_PreviewMouseLeftButtonUp" Canvas.Left="375" Canvas.Top="265" Opacity="0"/>
+            <Polygon x:Name="triTop" Panel.ZIndex="10" Fill="Black" Points="50,0 100,100, 0,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triTop_MouseEnter" MouseLeave="triTop_MouseLeave" Opacity="0" Canvas.Left="349" Canvas.Top="183" />
+            <Polygon x:Name="triRight" Panel.ZIndex="10" Fill="Black" Points="50,10 100,100, 10,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triRight_MouseEnter" MouseLeave="triRight_MouseLeave" RenderTransformOrigin="0.5,0.5" Height="117" Width="91" Opacity="0" Canvas.Left="373" Canvas.Top="269" >
                 <Polygon.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="0.987" ScaleY="0.967"/>
@@ -74,7 +74,7 @@
                     </TransformGroup>
                 </Polygon.RenderTransform>
             </Polygon>
-            <Polygon x:Name="triLeft" Fill="Black" Points="50,10 100,100 0,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triLeft_MouseEnter" MouseLeave="triLeft_MouseLeave" RenderTransformOrigin="0.5,0.5" Height="116" Width="86" Opacity="0" Canvas.Left="298" Canvas.Top="258" >
+            <Polygon x:Name="triLeft" Panel.ZIndex="10" Fill="Black" Points="50,10 100,100 0,100" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="triLeft_MouseEnter" MouseLeave="triLeft_MouseLeave" RenderTransformOrigin="0.5,0.5" Height="116" Width="86" Opacity="0" Canvas.Left="298" Canvas.Top="258" >
                 <Polygon.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="0.997" ScaleY="0.999"/>
@@ -84,35 +84,35 @@
                     </TransformGroup>
                 </Polygon.RenderTransform>
             </Polygon>
-            <Button x:Name="btnStat" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="322" Canvas.Top="148" MouseEnter="btnStat_MouseEnter" MouseLeave="btnStat_MouseLeave" Margin="0" Click="btnStat_Click">
+            <Button x:Name="btnStat" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="322" Canvas.Top="136" MouseEnter="btnStat_MouseEnter" MouseLeave="btnStat_MouseLeave" Margin="0" Click="btnStat_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/stat.png"/>
                 </Button.Background>
 
             </Button>
-            <Button x:Name="btnInv1" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="352" Canvas.Top="136" MouseEnter="btnInv1_MouseEnter" MouseLeave="btnInv1_MouseLeave" Margin="0">
+            <Button x:Name="btnInv" Panel.ZIndex="0" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="352" Canvas.Top="124" MouseEnter="btnInv1_MouseEnter" MouseLeave="btnInv1_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/inventory.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnChar" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="384" Canvas.Top="132" MouseEnter="btnChar_MouseEnter" MouseLeave="btnChar_MouseLeave" Margin="0">
+            <Button x:Name="btnChar" Panel.ZIndex="0" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="384" Canvas.Top="120" MouseEnter="btnChar_MouseEnter" MouseLeave="btnChar_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/character.png"/>
                 </Button.Background>
             </Button>
 
-            <Button x:Name="btnTalent" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="416" Canvas.Top="136" MouseEnter="btnTalent_MouseEnter" MouseLeave="btnTalent_MouseLeave" Margin="0" >
+            <Button x:Name="btnTalent" Panel.ZIndex="0" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="416" Canvas.Top="124" MouseEnter="btnTalent_MouseEnter" MouseLeave="btnTalent_MouseLeave" Margin="0" >
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/talents.png"/>
                 </Button.Background>
 
             </Button>
-            <Button x:Name="btnAbility" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="446" Canvas.Top="148" MouseEnter="btnAbility_MouseEnter" MouseLeave="btnAbility_MouseLeave" Margin="0">
+            <Button x:Name="btnAbility" Panel.ZIndex="0" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="446" Canvas.Top="136" MouseEnter="btnAbility_MouseEnter" MouseLeave="btnAbility_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/abbility.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnSave" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="421" Canvas.Top="339" MouseEnter="btnSave_MouseEnter" MouseLeave="btnSave_MouseLeave" Margin="0">
+            <Button x:Name="btnSave" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="421" Canvas.Top="339" MouseEnter="btnSave_MouseEnter" MouseLeave="btnSave_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/save.png"/>
                 </Button.Background>
@@ -126,7 +126,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnLoad" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="451" Canvas.Top="327" MouseEnter="btnLoad_MouseEnter" MouseLeave="btnLoad_MouseLeave" Margin="0">
+            <Button x:Name="btnLoad" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="451" Canvas.Top="327" MouseEnter="btnLoad_MouseEnter" MouseLeave="btnLoad_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/load.png"/>
                 </Button.Background>
@@ -140,7 +140,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnExit" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="483" Canvas.Top="323" MouseEnter="btnExit_MouseEnter" MouseLeave="btnExit_MouseLeave" Margin="0" Click="btnExit_Click">
+            <Button x:Name="btnExit" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="483" Canvas.Top="323" MouseEnter="btnExit_MouseEnter" MouseLeave="btnExit_MouseLeave" Margin="0" Click="btnExit_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/exit.png"/>
                 </Button.Background>
@@ -154,7 +154,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnSetting" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="515" Canvas.Top="327" MouseEnter="btnSetting_MouseEnter" MouseLeave="btnSetting_MouseLeave" Margin="0" Click="btnSetting_Click">
+            <Button x:Name="btnSetting" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="515" Canvas.Top="327" MouseEnter="btnSetting_MouseEnter" MouseLeave="btnSetting_MouseLeave" Margin="0" Click="btnSetting_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/settings.png"/>
                 </Button.Background>
@@ -168,7 +168,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnNevim" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="545" Canvas.Top="339" MouseEnter="btnNevim_MouseEnter" MouseLeave="btnNevim_MouseLeave" Margin="0">
+            <Button x:Name="btnNevim" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="545" Canvas.Top="339" MouseEnter="btnNevim_MouseEnter" MouseLeave="btnNevim_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/death.png"/>
                 </Button.Background>
@@ -182,7 +182,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnWiki" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="196" Canvas.Top="359" MouseEnter="btnWiki_MouseEnter" MouseLeave="btnWiki_MouseLeave" Margin="0">
+            <Button x:Name="btnWiki" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="196" Canvas.Top="359" MouseEnter="btnWiki_MouseEnter" MouseLeave="btnWiki_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/wiki.png"/>
                 </Button.Background>
@@ -196,7 +196,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnPratele" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="223" Canvas.Top="339" MouseEnter="btnPratele_MouseEnter" MouseLeave="btnPratele_MouseLeave" Margin="0">
+            <Button x:Name="btnPratele" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="223" Canvas.Top="339" MouseEnter="btnPratele_MouseEnter" MouseLeave="btnPratele_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/friends.png"/>
                 </Button.Background>
@@ -210,7 +210,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnZpravy" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="252" Canvas.Top="326" MouseEnter="btnZpravy_MouseEnter" MouseLeave="btnZpravy_MouseLeave" Margin="0">
+            <Button x:Name="btnZpravy" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="252" Canvas.Top="326" MouseEnter="btnZpravy_MouseEnter" MouseLeave="btnZpravy_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/mail.png"/>
                 </Button.Background>
@@ -224,7 +224,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnFrakce" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="285" Canvas.Top="323" MouseEnter="btnFrakce_MouseEnter" MouseLeave="btnFrakce_MouseLeave" Margin="0">
+            <Button x:Name="btnFrakce" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="285" Canvas.Top="323" MouseEnter="btnFrakce_MouseEnter" MouseLeave="btnFrakce_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/fraction.png"/>
                 </Button.Background>
@@ -238,7 +238,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnQuest" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="317" Canvas.Top="327" MouseEnter="btnQuest_MouseEnter" MouseLeave="btnQuest_MouseLeave" Margin="0">
+            <Button x:Name="btnQuest" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="317" Canvas.Top="328" MouseEnter="btnQuest_MouseEnter" MouseLeave="btnQuest_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/quest.png"/>
                 </Button.Background>
@@ -252,7 +252,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnObchod" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="348" Canvas.Top="339" MouseEnter="btnObchod_MouseEnter" MouseLeave="btnObchod_MouseLeave" Margin="0">
+            <Button x:Name="btnObchod" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="348" Canvas.Top="339" MouseEnter="btnObchod_MouseEnter" MouseLeave="btnObchod_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/shop.png"/>
                 </Button.Background>
@@ -266,7 +266,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnMapa" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="371" Canvas.Top="358" MouseEnter="btnMapa_MouseEnter" MouseLeave="btnMapa_MouseLeave" Margin="0">
+            <Button x:Name="btnMapa" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="371" Canvas.Top="358" MouseEnter="btnMapa_MouseEnter" MouseLeave="btnMapa_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/map.png"/>
                 </Button.Background>
@@ -279,27 +279,27 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Label x:Name="lbStat" Content="Statistiky" Canvas.Left="292" Canvas.Top="130" FontFamily="Tekton Pro Ext" Foreground="White">
+            <Label x:Name="lbStat" Content="Statistiky" Canvas.Left="292" Canvas.Top="118" FontFamily="Tekton Pro Ext" Foreground="White">
                 <Label.Effect>
                     <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
                 </Label.Effect>
             </Label>
-            <Label x:Name="lbInv" Content="Inventář" Canvas.Left="339" Canvas.Top="116" FontFamily="Tekton Pro Ext" Foreground="White">
+            <Label x:Name="lbInv" Content="Inventář" Canvas.Left="339" Canvas.Top="104" FontFamily="Tekton Pro Ext" Foreground="White">
                 <Label.Effect>
                     <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
                 </Label.Effect>
             </Label>
-            <Label x:Name="lbChar" Content="Charakter" Canvas.Left="370" Canvas.Top="111" FontFamily="Tekton Pro Ext" Foreground="White">
+            <Label x:Name="lbChar" Content="Charakter" Canvas.Left="370" Canvas.Top="99" FontFamily="Tekton Pro Ext" Foreground="White">
                 <Label.Effect>
                     <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
                 </Label.Effect>
             </Label>
-            <Label x:Name="lbtalent" Content="Talenty" Canvas.Left="414" Canvas.Top="117" FontFamily="Tekton Pro Ext" Foreground="White">
+            <Label x:Name="lbtalent" Content="Talenty" Canvas.Left="414" Canvas.Top="105" FontFamily="Tekton Pro Ext" Foreground="White">
                 <Label.Effect>
                     <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
                 </Label.Effect>
             </Label>
-            <Label x:Name="lbAbility" Content="Dovednosti" Canvas.Left="450" Canvas.Top="130" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tekton Pro Ext" Foreground="White">
+            <Label x:Name="lbAbility" Content="Dovednosti" Canvas.Left="450" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tekton Pro Ext" Foreground="White">
                 <Label.Effect>
                     <DropShadowEffect BlurRadius="5" ShadowDepth="0"/>
                 </Label.Effect>
