@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
+using System.Timers;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,6 +16,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
+using System.IO;
+using System.Xaml;
 
 namespace RPG_game_GUI.Menu
 {
@@ -30,6 +36,7 @@ namespace RPG_game_GUI.Menu
         {
             //Switcher.Switch(new Menu.MainMenu());
             App.Current.Properties["is_option"] = false;
+            
             (this.Parent as Border).IsEnabled = false;
 
             DoubleAnimation fade_out = new DoubleAnimation();
@@ -53,7 +60,7 @@ namespace RPG_game_GUI.Menu
             sbopt2.Duration = animate_durat;
             sbopt2.Children.Add(margin_out);
 
-            Storyboard.SetTarget(margin_out, (this.Parent as Border));
+            Storyboard.SetTarget(margin_out, (this.Parent as Border));  
             Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
 
             margin_out.From = new Thickness(0, 0, 0, 0);
@@ -63,20 +70,96 @@ namespace RPG_game_GUI.Menu
             sbopt2.Begin();
         }
 
+        /// <summary>
+        /// Funkce která zajístí spoždění pro vytracení menu a přepnutí do Loading screen po určitém čase.
+        /// </summary>
+        /// <param name="seconds">Kolik sekund bude čekat</param>
+        private void Wait(double seconds)
+        {
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(seconds) };
+            timer.Start();
+            timer.Tick += (sender, args) =>
+            {
+                timer.Stop();
+                this.Content = new Menu.OptionsContent.Video();
+
+                DoubleAnimation fade_in = new DoubleAnimation();
+                Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_in.Duration = animate_durat;
+
+                Storyboard sbopt12 = new Storyboard();
+                sbopt12.Duration = animate_durat;
+                sbopt12.Children.Add(fade_in);
+
+                Storyboard.SetTarget(fade_in, (this.Parent as Border));
+                Storyboard.SetTargetProperty(fade_in, new PropertyPath("(Opacity)"));
+
+                fade_in.From = 0;
+                fade_in.To = 1;
+
+                ThicknessAnimation margin_in = new ThicknessAnimation();
+                margin_in.Duration = animate_durat;
+
+                Storyboard sbopt22 = new Storyboard();
+                sbopt22.Duration = animate_durat;
+                sbopt22.Children.Add(margin_in);
+
+                Storyboard.SetTarget(margin_in, (this.Parent as Border));
+                Storyboard.SetTargetProperty(margin_in, new PropertyPath("(Margin)"));
+
+                margin_in.From = new Thickness(0, 100, 0, 0);
+                margin_in.To = new Thickness(0, 0, 0, 0);
+
+                sbopt12.Begin();
+                sbopt22.Begin();
+            };
+        }
+
         private void btnVideo_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.Properties["is_option"] = false;
             this.Content = new Menu.OptionsContent.Video();
+
+            /*DoubleAnimation fade_out = new DoubleAnimation();
+            Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+            fade_out.Duration = animate_durat;
+
+            Storyboard sbopt3 = new Storyboard();
+            sbopt3.Duration = animate_durat;
+            sbopt3.Children.Add(fade_out);
+
+            Storyboard.SetTarget(fade_out, (this.Parent as Border));
+            Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+            fade_out.From = 1;
+            fade_out.To = 0;
+
+            ThicknessAnimation margin_out = new ThicknessAnimation();
+            margin_out.Duration = animate_durat;
+
+            Storyboard sbopt23 = new Storyboard();
+            sbopt23.Duration = animate_durat;
+            sbopt23.Children.Add(margin_out);
+
+            Storyboard.SetTarget(margin_out, (this.Parent as Border));
+            Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+            margin_out.From = new Thickness(0, 0, 0, 0);
+            margin_out.To = new Thickness(0, 100, 0, 0);
+
+            sbopt3.Begin();
+            sbopt23.Begin();
+
+            Wait(1.5);*/
         }
 
         private void btnSound_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.Properties["is_option"] = false;
+        
         }
 
         private void btnKeyboard_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.Properties["is_option"] = false;
+        
         }
     }
 }

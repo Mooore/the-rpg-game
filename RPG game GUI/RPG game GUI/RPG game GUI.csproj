@@ -436,6 +436,26 @@
   <ItemGroup>
     <Resource Include="Resources\Credits_char.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\save-button.png" />
+    <Resource Include="Resources\title-keyboard.png" />
+    <Resource Include="Resources\title-sound.png" />
+    <Resource Include="Resources\title-video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\video-properties-antialiasing.png" />
+    <Resource Include="Resources\video-properties-brightness.png" />
+    <Resource Include="Resources\video-properties-effects-quality.png" />
+    <Resource Include="Resources\video-properties-graphics-quality.png" />
+    <Resource Include="Resources\video-properties-resolution.png" />
+    <Resource Include="Resources\video-properties-shadow-quality.png" />
+    <Resource Include="Resources\video-properties-texture-quality.png" />
+    <Resource Include="Resources\video-properties-vertical-sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\off.png" />
+    <Resource Include="Resources\on.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

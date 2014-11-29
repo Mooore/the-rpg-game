@@ -142,6 +142,113 @@ namespace RPG_game_GUI.Menu
 
         private void Button_Click_NewGame(object sender, RoutedEventArgs e)
         {
+            if (Convert.ToBoolean(App.Current.Properties["is_load"]) == true)
+            {
+
+                App.Current.Properties["is_load"] = false;
+                borLoadGame.IsEnabled = false;
+
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, borLoadGame);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, borLoadGame);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+
+                sb.Begin();
+                sb2.Begin();
+            }
+            else if (Convert.ToBoolean(App.Current.Properties["is_option"]) == true)
+            {
+                App.Current.Properties["is_option"] = false;
+                borOptions.IsEnabled = false;
+
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, borOptions);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, borOptions);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+
+                sb.Begin();
+                sb2.Begin();
+            }
+            else if (Convert.ToBoolean(App.Current.Properties["is_credits"]) == true)
+            {
+                App.Current.Properties["is_credits"] = false;
+                borCredits.IsEnabled = false;
+
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_dur;
+
+                Storyboard sb = new Storyboard();
+                sb.Duration = animate_dur;
+                sb.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, borCredits);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_dur;
+
+                Storyboard sb2 = new Storyboard();
+                sb2.Duration = animate_dur;
+                sb2.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, borCredits);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+
+                sb.Begin();
+                sb2.Begin();
+            }
+
             Grid.SetZIndex(BlackOut, 10);
 
             DoubleAnimation Fade = new DoubleAnimation();

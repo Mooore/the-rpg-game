@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
+using System.Timers;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +15,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
+using System.Windows.Threading;
+using System.IO;
+using System.Xaml;
 
 namespace RPG_game_GUI.Menu.OptionsContent
 {
@@ -25,6 +32,14 @@ namespace RPG_game_GUI.Menu.OptionsContent
             InitializeComponent();
             double width = Convert.ToDouble(App.Current.Properties["width"]);
             double height = Convert.ToDouble(App.Current.Properties["height"]);
+
+            vsync.SelectedIndex = 0;
+            anti.SelectedIndex = 2;
+            graph_q.SelectedIndex = 2;
+            effec_q.SelectedIndex = 2;
+            shad_q.SelectedIndex = 2;
+            text_q.SelectedIndex = 2;
+            
 
             setSelectedItem();
         }
@@ -50,53 +65,40 @@ namespace RPG_game_GUI.Menu.OptionsContent
 
         private void set1920()
         {
-            lbl_resolution.FontSize = 20;
-            lbl_resolution.Margin = new Thickness(170, 0, 0, 0);
-
             resolution.FontSize = 16;
-            resolution.Margin = new Thickness(90, 0, 0, 0);
+            vsync.FontSize = 16;
+            anti.FontSize = 16;
+            graph_q.FontSize = 16;
+            effec_q.FontSize = 16;
+            shad_q.FontSize = 16;
+            text_q.FontSize = 16;
+            bright.Width = 250;
 
-            btnBack.FontSize = 22;
-            btnBack.Padding = new Thickness(15, 5, 15, 5);
-            btnBack.Margin = new Thickness(0, 0, 100, 0);
             
-            btnSave.FontSize = 22;
-            btnSave.Padding = new Thickness(15, 5, 15, 5);
-            btnSave.Margin = new Thickness(100, 0, 0, 0);
         }
 
         private void set1366()
         {
-            lbl_resolution.FontSize = 15;
-            lbl_resolution.Margin = new Thickness(50, 0, 0, 0);
-
             resolution.FontSize = 12;
-            resolution.Margin = new Thickness(50, 0, 0, 0);
-
-            btnBack.FontSize = 16;
-            btnBack.Padding = new Thickness(10, 5, 10, 5);
-            btnBack.Margin = new Thickness(0, 0, 70, 0);
-
-            btnSave.FontSize = 16;
-            btnSave.Padding = new Thickness(10, 5, 10, 5);
-            btnSave.Margin = new Thickness(70, 0, 0, 0);
+            vsync.FontSize = 12;
+            anti.FontSize = 12;
+            graph_q.FontSize = 12;
+            effec_q.FontSize = 12;
+            shad_q.FontSize = 12;
+            text_q.FontSize = 12;
+            bright.Width = 150;
         }
 
         private void set1024()
         {
-            lbl_resolution.FontSize = 13;
-            lbl_resolution.Margin = new Thickness(20, 0, 0, 0);
-
             resolution.FontSize = 12;
-            resolution.Margin = new Thickness(10, 0, 0, 0);
-
-            btnBack.FontSize = 14;
-            btnBack.Padding = new Thickness(8, 4, 8, 4);
-            btnBack.Margin = new Thickness(0, 0, 30, 0);
-
-            btnSave.FontSize = 14;
-            btnSave.Padding = new Thickness(8, 4, 8, 4);
-            btnSave.Margin = new Thickness(30, 0, 0, 0);
+            vsync.FontSize = 12;
+            anti.FontSize = 12;
+            graph_q.FontSize = 12;
+            effec_q.FontSize = 12;
+            shad_q.FontSize = 12;
+            text_q.FontSize = 12;
+            bright.Width = 100;
         }
 
         private void resolution_1920()
@@ -126,10 +128,86 @@ namespace RPG_game_GUI.Menu.OptionsContent
             set1024();
         }
 
+        /// <summary>
+        /// Funkce která zajístí spoždění pro vytracení menu a přepnutí do Loading screen po určitém čase.
+        /// </summary>
+        /// <param name="seconds">Kolik sekund bude čekat</param>
+        private void Wait(double seconds)
+        {
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(seconds) };
+            timer.Start();
+            timer.Tick += (sender, args) =>
+            {
+                timer.Stop();
+                this.Content = new Menu.Options();
+
+                DoubleAnimation fade_in = new DoubleAnimation();
+                Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_in.Duration = animate_durat;
+
+                Storyboard sbopt12 = new Storyboard();
+                sbopt12.Duration = animate_durat;
+                sbopt12.Children.Add(fade_in);
+
+                Storyboard.SetTarget(fade_in, (this.Parent as Border));
+                Storyboard.SetTargetProperty(fade_in, new PropertyPath("(Opacity)"));
+
+                fade_in.From = 0;
+                fade_in.To = 1;
+
+                ThicknessAnimation margin_in = new ThicknessAnimation();
+                margin_in.Duration = animate_durat;
+
+                Storyboard sbopt22 = new Storyboard();
+                sbopt22.Duration = animate_durat;
+                sbopt22.Children.Add(margin_in);
+
+                Storyboard.SetTarget(margin_in, (this.Parent as Border));
+                Storyboard.SetTargetProperty(margin_in, new PropertyPath("(Margin)"));
+
+                margin_in.From = new Thickness(0, 100, 0, 0);
+                margin_in.To = new Thickness(0, 0, 0, 0);
+
+                sbopt12.Begin();
+                sbopt22.Begin();
+            };
+        }
+
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Content = new Menu.Options();
-            App.Current.Properties["is_option"] = true;
+
+            /*DoubleAnimation fade_out = new DoubleAnimation();
+            Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+            fade_out.Duration = animate_durat;
+
+            Storyboard sbopt3 = new Storyboard();
+            sbopt3.Duration = animate_durat;
+            sbopt3.Children.Add(fade_out);
+
+            Storyboard.SetTarget(fade_out, (this.Parent as Border));
+            Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+            fade_out.From = 1;
+            fade_out.To = 0;
+
+            ThicknessAnimation margin_out = new ThicknessAnimation();
+            margin_out.Duration = animate_durat;
+
+            Storyboard sbopt23 = new Storyboard();
+            sbopt23.Duration = animate_durat;
+            sbopt23.Children.Add(margin_out);
+
+            Storyboard.SetTarget(margin_out, (this.Parent as Border));
+            Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+            margin_out.From = new Thickness(0, 0, 0, 0);
+            margin_out.To = new Thickness(0, 100, 0, 0);
+            
+            sbopt3.Begin();
+            sbopt23.Begin();
+
+            Wait(1.5);*/
         }
 
         private void changeWindowProperties()

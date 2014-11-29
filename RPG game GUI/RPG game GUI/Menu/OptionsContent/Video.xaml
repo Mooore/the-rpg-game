@@ -5,53 +5,402 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="800">
-    <Grid>
+
+    <UserControl.Resources>
+        <DropShadowBitmapEffect x:Key="GlowEffect" Color="Khaki" ShadowDepth="0" Opacity="20" Softness="80" />
+        <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
+
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="2,0,2,0" 
+                            BorderBrush="Transparent" 
+                            CornerRadius="10" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource GlowEffect}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource ClickEffect}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- All ComboBox styles -->
+        <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Border
+          x:Name="Border" 
+          Grid.ColumnSpan="2"
+          CornerRadius="5"
+          Background="Gray"
+          BorderBrush="WhiteSmoke"
+          BorderThickness="1" />
+                <Border 
+          Grid.Column="0"
+          CornerRadius="5,0,0,5" 
+          Margin="1" 
+          Padding="0,20,0,10"
+          Background="DarkGray" 
+          BorderBrush="Black"
+          BorderThickness="0,0,1,0" />
+                <Path 
+          x:Name="Arrow"
+          Grid.Column="1"     
+          Fill="Black"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+          Data="M 0 0 L 4 4 L 8 0 Z"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="Border" Property="Background" Value="LightGray" />
+                    <Setter TargetName="Border" Property="BorderBrush" Value="Gray" />
+                    <Setter Property="Foreground" Value="DarkGray"/>
+                    <Setter TargetName="Arrow" Property="Fill" Value="DarkGray" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="ToggleButton.BitmapEffect" Value="{StaticResource GlowEffect}" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="ToggleButton.BitmapEffect" Value="{StaticResource ClickEffect}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!-- ComboBox TextBox -->
+        <ControlTemplate x:Key="ComboBoxTextBox" TargetType="TextBox">
+            <Border x:Name="PART_ContentHost" Focusable="True" Background="DarkGray" />
+        </ControlTemplate>
+
+        <!-- ComboBox style -->
+        <Style x:Key="{x:Type ComboBox}" TargetType="ComboBox">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="MinHeight" Value="20"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton 
+                    Name="ToggleButton" 
+                    Template="{StaticResource ComboBoxToggleButton}" 
+                    Grid.Column="2" 
+                    Focusable="false"
+                    IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                    ClickMode="Press">
+                            </ToggleButton>
+                            <ContentPresenter
+                        Name="ContentSite"
+                        IsHitTestVisible="False" 
+                        Margin="3,3,23,3"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left" />
+                            <TextBox x:Name="PART_EditableTextBox"
+                        Style="{x:Null}" 
+                        Template="{StaticResource ComboBoxTextBox}" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Center" 
+                        Padding="{TemplateBinding Padding}"
+                        Text="{TemplateBinding Text}"
+                        Margin="3,3,23,3"
+                        Focusable="False" 
+                        Background="Transparent"
+                        Visibility="Visible"
+                        Foreground="Black"/>
+                            <Popup 
+                        Name="Popup"
+                        Placement="Bottom"
+                        IsOpen="{TemplateBinding IsDropDownOpen}"
+                        AllowsTransparency="True" 
+                        Focusable="False"
+                        PopupAnimation="Fade">
+                                <Grid 
+                          Name="DropDown"
+                          SnapsToDevicePixels="True"                
+                          >
+                                    <Border 
+                                x:Name="DropDownBorder"
+                                Background="DarkGray"
+                                BorderThickness="1"
+                                BorderBrush="Black"/>
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasItems" Value="false">
+                                <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="LightGray"/>
+                            </Trigger>
+                            <Trigger Property="IsGrouping" Value="true">
+                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                            </Trigger>
+                            <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                                <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0,0,4,4"/>
+                                <Setter TargetName="DropDownBorder" Property="Margin" Value="0"/>
+                            </Trigger>
+                            <Trigger Property="IsEditable"
+           Value="false">
+                                <Setter Property="IsTabStop" Value="false"/>
+                                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="ComboBox.BitmapEffect" Value="{StaticResource GlowEffect}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style x:Key="SliderThumbStyle" TargetType="Thumb">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="false"/>
+            <Setter Property="Height" Value="18"/>
+            <Setter Property="Width" Value="18"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                        <Ellipse  Stroke="Black"
+                          StrokeThickness="1"
+                          Name="Ellipse" 
+                          Fill="DarkGray" />
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Thumb.BitmapEffect" Value="{StaticResource ClickEffect}" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter TargetName="Ellipse" Property="Fill" Value="Gray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Slider">
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Slider">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" Name="row" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" Name="column" />
+                                <ColumnDefinition Width="auto" />
+                            </Grid.ColumnDefinitions>
+                            <Border Name="PART_Border"
+                           BorderBrush="Black" BorderThickness="1"
+                           Padding="2"
+                          Grid.Row="1" Grid.Column="1"
+                           Width="{TemplateBinding Width}"
+                           Height="{TemplateBinding Height}"
+                           Background="Wheat"
+                           HorizontalAlignment="Stretch"
+                           VerticalAlignment="Center" />
+                            <Track Name="PART_Track"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Center"
+                              Grid.Row="1" Grid.Column="1"
+                              Width="{TemplateBinding Width}"
+                              Height="{TemplateBinding Height}">
+                                <Track.Thumb>
+                                    <Thumb Style="{StaticResource SliderThumbStyle}" />
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    
+    
+    
+
+    <Grid x:Name="video">
+        <Grid.Background>
+            <ImageBrush ImageSource="/RPG game GUI;component/Resources/background.jpg" />
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
+        <Canvas Name="title_video" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Height="80" VerticalAlignment="Top">
+            <Canvas.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/title-video.png" AlignmentX="Center" AlignmentY="Top" />
+            </Canvas.Background>
+        </Canvas>
 
         <Button     Name="btnSave" 
-                    Content="SAVE" 
-                    Grid.Column="1"
-                    Grid.Row="4"
-                    HorizontalAlignment="Left" 
-                    VerticalAlignment="Center"
-                    Height="auto" 
-                    Width="auto"
-                    Margin="10,10,10,10" 
-                    FontSize="16"     
-                    Click="btnSave_Click"/>
-        
-        <Button     x:Name="btnBack" 
-                    Content="BACK" 
-                    Grid.Row="4" 
-                    Grid.Column="1" 
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center" 
-                    Height="auto"
-                    Width="auto"
-                    Margin="10,10,10,10"
-                    FontSize="16"    
-                    Click="btnBack_Click"/>
+                    Style="{StaticResource MyButtonStyle}"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="6"
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch"
+                    MaxWidth="150" MinWidth="100" Width="auto" Height="auto"
+                    Click="btnSave_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/save-button.png" AlignmentX="Center" AlignmentY="Center" />
+            </Button.Background>
+        </Button>
 
-        <Label Name="lbl_resolution" Content="Resolution: " Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" FontSize="20"/>
-        <ComboBox Name="resolution" HorizontalAlignment="Right" Height="auto" Margin="10,10,40,10" Grid.Row="1" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
+        <Button     x:Name="btnBack" 
+                    Style="{StaticResource MyButtonStyle}"
+                    Grid.Row="6" 
+                    Grid.Column="2" 
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" 
+                    MaxWidth="150" MinWidth="100" Width="auto" Height="auto"
+                    Click="btnBack_Click" Margin="10,10,0,0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/back-button.png" AlignmentX="Center" AlignmentY="Center" />
+            </Button.Background>
+        </Button>
+
+        <Label Name="lbl_resolution" Grid.Row="2" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto">
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-resolution.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>    
+        </Label>
+        <ComboBox  Name="resolution" HorizontalAlignment="Center" Height="auto" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
             <ComboBoxItem Name="res_1920" Content="1920x1080" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
             <ComboBoxItem Name="res_1366" Content="1366x768" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
             <ComboBoxItem Name="res_1024" Content="1024x768" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
         </ComboBox>
 
+        <Label Name="lbl_vsync" Grid.Row="3" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-vertical-sync.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
+        </Label>
+
+        <ComboBox Name="vsync" HorizontalAlignment="Center" Height="auto" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
+            <ComboBoxItem Name="vsync_on" Content="ON" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="vsync_off" Content="OFF" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+        </ComboBox>
+     
+        <Label Name="lbl_antialiasing" Grid.Row="4" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-antialiasing.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
+        </Label>
+
+        <ComboBox Name="anti" HorizontalAlignment="Center" Height="auto" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
+            <ComboBoxItem Name="anti_off" Content="OFF" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="anti_4" Content="4x" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="anti_8" Content="8x" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="anti_16" Content="16x" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+        </ComboBox>
+
+        <Label Name="lbl_brightness" Grid.Row="5" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-brightness.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
+        </Label>
+        
+        <Slider Name="bright" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" ></Slider>
+
+        <Label Name="lbl_graph_q" Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-graphics-quality.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
+        </Label>
+
+        <ComboBox Name="graph_q" HorizontalAlignment="Center" Height="auto" Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
+            <ComboBoxItem Name="gq_low" Content="LOW" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="gq_medium" Content="MEDIUM" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="gq_high" Content="HIGH" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="gq_ultra" Content="ULTRA" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+        </ComboBox>
+
+        <Label Name="lbl_effe_q" Grid.Row="3" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-effects-quality.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
+        </Label>
+
+        <ComboBox Name="effec_q" HorizontalAlignment="Center" Height="auto" Grid.Row="3" Grid.Column="4" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
+            <ComboBoxItem Name="eq_low" Content="LOW" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="eq_medium" Content="MEDIUM" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="eq_high" Content="HIGH" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="eq_ultra" Content="ULTRA" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+        </ComboBox>
+
+        <Label Name="lbl_shadow_q" Grid.Row="4" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-shadow-quality.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
+        </Label>
+
+        <ComboBox Name="shad_q" HorizontalAlignment="Center" Height="auto" Grid.Row="4" Grid.Column="4" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
+            <ComboBoxItem Name="sq_low" Content="LOW" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="sq_medium" Content="MEDIUM" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="sq_high" Content="HIGH" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="sq_ultra" Content="ULTRA" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+        </ComboBox>
+
+        <Label Name="lbl_text_q" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-texture-quality.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
+        </Label>
+
+        <ComboBox Name="text_q" HorizontalAlignment="Center" Height="auto" Grid.Row="5" Grid.Column="4" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
+            <ComboBoxItem Name="tq_low" Content="LOW" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="tq_medium" Content="MEDIUM" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="tq_high" Content="HIGH" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="tq_ultra" Content="ULTRA" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+        </ComboBox>
 
     </Grid>
 </UserControl>

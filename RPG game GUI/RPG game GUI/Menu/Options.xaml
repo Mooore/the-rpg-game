@@ -38,7 +38,7 @@
         </Style>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid x:Name="options">
         <Grid.Background>
             <ImageBrush ImageSource="/RPG game GUI;component/Resources/background.jpg" />  
         </Grid.Background>
@@ -54,7 +54,7 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
-        <Canvas Name="title_load_game" Grid.Column="1" Grid.Row="0" Height="80" VerticalAlignment="Top">
+        <Canvas Name="title_options" Grid.Column="1" Grid.Row="0" Height="80" VerticalAlignment="Top">
             <Canvas.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/title-options-game.png" AlignmentX="Center" AlignmentY="Top" />
             </Canvas.Background>
