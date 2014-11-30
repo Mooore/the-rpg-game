@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="RPG_game_GUI.Menu.OptionsContent.Video"
+﻿<UserControl x:Class="RPG_game_GUI.Menu.OptionsContent.Keyboard"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -179,80 +179,9 @@
             <Style.Triggers>
             </Style.Triggers>
         </Style>
-
-
-        <Style x:Key="SliderThumbStyle" TargetType="Thumb">
-            <Setter Property="SnapsToDevicePixels" Value="true"/>
-            <Setter Property="OverridesDefaultStyle" Value="false"/>
-            <Setter Property="Height" Value="18"/>
-            <Setter Property="Width" Value="18"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Thumb">
-                        <Ellipse  Stroke="Black"
-                          StrokeThickness="1"
-                          Name="Ellipse" 
-                          Fill="DarkGray" />
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Thumb.BitmapEffect" Value="{StaticResource GlowEffect}" />
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter TargetName="Ellipse" Property="Fill" Value="Gray"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style TargetType="Slider">
-            <Setter Property="OverridesDefaultStyle" Value="true"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Slider">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
-                                <RowDefinition Height="auto" Name="row" />
-                                <RowDefinition Height="auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="*" Name="column" />
-                                <ColumnDefinition Width="auto" />
-                            </Grid.ColumnDefinitions>
-                            <Border Name="PART_Border"
-                           BorderBrush="Black" BorderThickness="1"
-                           Padding="2"
-                          Grid.Row="1" Grid.Column="1"
-                           Width="{TemplateBinding Width}"
-                           Height="{TemplateBinding Height}"
-                           Background="Wheat"
-                           HorizontalAlignment="Stretch"
-                           VerticalAlignment="Center" />
-                            <Track Name="PART_Track"
-                              HorizontalAlignment="Stretch"
-                              VerticalAlignment="Center"
-                              Grid.Row="1" Grid.Column="1"
-                              Width="{TemplateBinding Width}"
-                              Height="{TemplateBinding Height}">
-                                <Track.Thumb>
-                                    <Thumb Style="{StaticResource SliderThumbStyle}" />
-                                </Track.Thumb>
-                            </Track>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
     </UserControl.Resources>
-    
-    
-    
 
-    <Grid x:Name="video">
+        <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/RPG game GUI;component/Resources/background.jpg" />
         </Grid.Background>
@@ -273,15 +202,15 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
-        <Canvas Name="title_video" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Height="80" VerticalAlignment="Top">
+        <Canvas Name="title_keyboard" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Height="80" VerticalAlignment="Top">
             <Canvas.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/title-video.png" AlignmentX="Center" AlignmentY="Top" />
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/title-keyboard.png" AlignmentX="Center" AlignmentY="Top" />
             </Canvas.Background>
         </Canvas>
 
         <Canvas Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="4" Background="Wheat" Opacity="0.2">
         </Canvas>
-
+            
         <Button     Name="btnSave" 
                     Style="{StaticResource MyButtonStyle}"
                     Grid.Column="0"
@@ -310,100 +239,87 @@
             </Button.Background>
         </Button>
 
-        <Label Name="lbl_resolution" Grid.Row="2" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto">
+        <Label Name="lbl_up" Grid.Row="2" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
             <Label.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-resolution.png" AlignmentX="Center" AlignmentY="Center" />
-            </Label.Background>    
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-up.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
         </Label>
-        <ComboBox  Name="resolution" HorizontalAlignment="Center" Height="auto" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
-            <ComboBoxItem Name="res_1920" Content="1920x1080" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="res_1366" Content="1366x768" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="res_1024" Content="1024x768" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-        </ComboBox>
+            
+        <TextBox Name="up" Grid.Row="2" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+            W
+        </TextBox>
 
-        <Label Name="lbl_vsync" Grid.Row="3" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_down" Grid.Row="4" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
             <Label.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-vertical-sync.png" AlignmentX="Center" AlignmentY="Center" />
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-down.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <ComboBox Name="vsync" HorizontalAlignment="Center" Height="auto" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
-            <ComboBoxItem Name="vsync_on" Content="ON" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="vsync_off" Content="OFF" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-        </ComboBox>
-     
-        <Label Name="lbl_antialiasing" Grid.Row="4" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <TextBox Name="down" Grid.Row="4" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+            S
+        </TextBox>
+            
+        <Label Name="lbl_left" Grid.Row="3" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
             <Label.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-antialiasing.png" AlignmentX="Center" AlignmentY="Center" />
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-left.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <ComboBox Name="anti" HorizontalAlignment="Center" Height="auto" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
-            <ComboBoxItem Name="anti_off" Content="OFF" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="anti_4" Content="4x" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="anti_8" Content="8x" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="anti_16" Content="16x" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-        </ComboBox>
+        <TextBox Name="left" Grid.Row="3" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+            A
+        </TextBox>
 
-        <Label Name="lbl_brightness" Grid.Row="5" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_right" Grid.Row="5" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
             <Label.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-brightness.png" AlignmentX="Center" AlignmentY="Center" />
-            </Label.Background>
-        </Label>
-        
-        <Slider Name="bright" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" ></Slider>
-
-        <Label Name="lbl_graph_q" Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
-            <Label.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-graphics-quality.png" AlignmentX="Center" AlignmentY="Center" />
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-right.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <ComboBox Name="graph_q" HorizontalAlignment="Center" Height="auto" Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
-            <ComboBoxItem Name="gq_low" Content="LOW" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="gq_medium" Content="MEDIUM" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="gq_high" Content="HIGH" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="gq_ultra" Content="ULTRA" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-        </ComboBox>
+        <TextBox Name="right" Grid.Row="5" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+            D
+        </TextBox>
 
-        <Label Name="lbl_effe_q" Grid.Row="3" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_shoot" Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
             <Label.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-effects-quality.png" AlignmentX="Center" AlignmentY="Center" />
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-fire.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <ComboBox Name="effec_q" HorizontalAlignment="Center" Height="auto" Grid.Row="3" Grid.Column="4" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
-            <ComboBoxItem Name="eq_low" Content="LOW" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="eq_medium" Content="MEDIUM" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="eq_high" Content="HIGH" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="eq_ultra" Content="ULTRA" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+        <ComboBox  Name="fire" HorizontalAlignment="Left" Height="auto" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
+            <ComboBoxItem Name="lmouse" Content="lmouse" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="rmouse" Content="rmouse" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
+            <ComboBoxItem Name="F" Content="F" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
         </ComboBox>
 
-        <Label Name="lbl_shadow_q" Grid.Row="4" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_action" Grid.Row="3" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
             <Label.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-shadow-quality.png" AlignmentX="Center" AlignmentY="Center" />
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-action.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <ComboBox Name="shad_q" HorizontalAlignment="Center" Height="auto" Grid.Row="4" Grid.Column="4" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
-            <ComboBoxItem Name="sq_low" Content="LOW" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="sq_medium" Content="MEDIUM" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="sq_high" Content="HIGH" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="sq_ultra" Content="ULTRA" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-        </ComboBox>
-
-        <Label Name="lbl_text_q" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_jump" Grid.Row="4" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
             <Label.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/video-properties-texture-quality.png" AlignmentX="Center" AlignmentY="Center" />
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-jump.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <ComboBox Name="text_q" HorizontalAlignment="Center" Height="auto" Grid.Row="5" Grid.Column="4" VerticalAlignment="Center" Width="auto" FontSize="16" Padding="5,5,5,5">
-            <ComboBoxItem Name="tq_low" Content="LOW" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="tq_medium" Content="MEDIUM" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="tq_high" Content="HIGH" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-            <ComboBoxItem Name="tq_ultra" Content="ULTRA" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
-        </ComboBox>
+        <TextBox Name="jump" Grid.Row="4" Grid.Column="3" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+            LSHIFT
+        </TextBox>
+
+        <TextBox Name="action" Grid.Row="3" Grid.Column="4" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+            R
+        </TextBox>
+            
+        <Label Name="lbl_flying" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+            <Label.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-flying.png" AlignmentX="Center" AlignmentY="Center" />
+            </Label.Background>
+        </Label>
+
+        <TextBox Name="flying" Grid.Row="5" Grid.Column="3" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+            SPACE
+        </TextBox>
 
     </Grid>
 </UserControl>

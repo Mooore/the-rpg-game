@@ -121,8 +121,11 @@
 
         <OptionsContent:Video x:Name="ucVideo" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" Visibility="Hidden"/>
 
-        
-        
+        <OptionsContent:Sound x:Name="ucSound" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" Visibility="Hidden"/>
+
+        <OptionsContent:Keyboard x:Name="ucKeyboard" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" Visibility="Hidden"/>
+
+
         <Border x:Name="borLoadGame" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
             <local:LoadGame />
         </Border>

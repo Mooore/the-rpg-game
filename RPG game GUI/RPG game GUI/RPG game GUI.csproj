@@ -93,6 +93,12 @@
     <Compile Include="Menu\Options.xaml.cs">
       <DependentUpon>Options.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menu\OptionsContent\Keyboard.xaml.cs">
+      <DependentUpon>Keyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\OptionsContent\Sound.xaml.cs">
+      <DependentUpon>Sound.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Menu\OptionsContent\Video.xaml.cs">
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
@@ -129,6 +135,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Menu\Options.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\OptionsContent\Keyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\OptionsContent\Sound.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -454,6 +468,22 @@
   <ItemGroup>
     <Resource Include="Resources\off.png" />
     <Resource Include="Resources\on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sound-properties-effects.png" />
+    <Resource Include="Resources\sound-properties-master.png" />
+    <Resource Include="Resources\sound-properties-theme.png" />
+    <Resource Include="Resources\sound-properties-vehicles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\keyboard-properties-action.png" />
+    <Resource Include="Resources\keyboard-properties-down.png" />
+    <Resource Include="Resources\keyboard-properties-fire.png" />
+    <Resource Include="Resources\keyboard-properties-flying.png" />
+    <Resource Include="Resources\keyboard-properties-jump.png" />
+    <Resource Include="Resources\keyboard-properties-left.png" />
+    <Resource Include="Resources\keyboard-properties-right.png" />
+    <Resource Include="Resources\keyboard-properties-up.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
