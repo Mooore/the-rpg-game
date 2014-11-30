@@ -36,7 +36,7 @@ namespace RPG_game_GUI.Menu
             
             if(App.Current.Properties["is_option"].ToString() == "True") 
             {
-                borOptions.Visibility = Visibility.Visible;
+                ucOptions.Visibility = Visibility.Visible;
             }
             setSizeItems();
         }
@@ -181,7 +181,7 @@ namespace RPG_game_GUI.Menu
             else if (Convert.ToBoolean(App.Current.Properties["is_option"]) == true)
             {
                 App.Current.Properties["is_option"] = false;
-                borOptions.IsEnabled = false;
+                ucOptions.IsEnabled = false;
 
                 DoubleAnimation fade_out = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
@@ -191,7 +191,7 @@ namespace RPG_game_GUI.Menu
                 sb.Duration = animate_dur;
                 sb.Children.Add(fade_out);
 
-                Storyboard.SetTarget(fade_out, borOptions);
+                Storyboard.SetTarget(fade_out, ucOptions);
                 Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
 
                 fade_out.From = 1;
@@ -204,7 +204,7 @@ namespace RPG_game_GUI.Menu
                 sb2.Duration = animate_dur;
                 sb2.Children.Add(margin_out);
 
-                Storyboard.SetTarget(margin_out, borOptions);
+                Storyboard.SetTarget(margin_out, ucOptions);
                 Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
 
                 margin_out.From = new Thickness(0, 0, 0, 0);
@@ -328,7 +328,7 @@ namespace RPG_game_GUI.Menu
                     sb1.Duration = animate_dur1;
                     sb1.Children.Add(fade_out1);
 
-                    Storyboard.SetTarget(fade_out1, borOptions);
+                    Storyboard.SetTarget(fade_out1, ucOptions);
                     Storyboard.SetTargetProperty(fade_out1, new PropertyPath("(Opacity)"));
 
                     fade_out1.From = 1;
@@ -341,7 +341,7 @@ namespace RPG_game_GUI.Menu
                     sb12.Duration = animate_dur1;
                     sb12.Children.Add(margin_out);
 
-                    Storyboard.SetTarget(margin_out, borOptions);
+                    Storyboard.SetTarget(margin_out, ucOptions);
                     Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
 
                     margin_out.From = new Thickness(0, 0, 0, 0);
@@ -389,8 +389,8 @@ namespace RPG_game_GUI.Menu
 
                 App.Current.Properties["is_load"] = true;
 
-                Panel.SetZIndex(borOptions, 1);
-                borOptions.IsEnabled = false;
+                Panel.SetZIndex(ucOptions, 1);
+                ucOptions.IsEnabled = false;
                 Panel.SetZIndex(borCredits, 1);
                 borCredits.IsEnabled = false;
                 Panel.SetZIndex(borLoadGame, 10);
@@ -433,7 +433,7 @@ namespace RPG_game_GUI.Menu
             if (Convert.ToBoolean(App.Current.Properties["is_option"]) == true)
             {
                 App.Current.Properties["is_option"] = false;
-                borOptions.IsEnabled = false;
+                ucOptions.IsEnabled = false;
 
                 DoubleAnimation fade_out = new DoubleAnimation();
                 Duration animate_dur = new Duration(TimeSpan.FromSeconds(1.5));
@@ -443,7 +443,7 @@ namespace RPG_game_GUI.Menu
                 sb.Duration = animate_dur;
                 sb.Children.Add(fade_out);
 
-                Storyboard.SetTarget(fade_out, borOptions);
+                Storyboard.SetTarget(fade_out, ucOptions);
                 Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
 
                 fade_out.From = 1;
@@ -456,7 +456,7 @@ namespace RPG_game_GUI.Menu
                 sb2.Duration = animate_dur;
                 sb2.Children.Add(margin_out);
 
-                Storyboard.SetTarget(margin_out, borOptions);
+                Storyboard.SetTarget(margin_out, ucOptions);
                 Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
 
                 margin_out.From = new Thickness(0, 0, 0, 0);
@@ -467,9 +467,9 @@ namespace RPG_game_GUI.Menu
             }
             else
             {
-                if (borOptions.Visibility == Visibility.Hidden)
+                if (ucOptions.Visibility == Visibility.Hidden)
                 {
-                    borOptions.Visibility = Visibility.Visible;
+                    ucOptions.Visibility = Visibility.Visible;
                 }
 
                 if (Convert.ToBoolean(App.Current.Properties["is_load"]) != false)
@@ -549,8 +549,8 @@ namespace RPG_game_GUI.Menu
                 borLoadGame.IsEnabled = false;
                 Panel.SetZIndex(borCredits, 1);
                 borCredits.IsEnabled = false;
-                Panel.SetZIndex(borOptions, 10);
-                borOptions.IsEnabled = true;
+                Panel.SetZIndex(ucOptions, 10);
+                ucOptions.IsEnabled = true;
                 
                 
                 DoubleAnimation fade_in = new DoubleAnimation();
@@ -561,7 +561,7 @@ namespace RPG_game_GUI.Menu
                 sb.Duration = animate_dur;
                 sb.Children.Add(fade_in);
 
-                Storyboard.SetTarget(fade_in, borOptions);
+                Storyboard.SetTarget(fade_in, ucOptions);
                 Storyboard.SetTargetProperty(fade_in, new PropertyPath("(Opacity)"));
 
                 fade_in.From = 0;
@@ -574,7 +574,7 @@ namespace RPG_game_GUI.Menu
                 sb2.Duration = animate_dur;
                 sb2.Children.Add(margin_in);
 
-                Storyboard.SetTarget(margin_in, borOptions);
+                Storyboard.SetTarget(margin_in, ucOptions);
                 Storyboard.SetTargetProperty(margin_in, new PropertyPath("(Margin)"));
 
                 margin_in.From = new Thickness(0, 100, 0, 0);
@@ -681,7 +681,7 @@ namespace RPG_game_GUI.Menu
                     sb1.Duration = animate_dur1;
                     sb1.Children.Add(fade_out);
 
-                    Storyboard.SetTarget(fade_out, borOptions);
+                    Storyboard.SetTarget(fade_out, ucOptions);
                     Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
 
                     fade_out.From = 1;
@@ -694,7 +694,7 @@ namespace RPG_game_GUI.Menu
                     sb12.Duration = animate_dur1;
                     sb12.Children.Add(margin_out);
 
-                    Storyboard.SetTarget(margin_out, borOptions);
+                    Storyboard.SetTarget(margin_out, ucOptions);
                     Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
 
                     margin_out.From = new Thickness(0, 0, 0, 0);
@@ -708,8 +708,8 @@ namespace RPG_game_GUI.Menu
 
                 Panel.SetZIndex(borLoadGame, 1);
                 borLoadGame.IsEnabled = false;
-                Panel.SetZIndex(borOptions, 1);
-                borOptions.IsEnabled = false;
+                Panel.SetZIndex(ucOptions, 1);
+                ucOptions.IsEnabled = false;
                 Panel.SetZIndex(borCredits, 10);
                 borCredits.IsEnabled = true;
 

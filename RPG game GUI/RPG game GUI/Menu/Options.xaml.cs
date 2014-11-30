@@ -115,9 +115,31 @@ namespace RPG_game_GUI.Menu
             };
         }
 
+        
+
         private void btnVideo_Click(object sender, RoutedEventArgs e)
         {
-            this.Content = new Menu.OptionsContent.Video();
+            //this.Content = new Menu.OptionsContent.Video();
+
+            Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+            UserControl myVideo = (UserControl)mainGrid.FindName("ucVideo");
+
+            if (myVideo.Visibility == Visibility.Hidden) 
+            {
+                myVideo.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                MessageBox.Show("Okno už je vidět.", myVideo.Name.ToString());
+            }
+
+
+
+           // UserControl myVideo = (UserControl)myMainMenu.FindName("ucVideo");
+
+
+            //myVideo.Visibility = Visibility.Visible;
 
             /*DoubleAnimation fade_out = new DoubleAnimation();
             Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
