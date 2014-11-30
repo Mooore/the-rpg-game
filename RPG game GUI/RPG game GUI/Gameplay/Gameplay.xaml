@@ -111,21 +111,37 @@
 
             <Button x:Name="btnOne" Margin="10,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
                 <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/death.png"/>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon1.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnTwo" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnThree" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnTwo" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+                <Button.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon2.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnThree" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+                <Button.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon3.png"/>
+                </Button.Background>
+            </Button>
             <Button x:Name="btnFour" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
                 <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/inventory.png"/>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon4.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnFive" Margin="19.600,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
-            <Button x:Name="btnSix" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" />
+            <Button x:Name="btnFive" Margin="19.600,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+                <Button.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon5.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnSix" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+                <Button.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon6.png"/>
+                </Button.Background>
+            </Button>
             <Button x:Name="btnSeven" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
                 <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/stat.png"/>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon7.png"/>
                 </Button.Background>
             </Button>
         </StatusBar>
