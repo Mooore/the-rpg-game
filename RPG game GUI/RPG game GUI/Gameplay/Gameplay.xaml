@@ -80,7 +80,7 @@
                 <BlurEffect x:Name="vbMapBlur" Radius="0"/>
             </Viewbox.Effect>
 
-            <Ellipse Height="163" Stroke="Black" Width="165" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Ellipse Height="163" Width="165" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Minimap/minimap.png" />
                 </Ellipse.Fill>
