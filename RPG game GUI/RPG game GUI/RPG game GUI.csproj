@@ -425,7 +425,6 @@
     <Resource Include="Resources\crossButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Gothic Music - Witch Factory.mp3" />
     <EmbeddedResource Include="Resources\Sounds\Theme.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
