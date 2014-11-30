@@ -52,9 +52,9 @@
             </Viewbox.Effect>
             <WrapPanel x:Name="CharBar" Height="70">
 
-                <Ellipse Height="67" Margin="0,1,0,0" VerticalAlignment="Center" Stroke="Black" Width="74" Panel.ZIndex="1" >
+                <Ellipse Height="67" Margin="0,1,0,0" VerticalAlignment="Center" Width="74" Panel.ZIndex="1" >
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="/RPG game GUI;component/Resources/Char_icons/char_icon.jpg" />
+                        <ImageBrush ImageSource="/RPG game GUI;component/Resources/Char_icons/icon.png" />
                     </Ellipse.Fill>
                 </Ellipse>
                 <WrapPanel Height="90" Margin="-60,2.5,0,0" VerticalAlignment="Center" Width="185" >

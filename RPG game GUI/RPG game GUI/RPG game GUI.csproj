@@ -283,9 +283,6 @@
     <Resource Include="Resources\health.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\mana.png" />
-  </ItemGroup>
-  <ItemGroup>
     <SplashScreen Include="Resources\main_menu_textura.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -484,6 +481,12 @@
     <Resource Include="Resources\keyboard-properties-left.png" />
     <Resource Include="Resources\keyboard-properties-right.png" />
     <Resource Include="Resources\keyboard-properties-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Char_icons\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
