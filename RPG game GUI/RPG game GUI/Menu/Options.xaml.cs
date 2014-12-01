@@ -71,6 +71,8 @@ namespace RPG_game_GUI.Menu
         private void btnVideo_Click(object sender, RoutedEventArgs e)
         {
             //this.Content = new Menu.OptionsContent.Video();
+            App.Current.Properties["is_video"] = true;
+            App.Current.Properties["is_option"] = false;
 
             Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
             UserControl myVideo = (UserControl)mainGrid.FindName("ucVideo");
@@ -148,6 +150,9 @@ namespace RPG_game_GUI.Menu
 
         private void btnSound_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_sound"] = true;
+            App.Current.Properties["is_option"] = false;
+
             Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
             UserControl mySound = (UserControl)mainGrid.FindName("ucSound");
 
@@ -222,6 +227,9 @@ namespace RPG_game_GUI.Menu
 
         private void btnKeyboard_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Properties["is_keyboard"] = true;
+            App.Current.Properties["is_option"] = false;
+
             Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
             UserControl myKeyboard = (UserControl)mainGrid.FindName("ucKeyboard");
 

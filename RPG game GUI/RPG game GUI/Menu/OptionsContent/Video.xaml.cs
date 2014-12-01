@@ -72,7 +72,7 @@ namespace RPG_game_GUI.Menu.OptionsContent
             effec_q.FontSize = 16;
             shad_q.FontSize = 16;
             text_q.FontSize = 16;
-            bright.Width = 250;
+            bright.Width = 200;
 
             
         }
@@ -92,6 +92,7 @@ namespace RPG_game_GUI.Menu.OptionsContent
         private void set1024()
         {
             resolution.FontSize = 12;
+            resolution.Width = 80;
             vsync.FontSize = 12;
             anti.FontSize = 12;
             graph_q.FontSize = 12;
@@ -176,6 +177,7 @@ namespace RPG_game_GUI.Menu.OptionsContent
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             //this.Content = new Menu.Options();
+            App.Current.Properties["is_video"] = false;
 
             Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
             UserControl myOptions = (UserControl)mainGrid.FindName("ucOptions");

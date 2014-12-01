@@ -18,6 +18,9 @@ namespace RPG_game_GUI
             App.Current.Properties["is_option"] = false;
             App.Current.Properties["is_load"] = false;
             App.Current.Properties["is_credits"] = false;
+            App.Current.Properties["is_video"] = false;
+            App.Current.Properties["is_sound"] = false;
+            App.Current.Properties["is_keyboard"] = false;
             
             if ((SystemParameters.PrimaryScreenWidth == 1920) && (SystemParameters.PrimaryScreenHeight == 1080))
             {

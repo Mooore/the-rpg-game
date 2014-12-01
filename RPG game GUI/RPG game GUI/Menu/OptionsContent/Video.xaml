@@ -95,7 +95,7 @@
             <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
             <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
             <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
-            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="MinWidth" Value="80"/>
             <Setter Property="MinHeight" Value="20"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -184,15 +184,15 @@
         <Style x:Key="SliderThumbStyle" TargetType="Thumb">
             <Setter Property="SnapsToDevicePixels" Value="true"/>
             <Setter Property="OverridesDefaultStyle" Value="false"/>
-            <Setter Property="Height" Value="18"/>
-            <Setter Property="Width" Value="18"/>
+            <Setter Property="Height" Value="15"/>
+            <Setter Property="Width" Value="15"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Thumb">
                         <Ellipse  Stroke="Black"
                           StrokeThickness="1"
                           Name="Ellipse" 
-                          Fill="DarkGray" />
+                          Fill="WhiteSmoke" />
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Thumb.BitmapEffect" Value="{StaticResource GlowEffect}" />

@@ -95,7 +95,7 @@
             <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
             <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
             <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
-            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="MinWidth" Value="90"/>
             <Setter Property="MinHeight" Value="20"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -112,7 +112,7 @@
                             <ContentPresenter
                         Name="ContentSite"
                         IsHitTestVisible="False" 
-                        Margin="3,3,23,3"
+                        Margin="3,3,13,3"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Left" />
                             <TextBox x:Name="PART_EditableTextBox"
@@ -122,7 +122,7 @@
                         VerticalAlignment="Center" 
                         Padding="{TemplateBinding Padding}"
                         Text="{TemplateBinding Text}"
-                        Margin="3,3,23,3"
+                        Margin="3,3,13,3"
                         Focusable="False" 
                         Background="Transparent"
                         Visibility="Visible"
@@ -239,47 +239,47 @@
             </Button.Background>
         </Button>
 
-        <Label Name="lbl_up" Grid.Row="2" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_up" Grid.Row="2" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="100" Width="auto" Height="auto" >
             <Label.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-up.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
             
-        <TextBox Name="up" Grid.Row="2" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+        <TextBox Name="up" Grid.Row="2" Grid.Column="1" Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">
             W
         </TextBox>
 
-        <Label Name="lbl_down" Grid.Row="4" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_down" Grid.Row="4" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="100" Width="auto" Height="auto" >
             <Label.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-down.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <TextBox Name="down" Grid.Row="4" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+        <TextBox Name="down" Grid.Row="4" Grid.Column="1" Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">
             S
         </TextBox>
             
-        <Label Name="lbl_left" Grid.Row="3" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_left" Grid.Row="3" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="100" Width="auto" Height="auto" >
             <Label.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-left.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <TextBox Name="left" Grid.Row="3" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+        <TextBox Name="left" Grid.Row="3" Grid.Column="1" Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">
             A
         </TextBox>
 
-        <Label Name="lbl_right" Grid.Row="5" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_right" Grid.Row="5" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="100" Width="auto" Height="auto" >
             <Label.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-right.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <TextBox Name="right" Grid.Row="5" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+        <TextBox Name="right" Grid.Row="5" Grid.Column="1" Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">
             D
         </TextBox>
 
-        <Label Name="lbl_shoot" Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_shoot" Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="100" Width="auto" Height="auto" >
             <Label.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-fire.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
@@ -291,33 +291,33 @@
             <ComboBoxItem Name="F" Content="F" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16" Padding="5,5,5,5"/>
         </ComboBox>
 
-        <Label Name="lbl_action" Grid.Row="3" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_action" Grid.Row="3" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="100" Width="auto" Height="auto" >
             <Label.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-action.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <Label Name="lbl_jump" Grid.Row="4" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_jump" Grid.Row="4" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="100" Width="auto" Height="auto" >
             <Label.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-jump.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <TextBox Name="jump" Grid.Row="4" Grid.Column="3" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+        <TextBox Name="jump" Grid.Row="4" Grid.Column="3" Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">
             LSHIFT
         </TextBox>
 
-        <TextBox Name="action" Grid.Row="3" Grid.Column="4" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+        <TextBox Name="action" Grid.Row="3" Grid.Column="4" Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">
             R
         </TextBox>
             
-        <Label Name="lbl_flying" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="150" Width="auto" Height="auto" >
+        <Label Name="lbl_flying" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="250" MinWidth="100" Width="auto" Height="auto" >
             <Label.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/RPG game GUI;component/Resources/keyboard-properties-flying.png" AlignmentX="Center" AlignmentY="Center" />
             </Label.Background>
         </Label>
 
-        <TextBox Name="flying" Grid.Row="5" Grid.Column="3" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="25" Padding="0,6,0,0">
+        <TextBox Name="flying" Grid.Row="5" Grid.Column="3" Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" FontSize="18">
             SPACE
         </TextBox>
 

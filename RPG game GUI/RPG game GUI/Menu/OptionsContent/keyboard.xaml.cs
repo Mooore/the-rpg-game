@@ -34,9 +34,11 @@ namespace RPG_game_GUI.Menu.OptionsContent
             fire.SelectedIndex = 0;
         }
 
+      
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             //this.Content = new Menu.Options();
+            App.Current.Properties["is_keyboard"] = true;
 
             Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
             UserControl myOptions = (UserControl)mainGrid.FindName("ucOptions");

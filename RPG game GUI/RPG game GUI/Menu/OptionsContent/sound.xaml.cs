@@ -35,6 +35,7 @@ namespace RPG_game_GUI.Menu.OptionsContent
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             //this.Content = new Menu.Options();
+            App.Current.Properties["is_sound"] = true;
 
             Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
             UserControl myOptions = (UserControl)mainGrid.FindName("ucOptions");

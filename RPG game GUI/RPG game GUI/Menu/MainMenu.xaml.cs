@@ -248,6 +248,126 @@ namespace RPG_game_GUI.Menu
                 sb.Begin();
                 sb2.Begin();
             }
+            else if (Convert.ToBoolean(App.Current.Properties["is_video"]) == true)
+            {
+                App.Current.Properties["is_video"] = false;
+                App.Current.Properties["is_option"] = false;
+                ucOptions.IsEnabled = false;
+                ucVideo.IsEnabled = false;
+
+                //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                //UserControl myOptions = (UserControl)mainGrid.FindName("ucVideo");
+
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_durat;
+
+                Storyboard sbopt3 = new Storyboard();
+                sbopt3.Duration = animate_durat;
+                sbopt3.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, ucVideo);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_durat;
+
+                Storyboard sbopt23 = new Storyboard();
+                sbopt23.Duration = animate_durat;
+                sbopt23.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, ucVideo);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+
+                sbopt3.Begin();
+                sbopt23.Begin();
+            }
+            else if (Convert.ToBoolean(App.Current.Properties["is_sound"]) == true)
+            {
+                App.Current.Properties["is_sound"] = false;
+                App.Current.Properties["is_option"] = false;
+                ucOptions.IsEnabled = false;
+                ucSound.IsEnabled = false;
+
+                //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                //UserControl myOptions = (UserControl)mainGrid.FindName("ucSound");
+
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_durat;
+
+                Storyboard sbopt3 = new Storyboard();
+                sbopt3.Duration = animate_durat;
+                sbopt3.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, ucSound);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_durat;
+
+                Storyboard sbopt23 = new Storyboard();
+                sbopt23.Duration = animate_durat;
+                sbopt23.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, ucSound);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+
+                sbopt3.Begin();
+                sbopt23.Begin();
+            }
+            else if (Convert.ToBoolean(App.Current.Properties["is_keyboard"]) == true)
+            {
+                App.Current.Properties["is_keyboard"] = false;
+                App.Current.Properties["is_option"] = false;
+                ucOptions.IsEnabled = false;
+                ucKeyboard.IsEnabled = false;
+
+                //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                //UserControl myOptions = (UserControl)mainGrid.FindName("ucKeyboard");
+
+                DoubleAnimation fade_out = new DoubleAnimation();
+                Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                fade_out.Duration = animate_durat;
+
+                Storyboard sbopt3 = new Storyboard();
+                sbopt3.Duration = animate_durat;
+                sbopt3.Children.Add(fade_out);
+
+                Storyboard.SetTarget(fade_out, ucKeyboard);
+                Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                fade_out.From = 1;
+                fade_out.To = 0;
+
+                ThicknessAnimation margin_out = new ThicknessAnimation();
+                margin_out.Duration = animate_durat;
+
+                Storyboard sbopt23 = new Storyboard();
+                sbopt23.Duration = animate_durat;
+                sbopt23.Children.Add(margin_out);
+
+                Storyboard.SetTarget(margin_out, ucKeyboard);
+                Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                margin_out.From = new Thickness(0, 0, 0, 0);
+                margin_out.To = new Thickness(0, 100, 0, 0);
+
+                sbopt3.Begin();
+                sbopt23.Begin();
+            }
 
             Grid.SetZIndex(BlackOut, 10);
 
@@ -386,6 +506,120 @@ namespace RPG_game_GUI.Menu
                     sb1.Begin();
                     sb12.Begin();
                 }
+                if (Convert.ToBoolean(App.Current.Properties["is_video"]) == true)
+                {
+                    App.Current.Properties["is_video"] = false;
+                    App.Current.Properties["is_option"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucVideo");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucVideo);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucVideo);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
+                if (Convert.ToBoolean(App.Current.Properties["is_sound"]) == true)
+                {
+                    App.Current.Properties["is_sound"] = false;
+                    App.Current.Properties["is_option"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucSound");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucSound);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucSound);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
+                if (Convert.ToBoolean(App.Current.Properties["is_keyboard"]) == true)
+                {
+                    App.Current.Properties["is_keyboard"] = false;
+                    App.Current.Properties["is_option"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucKeyboard");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucKeyboard);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucKeyboard);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
 
                 App.Current.Properties["is_load"] = true;
 
@@ -393,6 +627,12 @@ namespace RPG_game_GUI.Menu
                 ucOptions.IsEnabled = false;
                 Panel.SetZIndex(borCredits, 1);
                 borCredits.IsEnabled = false;
+                Panel.SetZIndex(ucKeyboard, 1);
+                ucOptions.IsEnabled = false;
+                Panel.SetZIndex(ucSound, 1);
+                ucOptions.IsEnabled = false;
+                Panel.SetZIndex(ucVideo, 1);
+                ucOptions.IsEnabled = false;
                 Panel.SetZIndex(borLoadGame, 10);
                 borLoadGame.IsEnabled = true;
                 
@@ -542,6 +782,117 @@ namespace RPG_game_GUI.Menu
                     sb1.Begin();
                     sb12.Begin();
                 }
+                if (Convert.ToBoolean(App.Current.Properties["is_video"]) == true)
+                {
+                    App.Current.Properties["is_video"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucVideo");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucVideo);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucVideo);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
+                if (Convert.ToBoolean(App.Current.Properties["is_sound"]) == true)
+                {
+                    App.Current.Properties["is_sound"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucSound");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucSound);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucSound);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
+                if (Convert.ToBoolean(App.Current.Properties["is_keyboard"]) == true)
+                {
+                    App.Current.Properties["is_keyboard"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucKeyboard");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucKeyboard);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucKeyboard);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
 
                 App.Current.Properties["is_option"] = true;
 
@@ -549,6 +900,12 @@ namespace RPG_game_GUI.Menu
                 borLoadGame.IsEnabled = false;
                 Panel.SetZIndex(borCredits, 1);
                 borCredits.IsEnabled = false;
+                Panel.SetZIndex(ucKeyboard, 1);
+                ucOptions.IsEnabled = false;
+                Panel.SetZIndex(ucSound, 1);
+                ucOptions.IsEnabled = false;
+                Panel.SetZIndex(ucVideo, 1);
+                ucOptions.IsEnabled = false;
                 Panel.SetZIndex(ucOptions, 10);
                 ucOptions.IsEnabled = true;
                 
@@ -703,12 +1060,132 @@ namespace RPG_game_GUI.Menu
                     sb1.Begin();
                     sb12.Begin();
                 }
+                if (Convert.ToBoolean(App.Current.Properties["is_video"]) == true)
+                {
+                    App.Current.Properties["is_video"] = false;
+                    App.Current.Properties["is_option"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucVideo");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucVideo);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucVideo);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
+                if (Convert.ToBoolean(App.Current.Properties["is_sound"]) == true)
+                {
+                    App.Current.Properties["is_sound"] = false;
+                    App.Current.Properties["is_option"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucSound");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucSound);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucSound);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
+                if (Convert.ToBoolean(App.Current.Properties["is_keyboard"]) == true)
+                {
+                    App.Current.Properties["is_keyboard"] = false;
+                    App.Current.Properties["is_option"] = false;
+
+                    //Grid mainGrid = VisualTreeHelper.GetParent(this) as Grid;
+                    //UserControl myOptions = (UserControl)mainGrid.FindName("ucKeyboard");
+
+                    DoubleAnimation fade_out = new DoubleAnimation();
+                    Duration animate_durat = new Duration(TimeSpan.FromSeconds(1.5));
+                    fade_out.Duration = animate_durat;
+
+                    Storyboard sbopt3 = new Storyboard();
+                    sbopt3.Duration = animate_durat;
+                    sbopt3.Children.Add(fade_out);
+
+                    Storyboard.SetTarget(fade_out, ucKeyboard);
+                    Storyboard.SetTargetProperty(fade_out, new PropertyPath("(Opacity)"));
+
+                    fade_out.From = 1;
+                    fade_out.To = 0;
+
+                    ThicknessAnimation margin_out = new ThicknessAnimation();
+                    margin_out.Duration = animate_durat;
+
+                    Storyboard sbopt23 = new Storyboard();
+                    sbopt23.Duration = animate_durat;
+                    sbopt23.Children.Add(margin_out);
+
+                    Storyboard.SetTarget(margin_out, ucKeyboard);
+                    Storyboard.SetTargetProperty(margin_out, new PropertyPath("(Margin)"));
+
+                    margin_out.From = new Thickness(0, 0, 0, 0);
+                    margin_out.To = new Thickness(0, 100, 0, 0);
+
+                    sbopt3.Begin();
+                    sbopt23.Begin();
+                }
 
                 App.Current.Properties["is_credits"] = true;
 
                 Panel.SetZIndex(borLoadGame, 1);
                 borLoadGame.IsEnabled = false;
                 Panel.SetZIndex(ucOptions, 1);
+                ucOptions.IsEnabled = false;
+                Panel.SetZIndex(ucKeyboard, 1);
+                ucOptions.IsEnabled = false;
+                Panel.SetZIndex(ucSound, 1);
+                ucOptions.IsEnabled = false;
+                Panel.SetZIndex(ucVideo, 1);
                 ucOptions.IsEnabled = false;
                 Panel.SetZIndex(borCredits, 10);
                 borCredits.IsEnabled = true;
