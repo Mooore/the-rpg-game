@@ -8,6 +8,9 @@
              d:DesignHeight="768" d:DesignWidth="1024" PreviewKeyDown="UserControl_PreviewKeyDown" Loaded="UserControl_Loaded">
 
     <UserControl.Resources>
+        <DropShadowBitmapEffect x:Key="GlowEffect" Color="Khaki" ShadowDepth="0" Opacity="20" Softness="80" />
+        <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
+        
         <Style x:Key="MyButtonStyle" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="Margin" Value="5"/>
@@ -26,12 +29,20 @@
                             Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource GlowEffect}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Button.BitmapEffect" Value="{StaticResource ClickEffect}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
 
                 </Setter.Value>
             </Setter>
         </Style>
-        <Image x:Key="button1_icon1" Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+        <Image x:Key="button1_icon1"  Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
         <Image x:Key="button1_icon2" Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
         <Image x:Key="button1_icon3" Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
         <Image x:Key="button1_icon4" Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
@@ -162,25 +173,25 @@
                 <BlurEffect x:Name="vbBarBlur" Radius="0"/>
             </StatusBar.Effect>
 
-            <Button x:Name="btnOne" Click="Button_Click1" Margin="10,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+            <Button x:Name="btnOne" Background="Black" Click="Button_Click1" Margin="10,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
                 <DynamicResource ResourceKey="button1_icon1"/>
             </Button>
-            <Button x:Name="btnTwo" Click="Button_Click2" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+            <Button x:Name="btnTwo" Background="Black" Click="Button_Click2" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
                 <DynamicResource ResourceKey="button2_icon2"/>
             </Button>
-            <Button x:Name="btnThree" Click="Button_Click3" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+            <Button x:Name="btnThree" Background="Black" Click="Button_Click3" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
                 <DynamicResource ResourceKey="button3_icon3"/>
             </Button>
-            <Button x:Name="btnFour" Click="Button_Click4" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+            <Button x:Name="btnFour" Background="Black" Click="Button_Click4" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
                 <DynamicResource ResourceKey="button4_icon4"/>
             </Button>
-            <Button x:Name="btnFive" Click="Button_Click5" Margin="19.600,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+            <Button x:Name="btnFive" Background="Black" Click="Button_Click5" Margin="19.600,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
                 <DynamicResource ResourceKey="button5_icon5"/>
             </Button>
-            <Button x:Name="btnSix" Click="Button_Click6" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+            <Button x:Name="btnSix" Background="Black" Click="Button_Click6" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
                 <DynamicResource ResourceKey="button6_icon6"/>
             </Button>
-            <Button x:Name="btnSeven" Click="Button_Click7" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+            <Button x:Name="btnSeven" Background="Black" Click="Button_Click7" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
                 <DynamicResource ResourceKey="button7_icon7"/>
             </Button>
         </StatusBar>
