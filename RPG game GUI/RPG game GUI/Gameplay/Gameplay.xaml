@@ -31,6 +31,61 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Image x:Key="button1_icon1" Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+        <Image x:Key="button1_icon2" Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
+        <Image x:Key="button1_icon3" Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
+        <Image x:Key="button1_icon4" Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
+        <Image x:Key="button1_icon5" Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
+        <Image x:Key="button1_icon6" Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
+        <Image x:Key="button1_icon7" Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
+
+        <Image x:Key="button2_icon1" Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+        <Image x:Key="button2_icon2" Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
+        <Image x:Key="button2_icon3" Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
+        <Image x:Key="button2_icon4" Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
+        <Image x:Key="button2_icon5" Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
+        <Image x:Key="button2_icon6" Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
+        <Image x:Key="button2_icon7" Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
+
+        <Image x:Key="button3_icon1" Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+        <Image x:Key="button3_icon2" Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
+        <Image x:Key="button3_icon3" Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
+        <Image x:Key="button3_icon4" Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
+        <Image x:Key="button3_icon5" Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
+        <Image x:Key="button3_icon6" Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
+        <Image x:Key="button3_icon7" Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
+
+        <Image x:Key="button4_icon1" Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+        <Image x:Key="button4_icon2" Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
+        <Image x:Key="button4_icon3" Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
+        <Image x:Key="button4_icon4" Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
+        <Image x:Key="button4_icon5" Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
+        <Image x:Key="button4_icon6" Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
+        <Image x:Key="button4_icon7" Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
+
+        <Image x:Key="button5_icon1" Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+        <Image x:Key="button5_icon2" Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
+        <Image x:Key="button5_icon3" Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
+        <Image x:Key="button5_icon4" Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
+        <Image x:Key="button5_icon5" Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
+        <Image x:Key="button5_icon6" Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
+        <Image x:Key="button5_icon7" Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
+
+        <Image x:Key="button6_icon1" Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+        <Image x:Key="button6_icon2" Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
+        <Image x:Key="button6_icon3" Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
+        <Image x:Key="button6_icon4" Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
+        <Image x:Key="button6_icon5" Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
+        <Image x:Key="button6_icon6" Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
+        <Image x:Key="button6_icon7" Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
+
+        <Image x:Key="button7_icon1" Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+        <Image x:Key="button7_icon2" Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
+        <Image x:Key="button7_icon3" Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
+        <Image x:Key="button7_icon4" Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
+        <Image x:Key="button7_icon5" Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
+        <Image x:Key="button7_icon6" Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
+        <Image x:Key="button7_icon7" Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
     </UserControl.Resources>
 
 
@@ -107,42 +162,26 @@
                 <BlurEffect x:Name="vbBarBlur" Radius="0"/>
             </StatusBar.Effect>
 
-
-
-            <Button x:Name="btnOne" Margin="10,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
-                <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon1.png"/>
-                </Button.Background>
+            <Button x:Name="btnOne" Click="Button_Click1" Margin="10,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+                <DynamicResource ResourceKey="button1_icon1"/>
             </Button>
-            <Button x:Name="btnTwo" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
-                <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon2.png"/>
-                </Button.Background>
+            <Button x:Name="btnTwo" Click="Button_Click2" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+                <DynamicResource ResourceKey="button2_icon2"/>
             </Button>
-            <Button x:Name="btnThree" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
-                <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon3.png"/>
-                </Button.Background>
+            <Button x:Name="btnThree" Click="Button_Click3" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+                <DynamicResource ResourceKey="button3_icon3"/>
             </Button>
-            <Button x:Name="btnFour" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
-                <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon4.png"/>
-                </Button.Background>
+            <Button x:Name="btnFour" Click="Button_Click4" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+                <DynamicResource ResourceKey="button4_icon4"/>
             </Button>
-            <Button x:Name="btnFive" Margin="19.600,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
-                <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon5.png"/>
-                </Button.Background>
+            <Button x:Name="btnFive" Click="Button_Click5" Margin="19.600,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+                <DynamicResource ResourceKey="button5_icon5"/>
             </Button>
-            <Button x:Name="btnSix" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
-                <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon6.png"/>
-                </Button.Background>
+            <Button x:Name="btnSix" Click="Button_Click6" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right">
+                <DynamicResource ResourceKey="button6_icon6"/>
             </Button>
-            <Button x:Name="btnSeven" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
-                <Button.Background>
-                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/spell_icons/icon7.png"/>
-                </Button.Background>
+            <Button x:Name="btnSeven" Click="Button_Click7" Margin="19,0,0,0" Style="{StaticResource MyButtonStyle}" Focusable="False" FontSize="24" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" >
+                <DynamicResource ResourceKey="button7_icon7"/>
             </Button>
         </StatusBar>
 

@@ -108,6 +108,256 @@ namespace RPG_game_GUI.Gameplay
             }
             
         }
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            {
+                // 1
+                if (btnOne.Content == FindResource("button1_icon1"))
+                {
+                    btnOne.Content = FindResource("button1_icon2");
+                }
+                else if (btnOne.Content == FindResource("button1_icon2"))
+                {
+                    btnOne.Content = FindResource("button1_icon3");
+                }
+                else if (btnOne.Content == FindResource("button1_icon3"))
+                {
+                    btnOne.Content = FindResource("button1_icon4");
+                }
+                else if (btnOne.Content == FindResource("button1_icon4"))
+                {
+                    btnOne.Content = FindResource("button1_icon5");
+                }
+                else if (btnOne.Content == FindResource("button1_icon5"))
+                {
+                    btnOne.Content = FindResource("button1_icon6");
+                }
+                else if (btnOne.Content == FindResource("button1_icon6"))
+                {
+                    btnOne.Content = FindResource("button1_icon7");
+                }
+                else if (btnOne.Content == FindResource("button1_icon7"))
+                {
+                    btnOne.Content = FindResource("button1_icon1");
+                }               
+            }
+        }
 
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            {
+                // 2
+                if (btnTwo.Content == FindResource("button2_icon1"))
+                {
+                    btnTwo.Content = FindResource("button2_icon2");
+                }
+                else if (btnTwo.Content == FindResource("button2_icon2"))
+                {
+                    btnTwo.Content = FindResource("button2_icon3");
+                }
+                else if (btnTwo.Content == FindResource("button2_icon3"))
+                {
+                    btnTwo.Content = FindResource("button2_icon4");
+                }
+                else if (btnTwo.Content == FindResource("button2_icon4"))
+                {
+                    btnTwo.Content = FindResource("button2_icon5");
+                }
+                else if (btnTwo.Content == FindResource("button2_icon5"))
+                {
+                    btnTwo.Content = FindResource("button2_icon6");
+                }
+                else if (btnTwo.Content == FindResource("button2_icon6"))
+                {
+                    btnTwo.Content = FindResource("button2_icon7");
+                }
+                else if (btnTwo.Content == FindResource("button2_icon7"))
+                {
+                    btnTwo.Content = FindResource("button2_icon1");
+                }
+            }
+        }
+
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            {
+                // 3
+                if (btnThree.Content == FindResource("button3_icon1"))
+                {
+                    btnThree.Content = FindResource("button3_icon2");
+                }
+                else if (btnThree.Content == FindResource("button3_icon2"))
+                {
+                    btnThree.Content = FindResource("button3_icon3");
+                }
+                else if (btnThree.Content == FindResource("button3_icon3"))
+                {
+                    btnThree.Content = FindResource("button3_icon4");
+                }
+                else if (btnThree.Content == FindResource("button3_icon4"))
+                {
+                    btnThree.Content = FindResource("button3_icon5");
+                }
+                else if (btnThree.Content == FindResource("button3_icon5"))
+                {
+                    btnThree.Content = FindResource("button3_icon6");
+                }
+                else if (btnThree.Content == FindResource("button3_icon6"))
+                {
+                    btnThree.Content = FindResource("button3_icon7");
+                }
+                else if (btnThree.Content == FindResource("button3_icon7"))
+                {
+                    btnThree.Content = FindResource("button3_icon1");
+                }
+            }
+        }
+
+        private void Button_Click4(object sender, RoutedEventArgs e)
+        {
+            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            {
+                // 4
+                if (btnFour.Content == FindResource("button4_icon1"))
+                {
+                    btnFour.Content = FindResource("button4_icon2");
+                }
+                else if (btnFour.Content == FindResource("button4_icon2"))
+                {
+                    btnFour.Content = FindResource("button4_icon3");
+                }
+                else if (btnFour.Content == FindResource("button4_icon3"))
+                {
+                    btnFour.Content = FindResource("button4_icon4");
+                }
+                else if (btnFour.Content == FindResource("button4_icon4"))
+                {
+                    btnFour.Content = FindResource("button4_icon5");
+                }
+                else if (btnFour.Content == FindResource("button4_icon5"))
+                {
+                    btnFour.Content = FindResource("button4_icon6");
+                }
+                else if (btnFour.Content == FindResource("button4_icon6"))
+                {
+                    btnFour.Content = FindResource("button4_icon7");
+                }
+                else if (btnFour.Content == FindResource("button4_icon7"))
+                {
+                    btnFour.Content = FindResource("button4_icon1");
+                }
+            }
+        }
+
+        private void Button_Click5(object sender, RoutedEventArgs e)
+        {
+            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            {
+                // 5
+                if (btnFive.Content == FindResource("button5_icon1"))
+                {
+                    btnFive.Content = FindResource("button5_icon2");
+                }
+                else if (btnFive.Content == FindResource("button5_icon2"))
+                {
+                    btnFive.Content = FindResource("button5_icon3");
+                }
+                else if (btnFive.Content == FindResource("button5_icon3"))
+                {
+                    btnFive.Content = FindResource("button5_icon4");
+                }
+                else if (btnFive.Content == FindResource("button5_icon4"))
+                {
+                    btnFive.Content = FindResource("button5_icon5");
+                }
+                else if (btnFive.Content == FindResource("button5_icon5"))
+                {
+                    btnFive.Content = FindResource("button5_icon6");
+                }
+                else if (btnFive.Content == FindResource("button5_icon6"))
+                {
+                    btnFive.Content = FindResource("button5_icon7");
+                }
+                else if (btnFive.Content == FindResource("button5_icon7"))
+                {
+                    btnFive.Content = FindResource("button5_icon1");
+                }
+            }
+        }
+
+        private void Button_Click6(object sender, RoutedEventArgs e)
+        {
+            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            {
+                // 6
+                if (btnSix.Content == FindResource("button6_icon1"))
+                {
+                    btnSix.Content = FindResource("button6_icon2");
+                }
+                else if (btnSix.Content == FindResource("button6_icon2"))
+                {
+                    btnSix.Content = FindResource("button6_icon3");
+                }
+                else if (btnSix.Content == FindResource("button6_icon3"))
+                {
+                    btnSix.Content = FindResource("button6_icon4");
+                }
+                else if (btnSix.Content == FindResource("button6_icon4"))
+                {
+                    btnSix.Content = FindResource("button6_icon5");
+                }
+                else if (btnSix.Content == FindResource("button6_icon5"))
+                {
+                    btnSix.Content = FindResource("button6_icon6");
+                }
+                else if (btnSix.Content == FindResource("button6_icon6"))
+                {
+                    btnSix.Content = FindResource("button6_icon7");
+                }
+                else if (btnSix.Content == FindResource("button6_icon7"))
+                {
+                    btnSix.Content = FindResource("button6_icon1");
+                }
+            }
+        }
+
+        private void Button_Click7(object sender, RoutedEventArgs e)
+        {
+            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            {
+                // 7
+                if (btnSeven.Content == FindResource("button7_icon1"))
+                {
+                    btnSeven.Content = FindResource("button7_icon2");
+                }
+                else if (btnSeven.Content == FindResource("button7_icon2"))
+                {
+                    btnSeven.Content = FindResource("button7_icon3");
+                }
+                else if (btnSeven.Content == FindResource("button7_icon3"))
+                {
+                    btnSeven.Content = FindResource("button7_icon4");
+                }
+                else if (btnSeven.Content == FindResource("button7_icon4"))
+                {
+                    btnSeven.Content = FindResource("button7_icon5");
+                }
+                else if (btnSeven.Content == FindResource("button7_icon5"))
+                {
+                    btnSeven.Content = FindResource("button7_icon6");
+                }
+                else if (btnSeven.Content == FindResource("button7_icon6"))
+                {
+                    btnSeven.Content = FindResource("button7_icon7");
+                }
+                else if (btnSeven.Content == FindResource("button7_icon7"))
+                {
+                    btnSeven.Content = FindResource("button7_icon1");
+                }
+            }
+        }
     }
 }
