@@ -1,0 +1,22 @@
+Recenze technické zprávy  
+	Projekt: 111	
+	Recenzent: xcadam01
+	
+	Obsahová kvalita (9):
+	Jedinou připomínku bych měl k opakování 2 stejných odstavců v sekci Očekávané výsledky a Návrh uživatelského rozhraní.
+	
+	Formální a jazyková úroveň (10):
+	Celý dokument je strukturován logicky a psán čtivou formou. Vhodný výběr slov bez gramatických chyb.
+		
+	Zaměření řešení (10):
+	Autor zmiňuje intuitivní rozhraní i pro uživatele neznalé v žánru. Pokud se bude držet návrhu uvedených v přílohách, určitě to pochopí naprostý laik.
+		
+	Technická úroveň (10):
+	Vzhledem k tomu, že nemám žádné zkušenosti s prostředí WPF, nemohu posoudit vhodnost výběru. Dále autor zmiňuje, že má zkušenosti ve tvorbě grafických prvků - bez výhrad.
+		
+	Návrh testování (10):
+	Celé testování se mi zdá velmi dobře navržené. Především obsáhle popsané Beta-testování. Zaručeně nejlépe popsaná část dokumentace.
+		
+	Další doporučení pro autora technické zprávy	
+	Sice se jedná o grafické rozhraní, ale rád bych věděl o jakou tématiku (historický, scifi) hry se jedná a zda bude ve 2D či 3D. Jde předpokládat, že se jedná o 2D, ale zmíněno by to být mohlo. ***  *** U testování by mohla být uvedena statistika mezi pohlavím a další poměr úspěšnosti u různých věkových kategorií.
+	
