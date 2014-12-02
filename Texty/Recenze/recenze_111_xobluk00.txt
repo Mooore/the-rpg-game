@@ -1,0 +1,22 @@
+Recenze technické zprávy  
+	Projekt: 111	
+	Recenzent: xobluk00
+	
+	Obsahová kvalita (9):
+	Je to dobre napsane, sablanu od Berana jsme pouzili take... Mozna bych pridala vetu/dve o samotne implementaci. Zaroven, pokud je to mozne, pridat nejak vic na existujici reseni. Ja se omlouvam, ale o hrach, ktere zminujete, jsem neslysela/slysela jen letmo, ale netusim, jak vypadaji... Takze okud by byl treba mozny printscreen a rict: jo, tady je strasne moc tlacitek/panelu, to nam vadi. Nebo naopak: tady je fakt pekna grafika...
+	
+	Formální a jazyková úroveň (8):
+	Na prvni pohled bez chyb, jen jsem si vsimla, ze vam chybi jedna ukoncovaci zavorka: ...(kdy uživatel vůbec netuší co se uvnitř aplikace děje ***  *** Jeste bych mozna nejak upravila prvni vety u testovani. U realizace zacinate vetou: Realizace zacala..., u navrhu aplikace: Aplikace je... *** Ale kdyz u alfa (plati i pro beta test.) testovani zacinate vetou Celý tým, který se podílel na vývoji., zni to pro me mozna trochu divne. Co jako cely tym? cely tym, ktery se podilel na vyvoji, bude testovat? Asi jo:D Ale ta veta mi proste prisla takova nedokoncena, vytrzena z kontextu (oproti tem ostatnim...) ***  *** Asi detail, ale na konci odrazek obcas nemate tecku: Za jak dlouhou dobu uživatel pochopí základní principy hry (čas pro zorientování, při spuštění nové hry), obcas jo: Srovnání vůči jiným hrám typu RPG (pokud s nimi mají nějaké zkušenosti). Tak to mozna jen ujednotit;)
+		
+	Zaměření řešení (9):
+	ne, tady je to supr;) Mozna (pokud uz mate...) by se hodil nejaky printscreen...;)
+		
+	Technická úroveň (9):
+	nejsem osoba, ktera to dokaze objektivne posoudit...:D
+		
+	Návrh testování (9):
+	Navrh testovani je urcite supr. Nevim, jak sezenete 10-15 lidi na 1-3hod, ted, kdy konci vsechny projekty, ale zni to urcite dobre;)
+		
+	Další doporučení pro autora technické zprávy	
+	-
+	
