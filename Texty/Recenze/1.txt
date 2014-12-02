@@ -1,0 +1,22 @@
+Recenze technické zprávy  
+	Projekt: 111	
+	Recenzent: xvenho02
+	
+	Obsahová kvalita (7):
+	Uivatelské rozhraní bylo popsáno adekvátnì. Chtìlo by to ale lepší ukázku vısledného vzhledu. 2 schémata v malování nejsou to pravé.
+	
+	Formální a jazyková úroveò (9):
+	Text byl psán srozumitelnì, spíše ménì technicky, ale to nebylo na škodu. ádnıch do oèí bijících chyb jsem si nevšiml. Formátování je obstojné.
+		
+	Zamìøení øešení (6):
+	Samotná realizace mi pøipadala krátká, chtìlo by to více popsat jednotlivé nabídky a lépe strukturovat text do odráek (New Game, Load Game...)
+		
+	Technická úroveò (4):
+	Volba WPF nebyla úplnì nejšastnìjší, lépe by se pro hru hodilo rozhraní urèené pro hry (v OpenGL, popø ScaleForm), ale jako návrh asi bude dostaèující. Øešení však bylo ukázáno pouze na 2 schématech, které pouze matnì ukazují funkènost rozhraní.
+		
+	Návrh testování (9):
+	Návrh testování byl hluboce promyšlen.
+		
+	Další doporuèení pro autora technické zprávy	
+	Chtìlo by to víc obrázku, popøípadì i v lepší grafice.
+	

@@ -1,0 +1,22 @@
+Recenze technické zprávy  
+	Projekt: 111	
+	Recenzent: xelias11
+	
+	Obsahová kvalita (6):
+	Osobne si myslím, e dokumentácia obsahuje a príliš ve¾a detailnıch èi nepotrebnıch informácií pre tento predmet (uívate¾ môe svoju vıstroj poèas hry meni, aké predmety môe ma ma v inventáry atï..). Miesto tıchto informácií by som radšej uvítal viac obrazovıch materiálov.
+	
+	Formální a jazyková úroveò (9):
+	Text je napísanı na vysokej úrovni, nezaznamenal som iadne gramatické chyby.
+		
+	Zamìøení øešení (3):
+	Dokumentácia ma sklama kvôli absencií screenshotov z hry, len z detailného popisu GUI.
+		
+	Technická úroveò (9):
+	Myslím, e nástroje boli zvolené vhodne a boli na to aj pádne argumenty.
+		
+	Návrh testování (10):
+	Testovanie je vymyslené do detialov a páèil sa mi postup testovania.
+		
+	Další doporuèení pro autora technické zprávy	
+	Urèite doplòit tie obrázky ;) ... bez toho nikoho nepresvedèíte o inovatívnosti vašej novej RPG. Inak je všetko fajn...
+	
