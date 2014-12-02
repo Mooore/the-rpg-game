@@ -168,7 +168,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnNevim" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="545" Canvas.Top="339" MouseEnter="btnNevim_MouseEnter" MouseLeave="btnNevim_MouseLeave" Margin="0">
+            <Button x:Name="btnNevim" Click="btnNevim_Click" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="545" Canvas.Top="339" MouseEnter="btnNevim_MouseEnter" MouseLeave="btnNevim_MouseLeave" Margin="0">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/death.png"/>
                 </Button.Background>

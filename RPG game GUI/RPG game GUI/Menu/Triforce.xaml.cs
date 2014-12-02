@@ -838,5 +838,10 @@ namespace RPG_game_GUI.Menu
 
             story.Begin();
         }
+
+        private void btnNevim_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Neumíte číst ? Neklikat !!!");
+        }
     }
 }
