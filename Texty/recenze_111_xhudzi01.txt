@@ -1,0 +1,22 @@
+Recenze technické zprávy  
+	Projekt: 111	
+	Recenzent: xhudzi01
+	
+	Obsahová kvalita (7):
+	V části úvodu Existující řešení chybí podrobnější zhodnocení konkrétních existujících řešení s jejich screenshoty, konkrétními klady a zápory. *** Dokumentace je obsahově bohatá, jednotlivé části jsou dostatečně rozepsány. Přílohy velmi dobře naznačují vzhled UI. *** Kapitoly Návrh uživatelského rozhraní a Očekávané výsledky jsou stejné!
+	
+	Formální a jazyková úroveň (8):
+	Mezi nadpisy a odstavci by mohly být mezery. Odsazení odstavců bude lepší decentnější. *** Text je na dobré slohové úrovni a je srozumitelný.
+		
+	Zaměření řešení (10):
+	Řešení se v drtivé většině zaměřuje na UI. Návrh UI je velmi promyšlený se snahou o inovativnost a nové prvky.
+		
+	Technická úroveň (8):
+	Vybrané nástroje jsou vysokoúrovňové a vhodné pro vytvoření kvalitního GUI. Možný problém: C# je překládaný do bajtkódu, tento je pak interpretován, což může mít u této real-time multimediální aplikace vliv na rychlost, zejména na starších strojích.
+		
+	Návrh testování (10):
+	Návrh testování je opravdu dobře připraven. Je uvedeno nespočet bodů a konkrétních věcí, na které se zaměřit při testování. Všechno jsou to relevantní věci, některé z nich člověka nenapadnou hned. Otázky pro dotazník jsou pečlivě promyšlené, vážou se na člověka jako na osobnost - jsou osobnější, neberou člověka jen jako stroj na otestování.
+		
+	Další doporučení pro autora technické zprávy	
+	Je vidět, že si na projektu dáváte záležet a baví vás. Myslím, že vám i dobře funguje práce v týmu. Máte k projektu velmi precizní přístup, pravděpodobně si celkem užíváte i jeho realizaci. Vymysleli jste několik inovativních prvků, což hodně oživuje. Skvělá práce, radost pohledět.
+	

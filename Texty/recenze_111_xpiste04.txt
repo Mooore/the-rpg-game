@@ -1,0 +1,22 @@
+Recenze technické zprávy  
+	Projekt: 111	
+	Recenzent: xpiste04
+	
+	Obsahová kvalita (5):
+	V kapitolách 'Návrh uživatelského rozhraní' a 'Očekávané výsledky' zkoušíte pozornost čtenáře? :D ***  *** Myslím, že méně je někdy více...
+	
+	Formální a jazyková úroveň (6):
+	Některé věty jsou trošku kostrbaté např.:  *** 'rozhraní buď oku lahodící... nebo funkční.', *** 'Inspiraci hledáme v novějších RPG hrách, kdy se snaží ukázat'
+		
+	Zaměření řešení (7):
+	Možná by neškodilo přidat nějaké ukázky z existujících řešení, ne každý ví jak vypadá 'Tomb Raider nebo The Elder Scrolls V: Skyrim'...
+		
+	Technická úroveň (8):
+	Jelikož píšete, že základní menu s tlačítky již máte hotové, tak je škoda, že není náhled v přílohách. *** Zdůvodnění použití Vámi vybraných nástrojů, by se asi dalo napsat lépe a jejich vhodnost nemůžu posoudit jelikož je neznám.
+		
+	Návrh testování (9):
+	Testování - jako návrh to zní rozhodně výborně, ale nejsem si úplně jistý, že v rámci ITU vytvoříte něco co by se dalo testovat 1-3 hodiny. Případně, klobouk dolů...
+		
+	Další doporučení pro autora technické zprávy	
+	Je dobré pro nadpis používat bezpatkové a pro text patkové písmo...
+	
