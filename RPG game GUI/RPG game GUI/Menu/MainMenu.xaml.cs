@@ -38,6 +38,10 @@ namespace RPG_game_GUI.Menu
             {
                 ucOptions.Visibility = Visibility.Visible;
             }
+            if (App.Current.Properties["is_load"].ToString() == "True")
+            {
+                borLoadGame.Visibility = Visibility.Visible;
+            }
             setSizeItems();
         }
 

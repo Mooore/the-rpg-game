@@ -843,5 +843,16 @@ namespace RPG_game_GUI.Menu
         {
             MessageBox.Show("Neumíte číst ? Neklikat !!!");
         }
+
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Properties["is_load"] = true;
+            Switcher.Switch(new Menu.MainMenu());
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hra byla uložena.");
+        }
     }
 }
