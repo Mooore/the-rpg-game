@@ -74,7 +74,7 @@
             </Button.Triggers>
         </Button>
 
-        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,56,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -82,7 +82,18 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />    
             </Label.Content>
         </Label>
-        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,156,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Normal attack: " HorizontalAlignment="Left" Margin="81,56,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content=" - Effective for close combat." HorizontalAlignment="Left" Margin="81,76,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
+        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -90,8 +101,18 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
             </Label.Content>
         </Label>
+        <Label Content="Special attack:" HorizontalAlignment="Left" Margin="81,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content=" - Effective against single target." HorizontalAlignment="Left" Margin="81,126,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
 
-        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,206,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,156,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -99,8 +120,18 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
             </Label.Content>
         </Label>
-
-        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,256,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Long range attack:" HorizontalAlignment="Left" Margin="81,156,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content=" - Usable against the remote targets." HorizontalAlignment="Left" Margin="81,176,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
+        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,206,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -108,8 +139,18 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
             </Label.Content>
         </Label>
-
-        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,306,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Rocket attack:" HorizontalAlignment="Left" Margin="81,206,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content=" - Usable against heavy armored targets." HorizontalAlignment="Left" Margin="81,226,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
+        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,256,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -117,8 +158,18 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
             </Label.Content>
         </Label>
+        <Label Content="Flash bang grenade:" HorizontalAlignment="Left" Margin="81,256,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content=" - Targets will be blinded." HorizontalAlignment="Left" Margin="81,276,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
 
-        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,356,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,306,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -126,8 +177,19 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
             </Label.Content>
         </Label>
+        <Label Content="Hand grenade:" HorizontalAlignment="Left" Margin="81,306,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content=" - Effective against close distance groups." HorizontalAlignment="Left" Margin="81,326,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
 
-        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,406,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,356,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -135,8 +197,19 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
             </Label.Content>
         </Label>
+        <Label Content="Ultra powerful mega rocket:" HorizontalAlignment="Left" Margin="81,356,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label Content=" - Everything in the area will be damned." HorizontalAlignment="Left" Margin="81,376,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
 
-        <Label Content="Dovednosti:" HorizontalAlignment="Left" Margin="31,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
+        <Label Content="Dovednosti:" HorizontalAlignment="Left" Margin="31,20,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
