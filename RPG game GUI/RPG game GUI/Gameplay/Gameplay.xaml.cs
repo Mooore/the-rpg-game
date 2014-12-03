@@ -68,6 +68,8 @@ namespace RPG_game_GUI.Gameplay
                     vbMapBlur.Radius = 10;
                     vbBackground.Radius = 10;
                     vbStatistics.Visibility = Visibility.Hidden;
+                    vbAbilities.Visibility = Visibility.Hidden;
+                    vbInventory.Visibility = Visibility.Hidden;
                 }
             }
 
