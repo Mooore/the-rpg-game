@@ -100,6 +100,21 @@ namespace RPG_game_GUI.Gameplay
                     vbAbilities.Visibility = Visibility.Visible;
                 }
             }
+
+            /*
+             * Zobrazení Inventáře
+             */
+            if (e.Key == Key.B && vbTriforce.Visibility == Visibility.Hidden)
+            {
+                if (vbInventory.Visibility == Visibility.Visible)
+                {
+                    vbInventory.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbInventory.Visibility = Visibility.Visible;
+                }
+            }
         }
 
         private void QuickBar_Loaded(object sender, RoutedEventArgs e)

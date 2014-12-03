@@ -860,5 +860,11 @@ namespace RPG_game_GUI.Menu
             PageSwitcher.Send(Key.Tab);
             PageSwitcher.Send(Key.V);
         }
+
+        private void btnInv_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.B);
+        }
     }
 }

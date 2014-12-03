@@ -90,7 +90,7 @@
                 </Button.Background>
 
             </Button>
-            <Button x:Name="btnInv" Panel.ZIndex="0" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="352" Canvas.Top="124" MouseEnter="btnInv1_MouseEnter" MouseLeave="btnInv1_MouseLeave" Margin="0">
+            <Button x:Name="btnInv" Panel.ZIndex="0" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="352" Canvas.Top="124" MouseEnter="btnInv1_MouseEnter" MouseLeave="btnInv1_MouseLeave" Margin="0" Click="btnInv_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/inventory.png"/>
                 </Button.Background>
