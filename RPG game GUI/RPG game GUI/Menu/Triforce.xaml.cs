@@ -854,5 +854,11 @@ namespace RPG_game_GUI.Menu
         {
             MessageBox.Show("Hra byla uložena.");
         }
+
+        private void btnAbility_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.V);
+        }
     }
 }

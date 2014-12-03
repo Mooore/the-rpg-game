@@ -69,6 +69,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Character\abilities.xaml.cs">
+      <DependentUpon>abilities.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Character\Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
       <DependentUpon>Triforce.xaml</DependentUpon>
     </Compile>
     <Compile Include="Switcher.cs" />
+    <Page Include="Character\abilities.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Character\Statistics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

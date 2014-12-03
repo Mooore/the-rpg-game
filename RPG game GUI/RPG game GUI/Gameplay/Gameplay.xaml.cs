@@ -85,6 +85,21 @@ namespace RPG_game_GUI.Gameplay
                     vbStatistics.Visibility = Visibility.Visible;
                 }
             }
+
+            /*
+             * Zobrazení Dovedností
+             */
+            if (e.Key == Key.V && vbTriforce.Visibility == Visibility.Hidden)
+            {
+                if (vbAbilities.Visibility == Visibility.Visible)
+                {
+                    vbAbilities.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbAbilities.Visibility = Visibility.Visible;
+                }
+            }
         }
 
         private void QuickBar_Loaded(object sender, RoutedEventArgs e)
