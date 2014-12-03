@@ -74,37 +74,37 @@
             </Button.Triggers>
         </Button>
 
-        <Label Content="Síla:" HorizontalAlignment="Left" Margin="61,96,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Síla:" HorizontalAlignment="Left" Margin="31,96,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Pohyblivost:" HorizontalAlignment="Left" Margin="61,114,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Pohyblivost:" HorizontalAlignment="Left" Margin="31,114,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="8" HorizontalAlignment="Left" Margin="143,96,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="8" HorizontalAlignment="Left" Margin="153,96,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Inteligence:" HorizontalAlignment="Left" Margin="61,133,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Inteligence:" HorizontalAlignment="Left" Margin="31,133,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Charisma:" HorizontalAlignment="Left" Margin="61,153,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Charisma:" HorizontalAlignment="Left" Margin="31,153,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Štěstí:" HorizontalAlignment="Left" Margin="61,172,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Štěstí:" HorizontalAlignment="Left" Margin="31,172,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="8" HorizontalAlignment="Left" Margin="143,114,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="8" HorizontalAlignment="Left" Margin="153,114,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -119,42 +119,42 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="2" HorizontalAlignment="Left" Margin="143,172,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="2" HorizontalAlignment="Left" Margin="153,172,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Vlastnosti:" HorizontalAlignment="Left" Margin="61,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
+        <Label Content="Vlastnosti:" HorizontalAlignment="Left" Margin="31,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Na blízko:" HorizontalAlignment="Left" Margin="203,99,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Na blízko:" HorizontalAlignment="Left" Margin="193,99,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Kritický zásah:" HorizontalAlignment="Left" Margin="203,116,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Kritický zásah:" HorizontalAlignment="Left" Margin="193,116,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="3 - 5" HorizontalAlignment="Left" Margin="304,99,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="3 - 5" HorizontalAlignment="Left" Margin="324,99,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Na dálku:" HorizontalAlignment="Left" Margin="203,137,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Na dálku:" HorizontalAlignment="Left" Margin="193,137,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Kritický zásah:" HorizontalAlignment="Left" Margin="203,158,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="Kritický zásah:" HorizontalAlignment="Left" Margin="193,158,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="8 %" HorizontalAlignment="Left" Margin="304,116,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="8 %" HorizontalAlignment="Left" Margin="334,116,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -164,12 +164,12 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="23%" HorizontalAlignment="Left" Margin="304,158,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="23%" HorizontalAlignment="Left" Margin="328,158,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="Útok:" HorizontalAlignment="Left" Margin="203,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
+        <Label Content="Útok:" HorizontalAlignment="Left" Margin="193,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -239,7 +239,7 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="22" HorizontalAlignment="Left" Margin="278,229,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="22" HorizontalAlignment="Left" Margin="288,229,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -259,22 +259,22 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="18" HorizontalAlignment="Left" Margin="278,249,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="18" HorizontalAlignment="Left" Margin="288,249,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="5" HorizontalAlignment="Left" Margin="278,269,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="5" HorizontalAlignment="Left" Margin="288,269,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="11" HorizontalAlignment="Left" Margin="278,290,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="11" HorizontalAlignment="Left" Margin="288,290,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content="0" HorizontalAlignment="Left" Margin="278,310,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Content="0" HorizontalAlignment="Left" Margin="288,310,0,0" VerticalAlignment="Top" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
