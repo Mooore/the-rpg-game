@@ -514,6 +514,18 @@
   <ItemGroup>
     <Resource Include="Resources\Inventory_\Inventory_slot.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Inventory_\health_potion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Inventory_\mana_potion.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Inventory_\bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Inventory_\Rocket_.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

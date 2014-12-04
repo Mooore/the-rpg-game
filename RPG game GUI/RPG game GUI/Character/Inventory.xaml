@@ -84,7 +84,7 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/health_potion.png" />
             </Label.Content>
         </Label>
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="71,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
@@ -92,7 +92,7 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/mana_potion.gif" />
             </Label.Content>
         </Label>
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="121,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
@@ -100,7 +100,7 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/bullet.png" />
             </Label.Content>
         </Label>
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="171,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
@@ -108,7 +108,7 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/Rocket_.png" />
             </Label.Content>
         </Label>
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="221,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
