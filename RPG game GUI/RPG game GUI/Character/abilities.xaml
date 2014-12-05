@@ -79,20 +79,20 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />    
+                <Image Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
             </Label.Content>
         </Label>
-        <Label Content="Normální útok: " HorizontalAlignment="Left" Margin="81,56,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+        <Label Content="Normální útok: " HorizontalAlignment="Left" Margin="81,56,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="18" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content=" - Účinný pro boj zblízka." HorizontalAlignment="Left" Margin="81,76,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+        <Label Content=" - Účinný pro boj zblízka." HorizontalAlignment="Left" Margin="81,76,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="16" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        
+
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
@@ -101,12 +101,12 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon2.png" />
             </Label.Content>
         </Label>
-        <Label Content="Speciální útok:" HorizontalAlignment="Left" Margin="81,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+        <Label Content="Speciální útok:" HorizontalAlignment="Left" Margin="81,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="18" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content=" - Účinný proti jednomu cíli." HorizontalAlignment="Left" Margin="81,126,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+        <Label Content=" - Účinný proti jednomu cíli." HorizontalAlignment="Left" Margin="81,126,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="16" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -120,17 +120,17 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon3.png" />
             </Label.Content>
         </Label>
-        <Label Content="Útok na dálku:" HorizontalAlignment="Left" Margin="81,156,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+        <Label Content="Útok na dálku:" HorizontalAlignment="Left" Margin="81,156,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="18" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content=" - Vhodný proti vzdáleným cílům." HorizontalAlignment="Left" Margin="81,176,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+        <Label Content=" - Vhodný proti vzdáleným cílům." HorizontalAlignment="Left" Margin="81,176,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="16" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        
+
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,206,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
@@ -139,17 +139,17 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon4.png" />
             </Label.Content>
         </Label>
-        <Label Content="Raketa:" HorizontalAlignment="Left" Margin="81,206,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+        <Label Content="Raketa:" HorizontalAlignment="Left" Margin="81,206,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="18" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content=" - Vhodný proti těžce obrněným cílům." HorizontalAlignment="Left" Margin="81,226,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+        <Label Content=" - Vhodný proti těžce obrněným cílům." HorizontalAlignment="Left" Margin="81,226,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="16" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        
+
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,256,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
@@ -158,12 +158,12 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon5.png" />
             </Label.Content>
         </Label>
-        <Label Content="Oslepující granát:" HorizontalAlignment="Left" Margin="81,256,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+        <Label Content="Oslepující granát:" HorizontalAlignment="Left" Margin="81,256,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="18" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content=" - Cíle budou oslepeny." HorizontalAlignment="Left" Margin="81,276,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+        <Label Content=" - Cíle budou oslepeny." HorizontalAlignment="Left" Margin="81,276,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="16" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -177,17 +177,17 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon6.png" />
             </Label.Content>
         </Label>
-        <Label Content="Ruční granát:" HorizontalAlignment="Left" Margin="81,306,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+        <Label Content="Ruční granát:" HorizontalAlignment="Left" Margin="81,306,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="18" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content=" - Účinný proti skupinám cílů." HorizontalAlignment="Left" Margin="81,326,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+        <Label Content=" - Účinný proti skupinám cílů." HorizontalAlignment="Left" Margin="81,326,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="16" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        
+
 
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="31,356,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
@@ -197,19 +197,19 @@
                 <Image Source="/RPG game GUI;component/Resources/spell_icons/icon7.png" />
             </Label.Content>
         </Label>
-        <Label Content="Ultra silná raketa:" HorizontalAlignment="Left" Margin="81,356,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="18">
+        <Label Content="Ultra silná raketa:" HorizontalAlignment="Left" Margin="81,356,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="18" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        <Label Content=" - Všechno v oblasti bude zničeno." HorizontalAlignment="Left" Margin="81,376,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="16">
+        <Label Content=" - Všechno v oblasti bude zničeno." HorizontalAlignment="Left" Margin="81,376,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontSize="16" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        
 
-        <Label Content="Dovednosti:" HorizontalAlignment="Left" Margin="31,20,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="24">
+
+        <Label Content="Dovednosti:" HorizontalAlignment="Left" Margin="31,20,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontSize="24" FontFamily="Monotype Corsiva">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
