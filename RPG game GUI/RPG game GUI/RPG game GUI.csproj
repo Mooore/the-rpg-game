@@ -533,6 +533,30 @@
   <ItemGroup>
     <Resource Include="Resources\Inventory_\Rocket_.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\soldier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\helm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\gloves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\boots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\vest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\legs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\rifle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\rocket_launcher.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
