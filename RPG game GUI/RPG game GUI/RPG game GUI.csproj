@@ -84,6 +84,9 @@
     <Compile Include="Character\Talents.xaml.cs">
       <DependentUpon>Talents.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Character\world_map.xaml.cs">
+      <DependentUpon>world_map.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gameplay\Gameplay.xaml.cs">
       <DependentUpon>Gameplay.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Character\Talents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Character\world_map.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -536,7 +543,7 @@
   <ItemGroup>
     <Resource Include="Resources\Talents\Steampunk wood.jpg" />
   </ItemGroup>
-    <ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\Character\soldier.png" />
   </ItemGroup>
   <ItemGroup>
@@ -559,7 +566,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Character\rocket_launcher.png" />
-  </ItemGroup>  
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
