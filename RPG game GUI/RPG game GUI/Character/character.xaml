@@ -1,0 +1,207 @@
+﻿<UserControl x:Name="ucCharacter" x:Class="RPG_game_GUI.Character.Character"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="500" BorderBrush="Black" 
+             PreviewKeyDown="UserControl_PreviewKeyDown" 
+             BorderThickness="1">
+
+    <UserControl.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            Focusable="False"
+                            BorderBrush="Black" 
+                            CornerRadius="8" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.Background>
+        <ImageBrush ImageSource="/RPG game GUI;component/Resources/WindowLight.jpg" Stretch="UniformToFill"/>
+    </UserControl.Background>
+
+
+    <Grid>
+        <Rectangle Height="10" Width="10" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+        <Thumb x:Name="ThumbPanel" VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="Transparent" Foreground="Transparent" Height="20" DragDelta="Thumb_DragDelta" Opacity="0" />
+        <Button x:Name="btnExit" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Height="61" Click="Button_Click" Margin="0,-25,-25,0" RenderTransformOrigin="0.5,0.5" >
+            <Button.Background>
+                <ImageBrush ImageSource="/RPG game GUI;component/Resources/crossButton.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform />
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter" SourceName="btnExit">
+                    <BeginStoryboard >
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Button.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" 
+                                To="360" Duration="0:0:2"
+                                RepeatBehavior="Forever">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave" SourceName="btnExit">
+                    <BeginStoryboard >
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Button.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" >
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Label Content="Charakter:" HorizontalAlignment="Left" Margin="80,50,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label HorizontalAlignment="Left" Margin="81,86,0,20" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Character/soldier.png" />
+            </Label.Content>
+        </Label>
+
+
+        <Label Background="Black" Height="50" Width="50" HorizontalAlignment="Left" Margin="250,410,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Boty</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Character/boots.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Background="Black" Height="50" Width="50" HorizontalAlignment="Left" Margin="235,96,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Helma</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Character/helm.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Background="Black" Height="50" Width="50" HorizontalAlignment="Left" Margin="90,296,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Rukavice</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Character/gloves.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Background="Black" Height="50" Width="50" HorizontalAlignment="Left" Margin="172,196,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Vesta</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Character/vest.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Background="Black" Height="50" Width="50" HorizontalAlignment="Left" Margin="250,326,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Kalhoty</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Character/legs.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Background="Black" Height="50" Width="50" HorizontalAlignment="Left" Margin="100,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Raketomet</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Character/rocket_launcher.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Background="Black" Height="50" Width="50" HorizontalAlignment="Left" Margin="90,370,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Puška</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Character/rifle.png" />
+            </Label.Content>
+        </Label>
+
+    </Grid>
+</UserControl>

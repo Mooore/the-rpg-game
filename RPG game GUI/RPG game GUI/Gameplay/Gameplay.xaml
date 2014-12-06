@@ -175,6 +175,11 @@
             <Character:Inventory Height="500" Width="400" />
         </Viewbox>
 
+        <!-- Okno pro Charakter  -->
+        <Viewbox VerticalAlignment="Top" x:Name="vbCharacter" Visibility="Hidden" Canvas.Left="83" Canvas.Top="140" Stretch="Fill" >
+            <Character:Character Height="500" Width="400" />
+        </Viewbox>
+
         <StatusBar x:Name="QuickBar" Focusable="False" FocusManager.IsFocusScope="False" Height="90" Width="604" Canvas.Bottom="5" Canvas.Left="200" Loaded="QuickBar_Loaded" >
             <StatusBar.Background>
                 <ImageBrush ImageSource="/RPG game GUI;component/Resources/QuickBar.png" />

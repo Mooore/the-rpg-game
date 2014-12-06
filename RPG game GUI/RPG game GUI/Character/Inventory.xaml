@@ -83,6 +83,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Lektvar životů</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/health_potion.png" />
             </Label.Content>
@@ -91,6 +98,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Lektvar many</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/mana_potion.gif" />
             </Label.Content>
@@ -99,6 +113,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Náboje</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/bullet.png" />
             </Label.Content>
@@ -107,6 +128,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Rakety</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Rocket_.png" />
             </Label.Content>
@@ -115,6 +143,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -123,6 +158,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -131,6 +173,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -140,6 +189,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -148,6 +204,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -156,6 +219,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -164,6 +234,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -172,6 +249,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -180,6 +264,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -188,6 +279,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -197,6 +295,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -205,6 +310,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -213,6 +325,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -221,6 +340,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -229,6 +355,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -237,6 +370,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -245,6 +385,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -254,6 +401,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -262,6 +416,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -270,6 +431,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -278,6 +446,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -286,6 +461,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -294,6 +476,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -302,6 +491,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -311,6 +507,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -319,6 +522,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -327,6 +537,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -335,6 +552,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -343,6 +567,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -351,6 +582,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>
@@ -359,6 +597,13 @@
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Volné místo</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Inventory_slot.png" />
             </Label.Content>

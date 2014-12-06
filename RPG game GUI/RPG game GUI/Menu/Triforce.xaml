@@ -95,7 +95,7 @@
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/inventory.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnChar" Panel.ZIndex="0" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="384" Canvas.Top="120" MouseEnter="btnChar_MouseEnter" MouseLeave="btnChar_MouseLeave" Margin="0">
+            <Button x:Name="btnChar" Panel.ZIndex="0" Content="" Focusable="False" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="384" Canvas.Top="120" MouseEnter="btnChar_MouseEnter" MouseLeave="btnChar_MouseLeave" Margin="0" Click="btnChar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/character.png"/>
                 </Button.Background>
