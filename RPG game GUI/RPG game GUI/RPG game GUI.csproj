@@ -87,6 +87,7 @@
     <Compile Include="Character\world_map.xaml.cs">
       <DependentUpon>world_map.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Character\Zoom.cs" />
     <Compile Include="Gameplay\Gameplay.xaml.cs">
       <DependentUpon>Gameplay.xaml</DependentUpon>
     </Compile>
@@ -566,6 +567,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Character\rocket_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\World_map\worldmap.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RPG_game_GUI.Character"
              mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="500" BorderBrush="Black" 
              PreviewKeyDown="UserControl_PreviewKeyDown" 
              BorderThickness="1">
@@ -79,6 +80,17 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
         </Label>
-        
+
+        <Label HorizontalAlignment="Left" Margin="5,106,5,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+
+            <Label.Content>
+                <local:Zoom x:Name="Border" ClipToBounds="True" Background="Gray">
+                    <Image Name="map" Source="/RPG game GUI;component/Resources/World_map/worldmap.jpg"/>
+                </local:Zoom>
+            </Label.Content>
+        </Label>
     </Grid>
 </UserControl>
