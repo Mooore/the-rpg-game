@@ -24,7 +24,25 @@ namespace RPG_game_GUI.Character
         {
             InitializeComponent();
         }
-        
 
+        private void UserControl_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            /*
+             * Skrytí talentů
+             */
+            if (e.Key == Key.T || e.Key == Key.Tab)
+            {
+                (this.Parent as Viewbox).Visibility = Visibility.Hidden;
+            }
+        }
+
+         /*
+         * Zajišťuje, že je okno přetahovatelné a dá se volně umístit, kde uživatel chce.
+         */
+        private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
+        {
+            Canvas.SetLeft(this.Parent as Viewbox, Canvas.GetLeft(this.Parent as Viewbox) + e.HorizontalChange);
+            Canvas.SetTop(this.Parent as Viewbox, Canvas.GetTop(this.Parent as Viewbox) + e.VerticalChange);
+        }
     }
 }

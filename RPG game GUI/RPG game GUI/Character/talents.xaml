@@ -4,6 +4,51 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid/>
+             x:Name="ucTalents"
+             d:DesignHeight="800" d:DesignWidth="1000">
+
+    <UserControl.Resources>
+        <DropShadowBitmapEffect x:Key="GlowEffect" Color="Khaki" ShadowDepth="0" Opacity="20" Softness="80" />
+        <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
+
+        <Style x:Key="MyTalent" TargetType="Thumb">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                        <Border Name="border" 
+                            BorderThickness="3"
+                            Opacity="100"
+                            Padding="4,2" 
+                            BorderBrush="#FF7A7A7A" 
+                            CornerRadius="50" 
+                            Height="60"
+                            Width="60"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Height="{Binding ElementName=ucTalents, Path=Height}" Width="{Binding ElementName=ucTalents, Path=Width}">
+        <Image Source="/RPG game GUI;component/Resources/Talents/Steampunk wood.jpg" Stretch="Fill" Margin="0,0,0,80"/>
+
+        <Canvas>
+            <Thumb Style="{StaticResource MyTalent}" Margin="251,350,689,390" RenderTransformOrigin="0.5,0.5"/>
+
+            <StackPanel Canvas.Bottom="0" Width="{Binding ElementName=ucTalents, Path=Width}" Height="80" VerticalAlignment="Bottom" Background="#FF746565">
+                <Thumb Style="{StaticResource MyTalent}" Height="60" Width="60" HorizontalAlignment="Left" DragDelta="Thumb_DragDelta">
+                    <Thumb.Background>
+                        <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/death.png" />
+                    </Thumb.Background>
+                </Thumb>
+            </StackPanel>
+        </Canvas>
+       
+
+    </Grid>
 </UserControl>
