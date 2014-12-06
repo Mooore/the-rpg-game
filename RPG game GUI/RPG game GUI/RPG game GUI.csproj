@@ -72,6 +72,9 @@
     <Compile Include="Character\abilities.xaml.cs">
       <DependentUpon>abilities.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Character\character.xaml.cs">
+      <DependentUpon>character.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Character\Inventory.xaml.cs">
       <DependentUpon>Inventory.xaml</DependentUpon>
     </Compile>
@@ -115,6 +118,10 @@
     <Page Include="Character\abilities.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Character\character.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Character\Inventory.xaml">
       <SubType>Designer</SubType>
@@ -529,6 +536,30 @@
   <ItemGroup>
     <Resource Include="Resources\Talents\Steampunk wood.jpg" />
   </ItemGroup>
+    <ItemGroup>
+    <Resource Include="Resources\Character\soldier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\helm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\gloves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\boots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\vest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\legs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\rifle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Character\rocket_launcher.png" />
+  </ItemGroup>  
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
