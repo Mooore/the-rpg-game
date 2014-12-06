@@ -72,6 +72,9 @@
     <Compile Include="Character\abilities.xaml.cs">
       <DependentUpon>abilities.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Character\character.xaml.cs">
+      <DependentUpon>character.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Character\Inventory.xaml.cs">
       <DependentUpon>Inventory.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
     </Compile>
     <Compile Include="Switcher.cs" />
     <Page Include="Character\abilities.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Character\character.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

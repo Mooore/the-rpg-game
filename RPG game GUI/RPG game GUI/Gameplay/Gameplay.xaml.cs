@@ -70,6 +70,7 @@ namespace RPG_game_GUI.Gameplay
                     vbStatistics.Visibility = Visibility.Hidden;
                     vbAbilities.Visibility = Visibility.Hidden;
                     vbInventory.Visibility = Visibility.Hidden;
+                    vbCharacter.Visibility = Visibility.Hidden;
                 }
             }
 
@@ -115,6 +116,21 @@ namespace RPG_game_GUI.Gameplay
                 else
                 {
                     vbInventory.Visibility = Visibility.Visible;
+                }
+            }
+
+            /*
+             * Zobrazení Charakteru
+             */
+            if (e.Key == Key.X && vbTriforce.Visibility == Visibility.Hidden)
+            {
+                if (vbCharacter.Visibility == Visibility.Visible)
+                {
+                    vbCharacter.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbCharacter.Visibility = Visibility.Visible;
                 }
             }
         }
