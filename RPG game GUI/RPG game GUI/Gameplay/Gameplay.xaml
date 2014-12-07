@@ -189,7 +189,6 @@
         <Viewbox VerticalAlignment="Top" x:Name="vbworld_map" Visibility="Hidden" Canvas.Left="83" Canvas.Top="140" Stretch="Fill" >
             <Character:world_map Height="500" Width="400" />
         </Viewbox>
-<<<<<<< HEAD
 
         <!-- Okno pro Obchod  -->
         <Viewbox VerticalAlignment="Top" x:Name="vbobchod" Visibility="Hidden" Canvas.Left="83" Canvas.Top="140" Stretch="Fill" >
@@ -206,9 +205,6 @@
             <Character:fraction Height="500" Width="400" />
         </Viewbox>
 
-=======
-        
->>>>>>> origin/master
         <StatusBar x:Name="QuickBar" Focusable="False" FocusManager.IsFocusScope="False" Height="90" Width="604" Canvas.Bottom="5" Canvas.Left="200" Loaded="QuickBar_Loaded" >
             <StatusBar.Background>
                 <ImageBrush ImageSource="/RPG game GUI;component/Resources/QuickBar.png" />
