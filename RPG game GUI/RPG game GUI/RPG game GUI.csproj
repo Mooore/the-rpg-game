@@ -610,6 +610,12 @@
   <ItemGroup>
     <Resource Include="Resources\World_map\worldmap.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Inventory_\flashbang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Inventory_\granade.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

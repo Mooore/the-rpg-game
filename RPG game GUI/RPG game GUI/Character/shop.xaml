@@ -80,5 +80,148 @@
             </Label.Effect>
         </Label>
 
+        <Label x:Name="money" Content="1500000" HorizontalAlignment="Left" Margin="250,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        <Label x:Name="money_dolar" Content=" $" HorizontalAlignment="Left" Margin="330,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label MouseLeftButtonDown="Label1_MouseLeftButtonDown" Height="50" Width="50" HorizontalAlignment="Left" Margin="21,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Lektvar životů</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/health_potion.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Content="500 $" HorizontalAlignment="Left" Margin="71,116,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label MouseLeftButtonDown="Label2_MouseLeftButtonDown" Height="50" Width="50" HorizontalAlignment="Left" Margin="21,156,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Lektvar many</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/mana_potion.gif" />
+            </Label.Content>
+        </Label>
+
+        <Label Content="450 $" HorizontalAlignment="Left" Margin="71,166,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label MouseLeftButtonDown="Label3_MouseLeftButtonDown" Height="50" Width="50" HorizontalAlignment="Left" Margin="21,206,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Náboje</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/bullet.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Content="1000 $" HorizontalAlignment="Left" Margin="71,216,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label MouseLeftButtonDown="Label4_MouseLeftButtonDown" Height="50" Width="50" HorizontalAlignment="Left" Margin="21,256,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Rakety</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/Rocket_.png" />
+            </Label.Content>
+        </Label>
+
+        <Label Content="20000 $" HorizontalAlignment="Left" Margin="71,266,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label MouseLeftButtonDown="Label5_MouseLeftButtonDown" Height="50" Width="50" HorizontalAlignment="Left" Margin="251,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Granát</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/granade.jpg" />
+            </Label.Content>
+        </Label>
+
+        <Label Content="5000 $" HorizontalAlignment="Left" Margin="301,116,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label MouseLeftButtonDown="Label6_MouseLeftButtonDown" Height="50" Width="50" HorizontalAlignment="Left" Margin="251,156,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock>Oslepující granát</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+            <Label.Content>
+                <Image Source="/RPG game GUI;component/Resources/Inventory_/flashbang.jpg" />
+            </Label.Content>
+        </Label>
+
+        <Label Content="7000 $" HorizontalAlignment="Left" Margin="301,166,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
     </Grid>
 </UserControl>
