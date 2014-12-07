@@ -148,6 +148,8 @@ namespace RPG_game_GUI.Gameplay
                 else
                 {
                     vbTalents.Visibility = Visibility.Visible;
+                }
+            }
             
             /*
              * Zobrazení Mapy

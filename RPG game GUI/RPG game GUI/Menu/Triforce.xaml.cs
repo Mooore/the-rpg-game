@@ -878,5 +878,11 @@ namespace RPG_game_GUI.Menu
             PageSwitcher.Send(Key.Tab);
             PageSwitcher.Send(Key.M);
         }
+
+        private void btnTalent_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.T);
+        }
     }
 }
