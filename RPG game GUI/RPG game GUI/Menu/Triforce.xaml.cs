@@ -879,6 +879,7 @@ namespace RPG_game_GUI.Menu
             PageSwitcher.Send(Key.M);
         }
 
+<<<<<<< HEAD
         private void btnObchod_Click(object sender, RoutedEventArgs e)
         {
             PageSwitcher.Send(Key.Tab);
@@ -895,6 +896,12 @@ namespace RPG_game_GUI.Menu
         {
             PageSwitcher.Send(Key.Tab);
             PageSwitcher.Send(Key.F);
+=======
+        private void btnTalent_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.T);
+>>>>>>> origin/master
         }
     }
 }

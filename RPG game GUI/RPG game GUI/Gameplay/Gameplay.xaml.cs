@@ -71,6 +71,7 @@ namespace RPG_game_GUI.Gameplay
                     vbAbilities.Visibility = Visibility.Hidden;
                     vbInventory.Visibility = Visibility.Hidden;
                     vbCharacter.Visibility = Visibility.Hidden;
+                    vbTalents.Visibility = Visibility.Hidden;
                     vbworld_map.Visibility = Visibility.Hidden;
                     vbobchod.Visibility = Visibility.Hidden;
                     vbquests.Visibility = Visibility.Hidden;
@@ -138,6 +139,21 @@ namespace RPG_game_GUI.Gameplay
                 }
             }
 
+            /*
+             * Zobrazení Talentů
+             */
+            if (e.Key == Key.T && vbTriforce.Visibility == Visibility.Hidden)
+            {
+                if (vbTalents.Visibility == Visibility.Visible)
+                {
+                    vbTalents.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbTalents.Visibility = Visibility.Visible;
+                }
+            }
+            
             /*
              * Zobrazení Mapy
              */

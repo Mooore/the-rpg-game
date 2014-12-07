@@ -590,6 +590,24 @@
     <Resource Include="Resources\Character\rocket_launcher.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Talents\Icons\bolter-gun.png" />
+    <Resource Include="Resources\Talents\Icons\dna1.png" />
+    <Resource Include="Resources\Talents\Icons\doctor-face.png" />
+    <Resource Include="Resources\Talents\Icons\duel.png" />
+    <Resource Include="Resources\Talents\Icons\energise.png" />
+    <Resource Include="Resources\Talents\Icons\erlenmeyer.png" />
+    <Resource Include="Resources\Talents\Icons\gift-of-knowledge.png" />
+    <Resource Include="Resources\Talents\Icons\gunshot.png" />
+    <Resource Include="Resources\Talents\Icons\laser-blast.png" />
+    <Resource Include="Resources\Talents\Icons\locked-chest.png" />
+    <Resource Include="Resources\Talents\Icons\mp5.png" />
+    <Resource Include="Resources\Talents\Icons\padlock.png" />
+    <Resource Include="Resources\Talents\Icons\pistol-gun.png" />
+    <Resource Include="Resources\Talents\Icons\skeleton-key.png" />
+    <Resource Include="Resources\Talents\Icons\syringe.png" />
+    <Resource Include="Resources\Talents\Icons\wooden-door.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\World_map\worldmap.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
