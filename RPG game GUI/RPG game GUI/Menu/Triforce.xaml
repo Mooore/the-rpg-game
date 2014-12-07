@@ -224,7 +224,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnFrakce" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="285" Canvas.Top="323" MouseEnter="btnFrakce_MouseEnter" MouseLeave="btnFrakce_MouseLeave" Margin="0">
+            <Button x:Name="btnFrakce" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="285" Canvas.Top="323" MouseEnter="btnFrakce_MouseEnter" MouseLeave="btnFrakce_MouseLeave" Margin="0" Click="btnfraction_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/fraction.png"/>
                 </Button.Background>
@@ -238,7 +238,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnQuest" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="317" Canvas.Top="328" MouseEnter="btnQuest_MouseEnter" MouseLeave="btnQuest_MouseLeave" Margin="0">
+            <Button x:Name="btnQuest" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="317" Canvas.Top="328" MouseEnter="btnQuest_MouseEnter" MouseLeave="btnQuest_MouseLeave" Margin="0" Click="btnQuests_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/quest.png"/>
                 </Button.Background>
@@ -252,7 +252,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnObchod" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="348" Canvas.Top="339" MouseEnter="btnObchod_MouseEnter" MouseLeave="btnObchod_MouseLeave" Margin="0">
+            <Button x:Name="btnObchod" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="348" Canvas.Top="339" MouseEnter="btnObchod_MouseEnter" MouseLeave="btnObchod_MouseLeave" Margin="0" Click="btnObchod_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/shop.png"/>
                 </Button.Background>

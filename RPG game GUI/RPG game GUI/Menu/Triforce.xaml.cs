@@ -878,5 +878,23 @@ namespace RPG_game_GUI.Menu
             PageSwitcher.Send(Key.Tab);
             PageSwitcher.Send(Key.M);
         }
+
+        private void btnObchod_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.O);
+        }
+
+        private void btnQuests_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.L);
+        }
+
+        private void btnfraction_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.F);
+        }
     }
 }

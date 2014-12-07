@@ -72,6 +72,9 @@ namespace RPG_game_GUI.Gameplay
                     vbInventory.Visibility = Visibility.Hidden;
                     vbCharacter.Visibility = Visibility.Hidden;
                     vbworld_map.Visibility = Visibility.Hidden;
+                    vbobchod.Visibility = Visibility.Hidden;
+                    vbquests.Visibility = Visibility.Hidden;
+                    vbfraction.Visibility = Visibility.Hidden;
                 }
             }
 
@@ -147,6 +150,51 @@ namespace RPG_game_GUI.Gameplay
                 else
                 {
                     vbworld_map.Visibility = Visibility.Visible;
+                }
+            }
+
+            /*
+             * Zobrazení Obchodu
+             */
+            if (e.Key == Key.O && vbTriforce.Visibility == Visibility.Hidden)
+            {
+                if (vbobchod.Visibility == Visibility.Visible)
+                {
+                    vbobchod.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbobchod.Visibility = Visibility.Visible;
+                }
+            }
+
+            /*
+             * Zobrazení úkolů
+             */
+            if (e.Key == Key.L && vbTriforce.Visibility == Visibility.Hidden)
+            {
+                if (vbquests.Visibility == Visibility.Visible)
+                {
+                    vbquests.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbquests.Visibility = Visibility.Visible;
+                }
+            }
+
+            /*
+             * Zobrazení frakce
+             */
+            if (e.Key == Key.F && vbTriforce.Visibility == Visibility.Hidden)
+            {
+                if (vbfraction.Visibility == Visibility.Visible)
+                {
+                    vbfraction.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbfraction.Visibility = Visibility.Visible;
                 }
             }
         }

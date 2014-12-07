@@ -75,8 +75,17 @@
     <Compile Include="Character\character.xaml.cs">
       <DependentUpon>character.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Character\fraction.xaml.cs">
+      <DependentUpon>fraction.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Character\Inventory.xaml.cs">
       <DependentUpon>Inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Character\quests.xaml.cs">
+      <DependentUpon>quests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Character\shop.xaml.cs">
+      <DependentUpon>shop.xaml</DependentUpon>
     </Compile>
     <Compile Include="Character\Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
@@ -127,7 +136,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Character\fraction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Character\Inventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Character\quests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Character\shop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

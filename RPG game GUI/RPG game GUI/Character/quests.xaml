@@ -1,0 +1,84 @@
+﻿<UserControl x:Name="ucquests" x:Class="RPG_game_GUI.Character.quests"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="500" BorderBrush="Black" 
+             PreviewKeyDown="UserControl_PreviewKeyDown" 
+             BorderThickness="1">
+
+    <UserControl.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            Focusable="False"
+                            BorderBrush="Black" 
+                            CornerRadius="8" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.Background>
+        <ImageBrush ImageSource="/RPG game GUI;component/Resources/WindowLight.jpg" Stretch="UniformToFill"/>
+    </UserControl.Background>
+
+
+    <Grid>
+        <Rectangle Height="10" Width="10" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+        <Thumb x:Name="ThumbPanel" VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="Transparent" Foreground="Transparent" Height="20" DragDelta="Thumb_DragDelta" Opacity="0" />
+        <Button x:Name="btnExit" Style="{StaticResource MyButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Height="61" Click="Button_Click" Margin="0,-25,-25,0" RenderTransformOrigin="0.5,0.5" >
+            <Button.Background>
+                <ImageBrush ImageSource="/RPG game GUI;component/Resources/crossButton.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform />
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter" SourceName="btnExit">
+                    <BeginStoryboard >
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Button.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" 
+                                To="360" Duration="0:0:2"
+                                RepeatBehavior="Forever">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave" SourceName="btnExit">
+                    <BeginStoryboard >
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(Button.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" >
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Label Content="Úkoly:" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+    </Grid>
+</UserControl>
