@@ -72,6 +72,7 @@ namespace RPG_game_GUI.Gameplay
                     vbInventory.Visibility = Visibility.Hidden;
                     vbCharacter.Visibility = Visibility.Hidden;
                     vbTalents.Visibility = Visibility.Hidden;
+                    vbworld_map.Visibility = Visibility.Hidden;
                 }
             }
 
@@ -147,6 +148,19 @@ namespace RPG_game_GUI.Gameplay
                 else
                 {
                     vbTalents.Visibility = Visibility.Visible;
+            
+            /*
+             * Zobrazení Mapy
+             */
+            if (e.Key == Key.M && vbTriforce.Visibility == Visibility.Hidden)
+            {
+                if (vbworld_map.Visibility == Visibility.Visible)
+                {
+                    vbworld_map.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    vbworld_map.Visibility = Visibility.Visible;
                 }
             }
         }

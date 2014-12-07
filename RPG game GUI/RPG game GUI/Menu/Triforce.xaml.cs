@@ -872,5 +872,11 @@ namespace RPG_game_GUI.Menu
             PageSwitcher.Send(Key.Tab);
             PageSwitcher.Send(Key.X);
         }
+
+        private void btnMapa_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Send(Key.Tab);
+            PageSwitcher.Send(Key.M);
+        }
     }
 }

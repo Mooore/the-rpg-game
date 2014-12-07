@@ -84,6 +84,10 @@
     <Compile Include="Character\Talents.xaml.cs">
       <DependentUpon>Talents.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Character\world_map.xaml.cs">
+      <DependentUpon>world_map.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Character\Zoom.cs" />
     <Compile Include="Gameplay\Gameplay.xaml.cs">
       <DependentUpon>Gameplay.xaml</DependentUpon>
     </Compile>
@@ -132,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Character\Talents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Character\world_map.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -626,6 +634,9 @@
     <Resource Include="Resources\Talents\Icons\unplugged.png" />
     <Resource Include="Resources\Talents\Icons\vintage-robot.png" />
     <Resource Include="Resources\Talents\Icons\wooden-door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\World_map\worldmap.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -266,7 +266,7 @@
                 </Button.RenderTransform>
 
             </Button>
-            <Button x:Name="btnMapa" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="371" Canvas.Top="358" MouseEnter="btnMapa_MouseEnter" MouseLeave="btnMapa_MouseLeave" Margin="0">
+            <Button x:Name="btnMapa" Panel.ZIndex="0" Content="" Style="{StaticResource MyButtonStyle}" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" RenderTransformOrigin="0.5,0.5" Height="30" Canvas.Left="371" Canvas.Top="358" MouseEnter="btnMapa_MouseEnter" MouseLeave="btnMapa_MouseLeave" Margin="0" Click="btnMapa_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/map.png"/>
                 </Button.Background>
