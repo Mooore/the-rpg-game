@@ -536,7 +536,7 @@
   <ItemGroup>
     <Resource Include="Resources\Talents\Steampunk wood.jpg" />
   </ItemGroup>
-    <ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\Character\soldier.png" />
   </ItemGroup>
   <ItemGroup>
@@ -559,7 +559,74 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Character\rocket_launcher.png" />
-  </ItemGroup>  
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Talents\Icons\aerial-signal.png" />
+    <Resource Include="Resources\Talents\Icons\auto-repair.png" />
+    <Resource Include="Resources\Talents\Icons\autogun.png" />
+    <Resource Include="Resources\Talents\Icons\back-forth.png" />
+    <Resource Include="Resources\Talents\Icons\bolter-gun.png" />
+    <Resource Include="Resources\Talents\Icons\book-storm.png" />
+    <Resource Include="Resources\Talents\Icons\brain-freeze.png" />
+    <Resource Include="Resources\Talents\Icons\cannister.png" />
+    <Resource Include="Resources\Talents\Icons\chained-heart.png" />
+    <Resource Include="Resources\Talents\Icons\charm.png" />
+    <Resource Include="Resources\Talents\Icons\clockwork.png" />
+    <Resource Include="Resources\Talents\Icons\clout.png" />
+    <Resource Include="Resources\Talents\Icons\cogsplosion.png" />
+    <Resource Include="Resources\Talents\Icons\coma.png" />
+    <Resource Include="Resources\Talents\Icons\corked-tube.png" />
+    <Resource Include="Resources\Talents\Icons\daisy.png" />
+    <Resource Include="Resources\Talents\Icons\dna1.png" />
+    <Resource Include="Resources\Talents\Icons\dna2.png" />
+    <Resource Include="Resources\Talents\Icons\doctor-face.png" />
+    <Resource Include="Resources\Talents\Icons\duel.png" />
+    <Resource Include="Resources\Talents\Icons\energise.png" />
+    <Resource Include="Resources\Talents\Icons\erlenmeyer.png" />
+    <Resource Include="Resources\Talents\Icons\expander.png" />
+    <Resource Include="Resources\Talents\Icons\explosive-materials.png" />
+    <Resource Include="Resources\Talents\Icons\gift-of-knowledge.png" />
+    <Resource Include="Resources\Talents\Icons\glass-heart.png" />
+    <Resource Include="Resources\Talents\Icons\gunshot.png" />
+    <Resource Include="Resources\Talents\Icons\heart-drop.png" />
+    <Resource Include="Resources\Talents\Icons\hourglass.png" />
+    <Resource Include="Resources\Talents\Icons\implosion.png" />
+    <Resource Include="Resources\Talents\Icons\key.png" />
+    <Resource Include="Resources\Talents\Icons\land-mine.png" />
+    <Resource Include="Resources\Talents\Icons\laser-blast.png" />
+    <Resource Include="Resources\Talents\Icons\locked-chest.png" />
+    <Resource Include="Resources\Talents\Icons\love-howl.png" />
+    <Resource Include="Resources\Talents\Icons\mp5.png" />
+    <Resource Include="Resources\Talents\Icons\overdrive.png" />
+    <Resource Include="Resources\Talents\Icons\padlock.png" />
+    <Resource Include="Resources\Talents\Icons\pierced-heart.png" />
+    <Resource Include="Resources\Talents\Icons\pistol-gun.png" />
+    <Resource Include="Resources\Talents\Icons\processor.png" />
+    <Resource Include="Resources\Talents\Icons\quill-ink.png" />
+    <Resource Include="Resources\Talents\Icons\ram.png" />
+    <Resource Include="Resources\Talents\Icons\ray-gun.png" />
+    <Resource Include="Resources\Talents\Icons\robot-golem.png" />
+    <Resource Include="Resources\Talents\Icons\rocket.png" />
+    <Resource Include="Resources\Talents\Icons\skeleton-key.png" />
+    <Resource Include="Resources\Talents\Icons\spiked-armor.png" />
+    <Resource Include="Resources\Talents\Icons\spotted-mushroom.png" />
+    <Resource Include="Resources\Talents\Icons\steelwing-emblem.png" />
+    <Resource Include="Resources\Talents\Icons\stigmata.png" />
+    <Resource Include="Resources\Talents\Icons\stone-crafting.png" />
+    <Resource Include="Resources\Talents\Icons\stopwatch.png" />
+    <Resource Include="Resources\Talents\Icons\syringe %281%29.png" />
+    <Resource Include="Resources\Talents\Icons\syringe.png" />
+    <Resource Include="Resources\Talents\Icons\tied-scroll.png" />
+    <Resource Include="Resources\Talents\Icons\time-trap.png" />
+    <Resource Include="Resources\Talents\Icons\top-hat.png" />
+    <Resource Include="Resources\Talents\Icons\transfuse.png" />
+    <Resource Include="Resources\Talents\Icons\triple-needle.png" />
+    <Resource Include="Resources\Talents\Icons\unlit-bomb.png" />
+    <Resource Include="Resources\Talents\Icons\unlocking.png" />
+    <Resource Include="Resources\Talents\Icons\unplugged.png" />
+    <Resource Include="Resources\Talents\Icons\vintage-robot.png" />
+    <Resource Include="Resources\Talents\Icons\wooden-door.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

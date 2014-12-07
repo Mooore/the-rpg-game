@@ -8,17 +8,18 @@
              d:DesignHeight="800" d:DesignWidth="1000">
 
     <UserControl.Resources>
-        <DropShadowBitmapEffect x:Key="GlowEffect" Color="Khaki" ShadowDepth="0" Opacity="20" Softness="80" />
-        <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
-
         <Style x:Key="MyTalent" TargetType="Thumb">
+            <EventSetter Event="DragDelta" Handler="Thumb_DragDelta" />
+            <EventSetter Event="DragStarted" Handler="Thumb_DragStarted" />
+            <EventSetter Event="DragCompleted" Handler="Thumb_DragCompleted" />
+            <EventSetter Event="Loaded" Handler="Thumb_Loaded" />
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Thumb">
                         <Border Name="border" 
-                            BorderThickness="3"
+                            BorderThickness="1"
                             Opacity="100"
                             Padding="4,2" 
                             BorderBrush="#FF7A7A7A" 
@@ -35,20 +36,256 @@
     </UserControl.Resources>
 
     <Grid Height="{Binding ElementName=ucTalents, Path=Height}" Width="{Binding ElementName=ucTalents, Path=Width}">
-        <Image Source="/RPG game GUI;component/Resources/Talents/Steampunk wood.jpg" Stretch="Fill" Margin="0,0,0,80"/>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
 
-        <Canvas>
-            <Thumb Style="{StaticResource MyTalent}" Margin="251,350,689,390" RenderTransformOrigin="0.5,0.5"/>
 
-            <StackPanel Canvas.Bottom="0" Width="{Binding ElementName=ucTalents, Path=Width}" Height="80" VerticalAlignment="Bottom" Background="#FF746565">
-                <Thumb Style="{StaticResource MyTalent}" Height="60" Width="60" HorizontalAlignment="Left" DragDelta="Thumb_DragDelta">
-                    <Thumb.Background>
-                        <ImageBrush ImageSource="/RPG game GUI;component/Resources/Icons/death.png" />
-                    </Thumb.Background>
-                </Thumb>
-            </StackPanel>
+        <Canvas Name="cnvtalents">
+            <Viewbox Name="stolek" Height="800" Canvas.Bottom="0" Loaded="stolek_Loaded">
+                <Image Source="/RPG game GUI;component/Resources/Talents/Steampunk wood.jpg" />
+            </Viewbox>
+
+            <Rectangle Name="TalentZone" Height="541" Width="844" Canvas.Bottom="180" Loaded="TalentZone_Loaded" PreviewMouseMove="TalentZone_PreviewMouseMove" Fill="Black" Opacity="0" />
+
+            <Thumb x:Name="xChemik" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="223" Canvas.Top="662" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/erlenmeyer.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold">Chemik</TextBlock>
+                        <TextBlock>Umožňuje používat laboratoř k výrobě nejrůznějších chemických látek.</TextBlock>
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="xPistolnik" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="852" Canvas.Top="678" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/pistol-gun.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold">Pistolník</TextBlock>
+                        <TextBlock>Umožňuj ti efektivně používat jednoruční střelné zbraně.</TextBlock>
+                        <TextBlock>+25% k přesnosti při střelbě z pistole.</TextBlock>
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="xLekar" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="608" Canvas.Top="667" Margin="0" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/doctor-face.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold">Lékař</TextBlock>
+                        <TextBlock>Byl jsi vyhován v rodině plné doktorů. Celý život tě přesvědčovali,</TextBlock>
+                        <TextBlock>aby jsi šel na medicínu a stal se doktorem. Pořád ti do hlavy tloukly</TextBlock>
+                        <TextBlock>základy zdravotnictví. Pro tentokrát se to vyplatilo.</TextBlock>
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="xKnihomol" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="514" Canvas.Top="698" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/gift-of-knowledge.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold">Knihomol</TextBlock>
+                        <TextBlock>Díky své oblibě v knihách dokážeš z knih vstřebat mnohem více znalostí, než ostatní.</TextBlock>
+                        <TextBlock>To ti dává bonus 10% ke zkušenostem z přečtených knih.</TextBlock>
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="xStrelec" Style="{StaticResource MyTalent}" Height="60" Width="60"  Canvas.Left="306" Canvas.Top="678" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/mp5.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold">Střelec</TextBlock>
+                        <TextBlock>Umožňuj ti efektivně používat samopaly.</TextBlock>
+                        <TextBlock>+25% k přesnosti při střelbě ze samopalu.</TextBlock>
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="DNA" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="56" Canvas.Top="662" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/dna1.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold">DNA manipulace</TextBlock>
+                        <TextBlock>Tvoje schopnosti ti dovolují manipulovat se svou vlastní DNA.</TextBlock>
+                        <TextBlock>Díky tomu jsi schopen zvýšit některou ze svých vlastností, bohužel</TextBlock>
+                        <TextBlock>na úkor jiné.</TextBlock>
+                        <TextBlock Foreground="Red">CHEMIK</TextBlock>
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="xZamek" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="404" Canvas.Top="678" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/padlock.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold">Odemykání zámků</TextBlock>
+                        <TextBlock>Díky své kriminální minulosti jsi schopen vyháčkovat zámky.</TextBlock>
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+            <Thumb x:Name="Osetrovatel" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="709" Canvas.Top="678" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/syringe.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text="Ošetřovatel"/></TextBlock>
+                        <TextBlock>Díky nabytým zkušenostem víš, jak správně užívat léky,</TextBlock>
+                        <TextBlock>a proto jsou mnohem více účinné.</TextBlock>
+                        <TextBlock>+15% k účinnosti léků a injekcí se séry.</TextBlock>
+                        <TextBlock Foreground="Red">LÉKAŘ</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="Dostrel" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="769" Canvas.Top="648" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/gunshot.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text=""/>Delší dostřel</TextBlock>
+                        <TextBlock>+20% k dostřelu.</TextBlock>
+                        <TextBlock Foreground="Red">STŘELEC</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="Duelista" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="136" Canvas.Top="717" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/duel.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text=""/>Duelista</TextBlock>
+                        <TextBlock>+20% k přesnosti, pokud je protivník sám.</TextBlock>
+                        <TextBlock Foreground="Red">PISTOLNÍK</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="Dvere" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="141" Canvas.Top="640" Margin="0" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/wooden-door.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text=""/>Dveřník</TextBlock>
+                        <TextBlock>+15% k šanci na odemčení dveří.</TextBlock>
+                        <TextBlock Foreground="Red">ODEMYKÁNÍ ZÁMKŮ</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="Truhla" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="454" Canvas.Top="730" Margin="0" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/locked-chest.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text=""/>Truhlář</TextBlock>
+                        <TextBlock>+15% k šanci na odemčení truhel a skříní.</TextBlock>
+                        <TextBlock Foreground="Red">ODEMYKÁNÍ ZÁMKŮ</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="xEnergeticke" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="355" Canvas.Top="722" Margin="0" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/bolter-gun.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text=""/>Energetické zbraně</TextBlock>
+                        <TextBlock>Umožňuj ti efektivně používat energetické zbraně.</TextBlock>
+                        <TextBlock>+25% k přesnosti při střelbě z energetických zbraní.</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="Energie" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="263" Canvas.Top="669" Margin="0" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/energise.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text=""/>Truhlář</TextBlock>
+                        <TextBlock>+25% ke kapacitě energetických článků.</TextBlock>
+                        <TextBlock Foreground="Red">ENERGETICKÉ ZBRANĚ</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="Sila" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="219" Canvas.Top="722" Margin="0" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/laser-blast.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text=""/>Silný paprsek</TextBlock>
+                        <TextBlock>+15% k účinnosti zbraně.</TextBlock>
+                        <TextBlock Foreground="Red">ENERGETICKÉ ZBRANĚ</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
+            <Thumb x:Name="Kosteny" Style="{StaticResource MyTalent}" Height="60" Width="60" Canvas.Left="323" Canvas.Top="722" Margin="0" >
+                <Thumb.Background>
+                    <ImageBrush ImageSource="/RPG game GUI;component/Resources/Talents/Icons/skeleton-key.png" />
+                </Thumb.Background>
+
+                <Thumb.ToolTip>
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="Bold"><Run Text=""/>Silný paprsek</TextBlock>
+                        <TextBlock>Paklíč se nikdy nezlomí při neúspěšném pokusu o vyháčkování zámku.</TextBlock>
+                        <TextBlock>+20% k šanci na odemčení zámků.</TextBlock>
+                        <TextBlock Foreground="Red">ODEMYKÁNÍ ZÁMKŮ</TextBlock>
+
+                    </StackPanel>
+                </Thumb.ToolTip>
+            </Thumb>
+
         </Canvas>
-       
+
 
     </Grid>
 </UserControl>

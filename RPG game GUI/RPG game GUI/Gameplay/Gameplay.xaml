@@ -10,7 +10,7 @@
     <UserControl.Resources>
         <DropShadowBitmapEffect x:Key="GlowEffect" Color="Khaki" ShadowDepth="0" Opacity="20" Softness="80" />
         <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
-        
+
         <Style x:Key="MyButtonStyle" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="Margin" Value="5"/>
@@ -110,7 +110,7 @@
                 <BlurEffect x:Name="vbBackground" Radius="0"/>
             </Grid.Effect>
         </Grid>
-        
+
 
         <Viewbox x:Name="vbCharBar" Height="80" Canvas.Top="20" Canvas.Left="20" Stretch="Uniform">
             <Viewbox.Effect>
@@ -178,6 +178,11 @@
         <!-- Okno pro Charakter  -->
         <Viewbox VerticalAlignment="Top" x:Name="vbCharacter" Visibility="Hidden" Canvas.Left="83" Canvas.Top="140" Stretch="Fill" >
             <Character:Character Height="500" Width="400" />
+        </Viewbox>
+
+        <!-- Okno pro talenty  -->
+        <Viewbox VerticalAlignment="Top" x:Name="vbTalents" Visibility="Hidden" Canvas.Top="0" Stretch="Fill" Panel.ZIndex="10" >
+            <Character:Talents Height="{Binding ElementName=GameLayer, Path=Height}" Width="{Binding ElementName=GameLayer, Path=Width}" />
         </Viewbox>
 
         <StatusBar x:Name="QuickBar" Focusable="False" FocusManager.IsFocusScope="False" Height="90" Width="604" Canvas.Bottom="5" Canvas.Left="200" Loaded="QuickBar_Loaded" >
