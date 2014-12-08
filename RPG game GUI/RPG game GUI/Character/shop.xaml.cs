@@ -52,42 +52,60 @@ namespace RPG_game_GUI.Character
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            money.Content = pom2 - 7000;
+            if (pom2 - 7000 > 0)
+            {
+                money.Content = pom2 - 7000;
+            }
         }
 
         private void Label5_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            money.Content = pom2 - 5000;
+            if (pom2 - 5000 > 0)
+            {
+                money.Content = pom2 - 5000;
+            }
         }
 
         private void Label4_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            money.Content = pom2 - 20000;
+            if (pom2 - 20000 > 0)
+            {
+                money.Content = pom2 - 20000;
+            }
         }
 
         private void Label3_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            money.Content = pom2 - 1000;
+            if (pom2 - 1000 > 0)
+            {
+                money.Content = pom2 - 1000;
+            }
         }
 
         private void Label2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            money.Content = pom2 - 450;
+            if (pom2 - 450 > 0)
+            {
+                money.Content = pom2 - 450;
+            }
         }
 
         private void Label1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            money.Content = pom2 - 500;
+            if (pom2 - 500 > 0)
+            {
+                money.Content = pom2 - 500;
+            }
             //Inventory tmp = new Inventory();
            // tmp.changevalue1(sender, e);
           //  Inventory tmp =  new Inventory();
