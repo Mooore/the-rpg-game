@@ -88,6 +88,13 @@ namespace RPG_game_GUI.Character
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
             money.Content = pom2 - 500;
+
+            //Inventory tmp = new Inventory();
+           // tmp.changevalue1(sender, e);
+            Inventory tmp =  new Inventory();
+            int tmp2 = Convert.ToInt32(tmp.slot1.Content);
+            tmp.slot1.Content = tmp2 + 1;
+   
         }
 
     }
