@@ -91,11 +91,11 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+                <Image Source="/RPG game GUI;component/Resources/fraction/Rebels.png" />
             </Label.Content>
         </Label>
 
-        <Label Content="Žoldáci" HorizontalAlignment="Left" Margin="250,120,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
+        <Label Content="Žoldáci" HorizontalAlignment="Left" Margin="260,120,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -106,7 +106,7 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+                <Image Source="/RPG game GUI;component/Resources/fraction/mercenary.png" />
             </Label.Content>
         </Label>
 
@@ -121,7 +121,7 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+                <Image Source="/RPG game GUI;component/Resources/fraction/republicans.png" />
             </Label.Content>
         </Label>
 
@@ -131,12 +131,12 @@
             </Label.Effect>
         </Label>
 
-        <Label Height="100" Width="100" HorizontalAlignment="Left" Margin="250,350,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Height="100" Width="100" HorizontalAlignment="Left" Margin="250,355,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/spell_icons/icon1.png" />
+                <Image Source="/RPG game GUI;component/Resources/fraction/confederation.png" />
             </Label.Content>
         </Label>
 

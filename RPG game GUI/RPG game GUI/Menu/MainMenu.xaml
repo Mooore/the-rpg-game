@@ -133,7 +133,7 @@
         <Border x:Name="borCredits" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7" CornerRadius="10" BorderBrush="#FF443D3D" BorderThickness="5" Visibility="Hidden" Background="WhiteSmoke">
             <local:Credits />
         </Border>
-        <Label x:Name="lbVersion" Content="v. " HorizontalAlignment="Left" Grid.Row="8" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Foreground="White"/>
+        <Label x:Name="lbVersion" Content="v. " Margin="20,0,0,0" HorizontalAlignment="Left" Grid.Row="8" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Foreground="White"/>
 
 
     </Grid>
