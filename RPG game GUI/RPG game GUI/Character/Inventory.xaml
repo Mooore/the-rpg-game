@@ -94,7 +94,7 @@
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/health_potion.png" />
             </Label.Content>
         </Label>
-        <Label x:Name="slot1" Content="1" HorizontalAlignment="Left" Margin="20,120,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
+        <Label x:Name="slot1" Content="1" HorizontalAlignment="Left" Margin="20,125,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
@@ -115,6 +115,13 @@
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/mana_potion.gif" />
             </Label.Content>
         </Label>
+
+        <Label x:Name="slot2" Content="1" HorizontalAlignment="Left" Margin="70,125,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="121,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
@@ -129,6 +136,11 @@
             <Label.Content>
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/bullet.png" />
             </Label.Content>
+        </Label>
+        <Label x:Name="slot3" Content="5000" HorizontalAlignment="Left" Margin="120,125,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
         </Label>
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="171,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
@@ -145,6 +157,13 @@
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/Rocket_.png" />
             </Label.Content>
         </Label>
+
+        <Label x:Name="slot4" Content="2" HorizontalAlignment="Left" Margin="170,125,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="221,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
@@ -160,6 +179,13 @@
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/granade.jpg" />
             </Label.Content>
         </Label>
+
+        <Label x:Name="slot5" Content="1" HorizontalAlignment="Left" Margin="220,125,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="271,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
@@ -175,6 +201,13 @@
                 <Image Source="/RPG game GUI;component/Resources/Inventory_/flashbang.jpg" />
             </Label.Content>
         </Label>
+
+        <Label x:Name="slot6" Content="0" HorizontalAlignment="Left" Margin="270,125,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
         <Label Height="50" Width="50" HorizontalAlignment="Left" Margin="321,106,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
