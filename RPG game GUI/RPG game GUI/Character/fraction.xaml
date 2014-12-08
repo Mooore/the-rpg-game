@@ -86,12 +86,12 @@
             </Label.Effect>
         </Label>
 
-        <Label Height="100" Width="100" HorizontalAlignment="Left" Margin="20,170,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20">
+        <Label Height="100" Width="100" HorizontalAlignment="Left" Margin="20,170,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="White" BorderThickness="0" FontFamily="Giddyup Std" FontSize="20" Panel.ZIndex="2">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
             </Label.Effect>
             <Label.Content>
-                <Image Source="/RPG game GUI;component/Resources/fraction/Rebels.png" />
+                <Image Source="/RPG game GUI;component/Resources/fraction/Rebels.png"/>
             </Label.Content>
         </Label>
 
