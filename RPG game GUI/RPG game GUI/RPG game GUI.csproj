@@ -623,9 +623,6 @@
     <Resource Include="Resources\fraction\mercenary.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\fraction\Rebels.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\fraction\republicans.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
