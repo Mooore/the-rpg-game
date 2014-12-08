@@ -80,5 +80,137 @@
             </Label.Effect>
         </Label>
 
+        <Label Content="1/5 splněno:" HorizontalAlignment="Left" Margin="250,20,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="Odměna:" HorizontalAlignment="Left" Margin="290,70,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="24">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="S" HorizontalAlignment="Left" Margin="13,120,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="PowderBlue" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
+        <Label Content="1:" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="Zničit tank na severovýchodě." HorizontalAlignment="Left" Margin="50,120,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="20000 $." HorizontalAlignment="Left" Margin="301,120,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="N" HorizontalAlignment="Left" Margin="13,150,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="PowderBlue" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
+        <Label Content="2:" HorizontalAlignment="Left" Margin="30,150,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="Odstranit skupinu rebelů na jihu." HorizontalAlignment="Left" Margin="50,150,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="5000 $." HorizontalAlignment="Left" Margin="301,150,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="N" HorizontalAlignment="Left" Margin="13,180,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="PowderBlue" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
+        <Label Content="3:" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="Zjistit kdo stojí za vzpourou." HorizontalAlignment="Left" Margin="50,180,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="2000 $." HorizontalAlignment="Left" Margin="301,180,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="N" HorizontalAlignment="Left" Margin="13,210,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="PowderBlue" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
+        <Label Content="4:" HorizontalAlignment="Left" Margin="30,210,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="Zajistit zónu 13." HorizontalAlignment="Left" Margin="50,210,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="50000 $." HorizontalAlignment="Left" Margin="301,210,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="N" HorizontalAlignment="Left" Margin="13,240,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="PowderBlue" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+        
+        <Label Content="5:" HorizontalAlignment="Left" Margin="30,240,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="Zachránit civilisty ve městě Sevagal." HorizontalAlignment="Left" Margin="50,240,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
+        <Label Content="1000 $." HorizontalAlignment="Left" Margin="301,240,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" BorderThickness="0" FontFamily="Monotype Corsiva" FontSize="18">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="1" Color="#FF000000" />
+            </Label.Effect>
+        </Label>
+
     </Grid>
 </UserControl>

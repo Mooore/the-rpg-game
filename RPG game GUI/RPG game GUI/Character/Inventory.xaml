@@ -171,7 +171,7 @@
             <Label.ToolTip>
                 <ToolTip>
                     <StackPanel>
-                        <TextBlock>Volné místo</TextBlock>
+                        <TextBlock>Granát</TextBlock>
                     </StackPanel>
                 </ToolTip>
             </Label.ToolTip>
@@ -193,7 +193,7 @@
             <Label.ToolTip>
                 <ToolTip>
                     <StackPanel>
-                        <TextBlock>Volné místo</TextBlock>
+                        <TextBlock>Oslepující granát</TextBlock>
                     </StackPanel>
                 </ToolTip>
             </Label.ToolTip>
