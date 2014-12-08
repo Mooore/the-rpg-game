@@ -52,7 +52,7 @@ namespace RPG_game_GUI.Character
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            if (pom2 - 7000 > 0)
+            if (pom2 - 7000 >= 0)
             {
                 money.Content = pom2 - 7000;
             }
@@ -62,7 +62,7 @@ namespace RPG_game_GUI.Character
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            if (pom2 - 5000 > 0)
+            if (pom2 - 5000 >= 0)
             {
                 money.Content = pom2 - 5000;
             }
@@ -72,7 +72,7 @@ namespace RPG_game_GUI.Character
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            if (pom2 - 20000 > 0)
+            if (pom2 - 20000 >= 0)
             {
                 money.Content = pom2 - 20000;
             }
@@ -82,7 +82,7 @@ namespace RPG_game_GUI.Character
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            if (pom2 - 1000 > 0)
+            if (pom2 - 1000 >= 0)
             {
                 money.Content = pom2 - 1000;
             }
@@ -92,7 +92,7 @@ namespace RPG_game_GUI.Character
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            if (pom2 - 450 > 0)
+            if (pom2 - 450 >= 0)
             {
                 money.Content = pom2 - 450;
             }
@@ -102,7 +102,7 @@ namespace RPG_game_GUI.Character
         {
             var pom = money.Content;
             int pom2 = Convert.ToInt32(pom);
-            if (pom2 - 500 > 0)
+            if (pom2 - 500 >= 0)
             {
                 money.Content = pom2 - 500;
             }
