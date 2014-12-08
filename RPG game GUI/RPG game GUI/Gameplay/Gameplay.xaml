@@ -8,8 +8,8 @@
              d:DesignHeight="768" d:DesignWidth="1024" PreviewKeyDown="UserControl_PreviewKeyDown" Loaded="UserControl_Loaded">
 
     <UserControl.Resources>
-        <DropShadowBitmapEffect x:Key="GlowEffect" Color="Khaki" ShadowDepth="0" Opacity="20" Softness="80" />
-        <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="30" Softness="80" />
+        <DropShadowBitmapEffect x:Key="GlowEffect" Color="Khaki" ShadowDepth="0" Opacity="50" Softness="80" />
+        <DropShadowBitmapEffect x:Key="ClickEffect" Color="LightSkyBlue" ShadowDepth="0" Opacity="50" Softness="80" />
 
         <Style x:Key="MyButtonStyle" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
